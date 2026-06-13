@@ -1,0 +1,19 @@
+{
+  "backend": "geotiff",
+  "event_count": 607,
+  "sample_count": 10572,
+  "events_by_year": {
+    "2018": 176,
+    "2019": 74,
+    "2020": 201,
+    "2021": 156
+  },
+  "samples_by_year": {
+    "2018": 2893,
+    "2019": 1055,
+    "2020": 3287,
+    "2021": 3337
+  },
+  "checked_events": 8,
+  "invalid_events": []
+}

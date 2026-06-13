@@ -1,0 +1,19 @@
+{
+  "backend": "npz",
+  "event_count": 8,
+  "sample_count": 16,
+  "events_by_year": {
+    "2018": 2,
+    "2019": 2,
+    "2020": 2,
+    "2021": 2
+  },
+  "samples_by_year": {
+    "2018": 4,
+    "2019": 4,
+    "2020": 4,
+    "2021": 4
+  },
+  "checked_events": 4,
+  "invalid_events": []
+}

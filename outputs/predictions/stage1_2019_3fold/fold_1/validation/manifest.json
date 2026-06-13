@@ -1,0 +1,2310 @@
+{
+  "checkpoint": "outputs\\checkpoints\\stage1_2019_3fold\\stage1_fold_1_best.pt",
+  "calibration_json": "outputs\\calibration\\stage1_2019_3fold\\stage1_fold1_thresholds.json",
+  "fold": 1,
+  "split": "validation",
+  "split_mode": "event_kfold",
+  "years": [
+    2019
+  ],
+  "seed": 42,
+  "backend": "hdf5",
+  "input_days": 5,
+  "crop_size": 256,
+  "threshold": 0.7880859375,
+  "top_fraction": 0.001,
+  "event_count": 25,
+  "sample_count": 229,
+  "records": [
+    {
+      "event_id": "fire_22863125",
+      "target_date": "2019-06-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863125\\2019-06-01.npz",
+      "probability_max": 0.654296875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.326171875
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-01.npz",
+      "probability_max": 0.55712890625,
+      "target_positive_pixels": 21,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.455810546875
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-02",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-02.npz",
+      "probability_max": 0.7373046875,
+      "target_positive_pixels": 33,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7001953125
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-03",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-03.npz",
+      "probability_max": 0.8134765625,
+      "target_positive_pixels": 53,
+      "threshold_positive_pixels": 84,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.79150390625
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-04",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-04.npz",
+      "probability_max": 0.83837890625,
+      "target_positive_pixels": 81,
+      "threshold_positive_pixels": 161,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8154296875
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-05.npz",
+      "probability_max": 0.67724609375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.388427734375
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-07.npz",
+      "probability_max": 0.291259765625,
+      "target_positive_pixels": 82,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1468505859375
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-08.npz",
+      "probability_max": 0.84130859375,
+      "target_positive_pixels": 101,
+      "threshold_positive_pixels": 222,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81787109375
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-09.npz",
+      "probability_max": 0.75830078125,
+      "target_positive_pixels": 66,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7138671875
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-10.npz",
+      "probability_max": 0.82958984375,
+      "target_positive_pixels": 110,
+      "threshold_positive_pixels": 68,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7880859375
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-11.npz",
+      "probability_max": 0.841796875,
+      "target_positive_pixels": 168,
+      "threshold_positive_pixels": 205,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8154296875
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-12.npz",
+      "probability_max": 0.8330078125,
+      "target_positive_pixels": 247,
+      "threshold_positive_pixels": 183,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8115234375
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-13.npz",
+      "probability_max": 0.8544921875,
+      "target_positive_pixels": 191,
+      "threshold_positive_pixels": 225,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82763671875
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-14.npz",
+      "probability_max": 0.3251953125,
+      "target_positive_pixels": 31,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2161865234375
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-15.npz",
+      "probability_max": 0.78466796875,
+      "target_positive_pixels": 10,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7392578125
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-16",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-16.npz",
+      "probability_max": 0.499267578125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.40283203125
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-17",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-17.npz",
+      "probability_max": 0.8212890625,
+      "target_positive_pixels": 6,
+      "threshold_positive_pixels": 61,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.787109375
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-18",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-18.npz",
+      "probability_max": 0.8203125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 159,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.798828125
+    },
+    {
+      "event_id": "fire_22863172",
+      "target_date": "2019-06-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22863172\\2019-06-19.npz",
+      "probability_max": 0.82568359375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 186,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80859375
+    },
+    {
+      "event_id": "fire_22938746",
+      "target_date": "2019-06-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22938746\\2019-06-08.npz",
+      "probability_max": 0.869140625,
+      "target_positive_pixels": 40,
+      "threshold_positive_pixels": 132,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8271484375
+    },
+    {
+      "event_id": "fire_22938746",
+      "target_date": "2019-06-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22938746\\2019-06-09.npz",
+      "probability_max": 0.8173828125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 69,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.78955078125
+    },
+    {
+      "event_id": "fire_22938746",
+      "target_date": "2019-06-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22938746\\2019-06-11.npz",
+      "probability_max": 0.822265625,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 14,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.73828125
+    },
+    {
+      "event_id": "fire_22938746",
+      "target_date": "2019-06-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22938746\\2019-06-12.npz",
+      "probability_max": 0.80517578125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 19,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.73974609375
+    },
+    {
+      "event_id": "fire_22938746",
+      "target_date": "2019-06-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22938746\\2019-06-13.npz",
+      "probability_max": 0.8173828125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 22,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.73388671875
+    },
+    {
+      "event_id": "fire_22938746",
+      "target_date": "2019-06-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22938746\\2019-06-14.npz",
+      "probability_max": 0.289306640625,
+      "target_positive_pixels": 205,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1094970703125
+    },
+    {
+      "event_id": "fire_22938746",
+      "target_date": "2019-06-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_22938746\\2019-06-15.npz",
+      "probability_max": 0.299072265625,
+      "target_positive_pixels": 172,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1719970703125
+    },
+    {
+      "event_id": "fire_23036542",
+      "target_date": "2019-07-26",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036542\\2019-07-26.npz",
+      "probability_max": 0.30126953125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1942138671875
+    },
+    {
+      "event_id": "fire_23036804",
+      "target_date": "2019-07-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036804\\2019-07-15.npz",
+      "probability_max": 0.84228515625,
+      "target_positive_pixels": 36,
+      "threshold_positive_pixels": 63,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.77880859375
+    },
+    {
+      "event_id": "fire_23036804",
+      "target_date": "2019-07-16",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036804\\2019-07-16.npz",
+      "probability_max": 0.52392578125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.358154296875
+    },
+    {
+      "event_id": "fire_23036804",
+      "target_date": "2019-07-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036804\\2019-07-19.npz",
+      "probability_max": 0.274169921875,
+      "target_positive_pixels": 259,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1658935546875
+    },
+    {
+      "event_id": "fire_23036804",
+      "target_date": "2019-07-20",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036804\\2019-07-20.npz",
+      "probability_max": 0.27392578125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.15771484375
+    },
+    {
+      "event_id": "fire_23036804",
+      "target_date": "2019-07-25",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036804\\2019-07-25.npz",
+      "probability_max": 0.274169921875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1331787109375
+    },
+    {
+      "event_id": "fire_23036806",
+      "target_date": "2019-07-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036806\\2019-07-19.npz",
+      "probability_max": 0.27490234375,
+      "target_positive_pixels": 259,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.134033203125
+    },
+    {
+      "event_id": "fire_23036806",
+      "target_date": "2019-07-20",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036806\\2019-07-20.npz",
+      "probability_max": 0.275146484375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.130126953125
+    },
+    {
+      "event_id": "fire_23036806",
+      "target_date": "2019-07-25",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036806\\2019-07-25.npz",
+      "probability_max": 0.2900390625,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1207275390625
+    },
+    {
+      "event_id": "fire_23036806",
+      "target_date": "2019-07-27",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23036806\\2019-07-27.npz",
+      "probability_max": 0.285888671875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.14794921875
+    },
+    {
+      "event_id": "fire_23037423",
+      "target_date": "2019-08-02",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23037423\\2019-08-02.npz",
+      "probability_max": 0.300048828125,
+      "target_positive_pixels": 70,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.160888671875
+    },
+    {
+      "event_id": "fire_23037423",
+      "target_date": "2019-08-03",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23037423\\2019-08-03.npz",
+      "probability_max": 0.8193359375,
+      "target_positive_pixels": 92,
+      "threshold_positive_pixels": 29,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.744140625
+    },
+    {
+      "event_id": "fire_23037423",
+      "target_date": "2019-08-04",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23037423\\2019-08-04.npz",
+      "probability_max": 0.82763671875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 50,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.77490234375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-14.npz",
+      "probability_max": 0.81689453125,
+      "target_positive_pixels": 234,
+      "threshold_positive_pixels": 114,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.79638671875
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-15.npz",
+      "probability_max": 0.83984375,
+      "target_positive_pixels": 264,
+      "threshold_positive_pixels": 213,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80908203125
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-16",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-16.npz",
+      "probability_max": 0.81787109375,
+      "target_positive_pixels": 343,
+      "threshold_positive_pixels": 49,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7822265625
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-17",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-17.npz",
+      "probability_max": 0.83349609375,
+      "target_positive_pixels": 256,
+      "threshold_positive_pixels": 174,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8115234375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-18",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-18.npz",
+      "probability_max": 0.85107421875,
+      "target_positive_pixels": 157,
+      "threshold_positive_pixels": 256,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81982421875
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-19.npz",
+      "probability_max": 0.85693359375,
+      "target_positive_pixels": 164,
+      "threshold_positive_pixels": 266,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82958984375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-20",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-20.npz",
+      "probability_max": 0.81689453125,
+      "target_positive_pixels": 213,
+      "threshold_positive_pixels": 155,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.802734375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-21",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-21.npz",
+      "probability_max": 0.810546875,
+      "target_positive_pixels": 143,
+      "threshold_positive_pixels": 81,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7890625
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-22",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-22.npz",
+      "probability_max": 0.82861328125,
+      "target_positive_pixels": 127,
+      "threshold_positive_pixels": 108,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80029296875
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-23",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-23.npz",
+      "probability_max": 0.81494140625,
+      "target_positive_pixels": 55,
+      "threshold_positive_pixels": 20,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7529296875
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-24",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-24.npz",
+      "probability_max": 0.8330078125,
+      "target_positive_pixels": 49,
+      "threshold_positive_pixels": 103,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.802734375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-25",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-25.npz",
+      "probability_max": 0.8115234375,
+      "target_positive_pixels": 42,
+      "threshold_positive_pixels": 29,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.77392578125
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-26",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-26.npz",
+      "probability_max": 0.8115234375,
+      "target_positive_pixels": 48,
+      "threshold_positive_pixels": 49,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.783203125
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-27",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-27.npz",
+      "probability_max": 0.7353515625,
+      "target_positive_pixels": 38,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.65771484375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-28",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-28.npz",
+      "probability_max": 0.818359375,
+      "target_positive_pixels": 36,
+      "threshold_positive_pixels": 23,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7734375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-29",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-29.npz",
+      "probability_max": 0.79052734375,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 1,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.72802734375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-30",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-30.npz",
+      "probability_max": 0.79931640625,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 5,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7412109375
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-08-31",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-08-31.npz",
+      "probability_max": 0.82763671875,
+      "target_positive_pixels": 30,
+      "threshold_positive_pixels": 88,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.794921875
+    },
+    {
+      "event_id": "fire_23159633",
+      "target_date": "2019-09-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159633\\2019-09-01.npz",
+      "probability_max": 0.8427734375,
+      "target_positive_pixels": 48,
+      "threshold_positive_pixels": 236,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81787109375
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-05.npz",
+      "probability_max": 0.80712890625,
+      "target_positive_pixels": 63,
+      "threshold_positive_pixels": 10,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.74853515625
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-06.npz",
+      "probability_max": 0.79931640625,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 5,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.71923828125
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-07.npz",
+      "probability_max": 0.82421875,
+      "target_positive_pixels": 33,
+      "threshold_positive_pixels": 73,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.791015625
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-08.npz",
+      "probability_max": 0.50244140625,
+      "target_positive_pixels": 46,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.390380859375
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-09.npz",
+      "probability_max": 0.75927734375,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7041015625
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-10.npz",
+      "probability_max": 0.607421875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.442138671875
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-18",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-18.npz",
+      "probability_max": 0.71142578125,
+      "target_positive_pixels": 7,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.36279296875
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-19.npz",
+      "probability_max": 0.351806640625,
+      "target_positive_pixels": 21,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.20849609375
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-20",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-20.npz",
+      "probability_max": 0.487060546875,
+      "target_positive_pixels": 15,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.25048828125
+    },
+    {
+      "event_id": "fire_23159787",
+      "target_date": "2019-08-21",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159787\\2019-08-21.npz",
+      "probability_max": 0.27197265625,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.103759765625
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-04",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-04.npz",
+      "probability_max": 0.78515625,
+      "target_positive_pixels": 25,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.728515625
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-05.npz",
+      "probability_max": 0.78369140625,
+      "target_positive_pixels": 23,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7041015625
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-06.npz",
+      "probability_max": 0.8056640625,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 10,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.74560546875
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-07.npz",
+      "probability_max": 0.8134765625,
+      "target_positive_pixels": 38,
+      "threshold_positive_pixels": 20,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.76513671875
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-08.npz",
+      "probability_max": 0.83544921875,
+      "target_positive_pixels": 30,
+      "threshold_positive_pixels": 85,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.798828125
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-09.npz",
+      "probability_max": 0.273193359375,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1114501953125
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-10.npz",
+      "probability_max": 0.74169921875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.5439453125
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-13.npz",
+      "probability_max": 0.454345703125,
+      "target_positive_pixels": 18,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.31640625
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-14.npz",
+      "probability_max": 0.433349609375,
+      "target_positive_pixels": 28,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.28271484375
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-15.npz",
+      "probability_max": 0.67822265625,
+      "target_positive_pixels": 17,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.415283203125
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-16",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-16.npz",
+      "probability_max": 0.7685546875,
+      "target_positive_pixels": 19,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.61328125
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-17",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-17.npz",
+      "probability_max": 0.8017578125,
+      "target_positive_pixels": 21,
+      "threshold_positive_pixels": 8,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.68359375
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-18",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-18.npz",
+      "probability_max": 0.81103515625,
+      "target_positive_pixels": 30,
+      "threshold_positive_pixels": 9,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.71630859375
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-19.npz",
+      "probability_max": 0.80419921875,
+      "target_positive_pixels": 46,
+      "threshold_positive_pixels": 9,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.73583984375
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-20",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-20.npz",
+      "probability_max": 0.6103515625,
+      "target_positive_pixels": 51,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.38818359375
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-21",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-21.npz",
+      "probability_max": 0.857421875,
+      "target_positive_pixels": 35,
+      "threshold_positive_pixels": 149,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.822265625
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-22",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-22.npz",
+      "probability_max": 0.3154296875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2314453125
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-24",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-24.npz",
+      "probability_max": 0.5927734375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.3994140625
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-26",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-26.npz",
+      "probability_max": 0.552734375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.342041015625
+    },
+    {
+      "event_id": "fire_23159792",
+      "target_date": "2019-08-28",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159792\\2019-08-28.npz",
+      "probability_max": 0.4091796875,
+      "target_positive_pixels": 48,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.242431640625
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-21",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-21.npz",
+      "probability_max": 0.83935546875,
+      "target_positive_pixels": 51,
+      "threshold_positive_pixels": 78,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80029296875
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-22",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-22.npz",
+      "probability_max": 0.83984375,
+      "target_positive_pixels": 39,
+      "threshold_positive_pixels": 129,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8115234375
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-23",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-23.npz",
+      "probability_max": 0.274169921875,
+      "target_positive_pixels": 53,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1484375
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-24",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-24.npz",
+      "probability_max": 0.27392578125,
+      "target_positive_pixels": 84,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.09808349609375
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-25",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-25.npz",
+      "probability_max": 0.8564453125,
+      "target_positive_pixels": 121,
+      "threshold_positive_pixels": 154,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8193359375
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-26",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-26.npz",
+      "probability_max": 0.84619140625,
+      "target_positive_pixels": 117,
+      "threshold_positive_pixels": 160,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81982421875
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-27",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-27.npz",
+      "probability_max": 0.447998046875,
+      "target_positive_pixels": 83,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.295166015625
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-28",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-28.npz",
+      "probability_max": 0.8408203125,
+      "target_positive_pixels": 173,
+      "threshold_positive_pixels": 102,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81103515625
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-29",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-29.npz",
+      "probability_max": 0.84130859375,
+      "target_positive_pixels": 74,
+      "threshold_positive_pixels": 156,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.814453125
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-30",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-30.npz",
+      "probability_max": 0.86767578125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 375,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.837890625
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-08-31",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-08-31.npz",
+      "probability_max": 0.853515625,
+      "target_positive_pixels": 115,
+      "threshold_positive_pixels": 216,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82080078125
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-09-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-09-01.npz",
+      "probability_max": 0.845703125,
+      "target_positive_pixels": 144,
+      "threshold_positive_pixels": 209,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81787109375
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-09-02",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-09-02.npz",
+      "probability_max": 0.82373046875,
+      "target_positive_pixels": 177,
+      "threshold_positive_pixels": 173,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80712890625
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-09-03",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-09-03.npz",
+      "probability_max": 0.8095703125,
+      "target_positive_pixels": 187,
+      "threshold_positive_pixels": 10,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7529296875
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-09-04",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-09-04.npz",
+      "probability_max": 0.83935546875,
+      "target_positive_pixels": 176,
+      "threshold_positive_pixels": 12,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.68212890625
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-09-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-09-05.npz",
+      "probability_max": 0.83642578125,
+      "target_positive_pixels": 124,
+      "threshold_positive_pixels": 28,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7001953125
+    },
+    {
+      "event_id": "fire_23159821",
+      "target_date": "2019-09-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159821\\2019-09-06.npz",
+      "probability_max": 0.85302734375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 83,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7939453125
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-05.npz",
+      "probability_max": 0.326416015625,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.21484375
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-06.npz",
+      "probability_max": 0.272705078125,
+      "target_positive_pixels": 64,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2314453125
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-07.npz",
+      "probability_max": 0.85400390625,
+      "target_positive_pixels": 71,
+      "threshold_positive_pixels": 115,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8125
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-08.npz",
+      "probability_max": 0.481689453125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.279052734375
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-10.npz",
+      "probability_max": 0.5732421875,
+      "target_positive_pixels": 6,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.447998046875
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-11.npz",
+      "probability_max": 0.272705078125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.13623046875
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-12.npz",
+      "probability_max": 0.669921875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.48681640625
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-14.npz",
+      "probability_max": 0.740234375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.697265625
+    },
+    {
+      "event_id": "fire_23159836",
+      "target_date": "2019-08-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159836\\2019-08-15.npz",
+      "probability_max": 0.7529296875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7236328125
+    },
+    {
+      "event_id": "fire_23159841",
+      "target_date": "2019-08-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159841\\2019-08-06.npz",
+      "probability_max": 0.84375,
+      "target_positive_pixels": 28,
+      "threshold_positive_pixels": 185,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.822265625
+    },
+    {
+      "event_id": "fire_23159841",
+      "target_date": "2019-08-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159841\\2019-08-07.npz",
+      "probability_max": 0.7236328125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.6376953125
+    },
+    {
+      "event_id": "fire_23159841",
+      "target_date": "2019-08-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159841\\2019-08-15.npz",
+      "probability_max": 0.303466796875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1134033203125
+    },
+    {
+      "event_id": "fire_23159853",
+      "target_date": "2019-08-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159853\\2019-08-08.npz",
+      "probability_max": 0.662109375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.4765625
+    },
+    {
+      "event_id": "fire_23159853",
+      "target_date": "2019-08-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23159853\\2019-08-10.npz",
+      "probability_max": 0.41357421875,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.255615234375
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-08-25",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-08-25.npz",
+      "probability_max": 0.80859375,
+      "target_positive_pixels": 79,
+      "threshold_positive_pixels": 27,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.76416015625
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-08-26",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-08-26.npz",
+      "probability_max": 0.76025390625,
+      "target_positive_pixels": 97,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.67529296875
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-08-27",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-08-27.npz",
+      "probability_max": 0.7529296875,
+      "target_positive_pixels": 70,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.6591796875
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-08-28",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-08-28.npz",
+      "probability_max": 0.8349609375,
+      "target_positive_pixels": 91,
+      "threshold_positive_pixels": 92,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80078125
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-08-29",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-08-29.npz",
+      "probability_max": 0.849609375,
+      "target_positive_pixels": 157,
+      "threshold_positive_pixels": 90,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80224609375
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-08-30",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-08-30.npz",
+      "probability_max": 0.833984375,
+      "target_positive_pixels": 85,
+      "threshold_positive_pixels": 105,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.802734375
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-08-31",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-08-31.npz",
+      "probability_max": 0.8193359375,
+      "target_positive_pixels": 182,
+      "threshold_positive_pixels": 50,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.779296875
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-09-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-09-01.npz",
+      "probability_max": 0.85302734375,
+      "target_positive_pixels": 149,
+      "threshold_positive_pixels": 134,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8173828125
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-09-02",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-09-02.npz",
+      "probability_max": 0.83056640625,
+      "target_positive_pixels": 41,
+      "threshold_positive_pixels": 73,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.79296875
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-09-03",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-09-03.npz",
+      "probability_max": 0.42578125,
+      "target_positive_pixels": 20,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.269287109375
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-09-04",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-09-04.npz",
+      "probability_max": 0.6806640625,
+      "target_positive_pixels": 5,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.53173828125
+    },
+    {
+      "event_id": "fire_23160511",
+      "target_date": "2019-09-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23160511\\2019-09-05.npz",
+      "probability_max": 0.60595703125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.50244140625
+    },
+    {
+      "event_id": "fire_23300665",
+      "target_date": "2019-09-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300665\\2019-09-06.npz",
+      "probability_max": 0.48681640625,
+      "target_positive_pixels": 64,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2147216796875
+    },
+    {
+      "event_id": "fire_23300665",
+      "target_date": "2019-09-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300665\\2019-09-07.npz",
+      "probability_max": 0.84375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 251,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80908203125
+    },
+    {
+      "event_id": "fire_23300665",
+      "target_date": "2019-09-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300665\\2019-09-13.npz",
+      "probability_max": 0.83740234375,
+      "target_positive_pixels": 6,
+      "threshold_positive_pixels": 222,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81298828125
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-06.npz",
+      "probability_max": 0.85791015625,
+      "target_positive_pixels": 370,
+      "threshold_positive_pixels": 142,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82275390625
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-07.npz",
+      "probability_max": 0.845703125,
+      "target_positive_pixels": 58,
+      "threshold_positive_pixels": 114,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80029296875
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-08.npz",
+      "probability_max": 0.84912109375,
+      "target_positive_pixels": 67,
+      "threshold_positive_pixels": 384,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.833984375
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-09.npz",
+      "probability_max": 0.85205078125,
+      "target_positive_pixels": 46,
+      "threshold_positive_pixels": 279,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.83154296875
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-10.npz",
+      "probability_max": 0.294921875,
+      "target_positive_pixels": 38,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.153564453125
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-11.npz",
+      "probability_max": 0.35107421875,
+      "target_positive_pixels": 43,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.171142578125
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-12.npz",
+      "probability_max": 0.43994140625,
+      "target_positive_pixels": 50,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.324462890625
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-13.npz",
+      "probability_max": 0.79638671875,
+      "target_positive_pixels": 71,
+      "threshold_positive_pixels": 2,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.74072265625
+    },
+    {
+      "event_id": "fire_23300668",
+      "target_date": "2019-09-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300668\\2019-09-14.npz",
+      "probability_max": 0.315673828125,
+      "target_positive_pixels": 69,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.198486328125
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-09-30",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-09-30.npz",
+      "probability_max": 0.276123046875,
+      "target_positive_pixels": 12,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1708984375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-01.npz",
+      "probability_max": 0.462646484375,
+      "target_positive_pixels": 13,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2880859375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-02",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-02.npz",
+      "probability_max": 0.84814453125,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 57,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.779296875
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-03",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-03.npz",
+      "probability_max": 0.7822265625,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7373046875
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-04",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-04.npz",
+      "probability_max": 0.29638671875,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1915283203125
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-05.npz",
+      "probability_max": 0.3310546875,
+      "target_positive_pixels": 16,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1865234375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-06.npz",
+      "probability_max": 0.857421875,
+      "target_positive_pixels": 40,
+      "threshold_positive_pixels": 158,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82373046875
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-07.npz",
+      "probability_max": 0.83935546875,
+      "target_positive_pixels": 35,
+      "threshold_positive_pixels": 119,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80908203125
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-08.npz",
+      "probability_max": 0.45849609375,
+      "target_positive_pixels": 48,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2418212890625
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-09.npz",
+      "probability_max": 0.85595703125,
+      "target_positive_pixels": 55,
+      "threshold_positive_pixels": 285,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.833984375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-10.npz",
+      "probability_max": 0.8603515625,
+      "target_positive_pixels": 101,
+      "threshold_positive_pixels": 260,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82666015625
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-11.npz",
+      "probability_max": 0.8564453125,
+      "target_positive_pixels": 104,
+      "threshold_positive_pixels": 250,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.833984375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-12.npz",
+      "probability_max": 0.85205078125,
+      "target_positive_pixels": 44,
+      "threshold_positive_pixels": 223,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82763671875
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-13.npz",
+      "probability_max": 0.8349609375,
+      "target_positive_pixels": 36,
+      "threshold_positive_pixels": 152,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81396484375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-14.npz",
+      "probability_max": 0.46044921875,
+      "target_positive_pixels": 23,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.312744140625
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-15.npz",
+      "probability_max": 0.275634765625,
+      "target_positive_pixels": 21,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.093994140625
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-16",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-16.npz",
+      "probability_max": 0.2744140625,
+      "target_positive_pixels": 38,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.09808349609375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-17",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-17.npz",
+      "probability_max": 0.33251953125,
+      "target_positive_pixels": 12,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1337890625
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-18",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-18.npz",
+      "probability_max": 0.83984375,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 109,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80859375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-19.npz",
+      "probability_max": 0.81640625,
+      "target_positive_pixels": 13,
+      "threshold_positive_pixels": 12,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.72802734375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-20",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-20.npz",
+      "probability_max": 0.77490234375,
+      "target_positive_pixels": 9,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.65087890625
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-21",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-21.npz",
+      "probability_max": 0.373046875,
+      "target_positive_pixels": 23,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.197021484375
+    },
+    {
+      "event_id": "fire_23300699",
+      "target_date": "2019-10-22",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300699\\2019-10-22.npz",
+      "probability_max": 0.57421875,
+      "target_positive_pixels": 23,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.43212890625
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-06.npz",
+      "probability_max": 0.8564453125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 113,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.81640625
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-07.npz",
+      "probability_max": 0.82958984375,
+      "target_positive_pixels": 16,
+      "threshold_positive_pixels": 47,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7578125
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-08.npz",
+      "probability_max": 0.76123046875,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.51806640625
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-09.npz",
+      "probability_max": 0.689453125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.40234375
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-10.npz",
+      "probability_max": 0.29541015625,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1275634765625
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-11.npz",
+      "probability_max": 0.4208984375,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2548828125
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-12.npz",
+      "probability_max": 0.62060546875,
+      "target_positive_pixels": 5,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.42431640625
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-13.npz",
+      "probability_max": 0.70849609375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.62060546875
+    },
+    {
+      "event_id": "fire_23300744",
+      "target_date": "2019-09-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23300744\\2019-09-14.npz",
+      "probability_max": 0.294189453125,
+      "target_positive_pixels": 10,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.123046875
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-11.npz",
+      "probability_max": 0.75341796875,
+      "target_positive_pixels": 35,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.6728515625
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-12.npz",
+      "probability_max": 0.81982421875,
+      "target_positive_pixels": 56,
+      "threshold_positive_pixels": 32,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.76806640625
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-13.npz",
+      "probability_max": 0.8251953125,
+      "target_positive_pixels": 248,
+      "threshold_positive_pixels": 211,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80712890625
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-14.npz",
+      "probability_max": 0.84765625,
+      "target_positive_pixels": 331,
+      "threshold_positive_pixels": 244,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82373046875
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-15.npz",
+      "probability_max": 0.85595703125,
+      "target_positive_pixels": 162,
+      "threshold_positive_pixels": 401,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.83642578125
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-16",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-16.npz",
+      "probability_max": 0.80517578125,
+      "target_positive_pixels": 36,
+      "threshold_positive_pixels": 9,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.736328125
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-17",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-17.npz",
+      "probability_max": 0.80615234375,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 25,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.76806640625
+    },
+    {
+      "event_id": "fire_23301046",
+      "target_date": "2019-09-18",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301046\\2019-09-18.npz",
+      "probability_max": 0.81103515625,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 164,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7978515625
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-08.npz",
+      "probability_max": 0.77783203125,
+      "target_positive_pixels": 175,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.70458984375
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-09.npz",
+      "probability_max": 0.82958984375,
+      "target_positive_pixels": 61,
+      "threshold_positive_pixels": 255,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8115234375
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-10.npz",
+      "probability_max": 0.822265625,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 186,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8076171875
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-13.npz",
+      "probability_max": 0.84521484375,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 92,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8017578125
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-14.npz",
+      "probability_max": 0.293701171875,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2166748046875
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-15",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-15.npz",
+      "probability_max": 0.360595703125,
+      "target_positive_pixels": 6,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1680908203125
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-16",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-16.npz",
+      "probability_max": 0.493408203125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.268798828125
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-17",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-17.npz",
+      "probability_max": 0.83203125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 44,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.76904296875
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-18",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-18.npz",
+      "probability_max": 0.5771484375,
+      "target_positive_pixels": 9,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.361572265625
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-19",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-19.npz",
+      "probability_max": 0.69921875,
+      "target_positive_pixels": 6,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.599609375
+    },
+    {
+      "event_id": "fire_23301095",
+      "target_date": "2019-09-20",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301095\\2019-09-20.npz",
+      "probability_max": 0.29736328125,
+      "target_positive_pixels": 7,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1890869140625
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-09-26",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-09-26.npz",
+      "probability_max": 0.80224609375,
+      "target_positive_pixels": 18,
+      "threshold_positive_pixels": 6,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.76220703125
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-09-27",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-09-27.npz",
+      "probability_max": 0.82568359375,
+      "target_positive_pixels": 35,
+      "threshold_positive_pixels": 179,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8017578125
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-09-28",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-09-28.npz",
+      "probability_max": 0.81640625,
+      "target_positive_pixels": 21,
+      "threshold_positive_pixels": 48,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.779296875
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-09-29",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-09-29.npz",
+      "probability_max": 0.78955078125,
+      "target_positive_pixels": 32,
+      "threshold_positive_pixels": 1,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.6259765625
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-09-30",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-09-30.npz",
+      "probability_max": 0.8251953125,
+      "target_positive_pixels": 41,
+      "threshold_positive_pixels": 16,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.75146484375
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-01.npz",
+      "probability_max": 0.8642578125,
+      "target_positive_pixels": 70,
+      "threshold_positive_pixels": 351,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82666015625
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-02",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-02.npz",
+      "probability_max": 0.83984375,
+      "target_positive_pixels": 212,
+      "threshold_positive_pixels": 151,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8056640625
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-03",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-03.npz",
+      "probability_max": 0.841796875,
+      "target_positive_pixels": 156,
+      "threshold_positive_pixels": 99,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80126953125
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-04",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-04.npz",
+      "probability_max": 0.8623046875,
+      "target_positive_pixels": 35,
+      "threshold_positive_pixels": 162,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82275390625
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-05.npz",
+      "probability_max": 0.705078125,
+      "target_positive_pixels": 32,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.51904296875
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-06.npz",
+      "probability_max": 0.51953125,
+      "target_positive_pixels": 80,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.343994140625
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-07",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-07.npz",
+      "probability_max": 0.7880859375,
+      "target_positive_pixels": 35,
+      "threshold_positive_pixels": 1,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.65966796875
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-08.npz",
+      "probability_max": 0.377197265625,
+      "target_positive_pixels": 77,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1971435546875
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-09.npz",
+      "probability_max": 0.298095703125,
+      "target_positive_pixels": 62,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.11065673828125
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-10.npz",
+      "probability_max": 0.8447265625,
+      "target_positive_pixels": 6,
+      "threshold_positive_pixels": 34,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.72265625
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-11.npz",
+      "probability_max": 0.83056640625,
+      "target_positive_pixels": 10,
+      "threshold_positive_pixels": 54,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.7841796875
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-12",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-12.npz",
+      "probability_max": 0.60107421875,
+      "target_positive_pixels": 20,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.41357421875
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-13",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-13.npz",
+      "probability_max": 0.30078125,
+      "target_positive_pixels": 119,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.161865234375
+    },
+    {
+      "event_id": "fire_23301101",
+      "target_date": "2019-10-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23301101\\2019-10-14.npz",
+      "probability_max": 0.86328125,
+      "target_positive_pixels": 99,
+      "threshold_positive_pixels": 196,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.833984375
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-10-25",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-10-25.npz",
+      "probability_max": 0.859375,
+      "target_positive_pixels": 156,
+      "threshold_positive_pixels": 288,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.82861328125
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-10-26",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-10-26.npz",
+      "probability_max": 0.85693359375,
+      "target_positive_pixels": 200,
+      "threshold_positive_pixels": 487,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.83935546875
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-10-27",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-10-27.npz",
+      "probability_max": 0.8603515625,
+      "target_positive_pixels": 1271,
+      "threshold_positive_pixels": 529,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8359375
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-10-28",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-10-28.npz",
+      "probability_max": 0.86376953125,
+      "target_positive_pixels": 428,
+      "threshold_positive_pixels": 556,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.8349609375
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-10-29",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-10-29.npz",
+      "probability_max": 0.84423828125,
+      "target_positive_pixels": 99,
+      "threshold_positive_pixels": 105,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.80712890625
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-10-30",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-10-30.npz",
+      "probability_max": 0.27294921875,
+      "target_positive_pixels": 89,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.115966796875
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-10-31",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-10-31.npz",
+      "probability_max": 0.272705078125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.094482421875
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-11-01",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-11-01.npz",
+      "probability_max": 0.2744140625,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1640625
+    },
+    {
+      "event_id": "fire_23410594",
+      "target_date": "2019-11-02",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410594\\2019-11-02.npz",
+      "probability_max": 0.68896484375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.3974609375
+    },
+    {
+      "event_id": "fire_23410720",
+      "target_date": "2019-10-08",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410720\\2019-10-08.npz",
+      "probability_max": 0.33251953125,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2099609375
+    },
+    {
+      "event_id": "fire_23410720",
+      "target_date": "2019-10-09",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410720\\2019-10-09.npz",
+      "probability_max": 0.311767578125,
+      "target_positive_pixels": 4,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.2108154296875
+    },
+    {
+      "event_id": "fire_23410720",
+      "target_date": "2019-10-10",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410720\\2019-10-10.npz",
+      "probability_max": 0.68603515625,
+      "target_positive_pixels": 8,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.478759765625
+    },
+    {
+      "event_id": "fire_23410720",
+      "target_date": "2019-10-11",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23410720\\2019-10-11.npz",
+      "probability_max": 0.466064453125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.31787109375
+    },
+    {
+      "event_id": "fire_23493983",
+      "target_date": "2019-11-05",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23493983\\2019-11-05.npz",
+      "probability_max": 0.81396484375,
+      "target_positive_pixels": 26,
+      "threshold_positive_pixels": 45,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.76318359375
+    },
+    {
+      "event_id": "fire_23493983",
+      "target_date": "2019-11-06",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23493983\\2019-11-06.npz",
+      "probability_max": 0.294677734375,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.1202392578125
+    },
+    {
+      "event_id": "fire_23493983",
+      "target_date": "2019-11-14",
+      "path": "outputs\\predictions\\stage1_2019_3fold\\fold_1\\validation\\fire_23493983\\2019-11-14.npz",
+      "probability_max": 0.51953125,
+      "target_positive_pixels": 0,
+      "threshold_positive_pixels": 0,
+      "top_positive_pixels": 66,
+      "top_threshold": 0.4111328125
+    }
+  ]
+}

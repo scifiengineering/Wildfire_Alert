@@ -1,0 +1,13 @@
+{
+  "models": [
+    "outputs\\stage2\\models_3fold_r4km\\stage2_gbm_3fold_r4km_holdout0.joblib",
+    "outputs\\stage2\\models_3fold_r4km\\stage2_gbm_3fold_r4km_holdout1.joblib",
+    "outputs\\stage2\\models_3fold_r4km\\stage2_gbm_3fold_r4km_holdout2.joblib"
+  ],
+  "candidate_csv": "outputs\\stage2\\candidates_2020_r4km_fair\\stage2_2020_candidates.csv",
+  "output_csv": "outputs\\stage2\\scored_2020_r4km_fair\\stage2_2020_scored_candidates.csv",
+  "candidate_count": 5212367,
+  "ensemble_size": 3,
+  "mean_score": 0.1579808625043252,
+  "maximum_score": 0.9715452188843199
+}

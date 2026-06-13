@@ -1,0 +1,10 @@
+stage2:
+  candidate_radius:
+    minimum_km: 5.0
+    spread_rate_multiplier: 1.5
+  model:
+    class_weight: balanced
+    n_estimators: 1000
+    num_leaves: 63
+  seed: 42
+

@@ -1,0 +1,17 @@
+{
+  "fold": 0,
+  "split": "validation",
+  "years": [
+    2019
+  ],
+  "seed": 42,
+  "event_count": 15,
+  "sample_count": 219,
+  "candidate_count": 51330,
+  "positive_count": 3269,
+  "positive_rate": 0.06368595363335282,
+  "ring_radius_km": 2.0,
+  "include_threshold_candidates": false,
+  "include_target_candidates": false,
+  "csv_path": "outputs\\stage2\\candidates_r2km_fair\\stage2_fold0_validation_candidates.csv"
+}

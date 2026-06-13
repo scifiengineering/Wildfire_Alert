@@ -1,0 +1,13 @@
+{
+  "year": 2020,
+  "predictions_dir": "outputs\\predictions\\stage1_2020_ensemble",
+  "event_count": 201,
+  "sample_count": 2184,
+  "candidate_count": 5212367,
+  "positive_count": 255765,
+  "positive_rate": 0.049068877920530156,
+  "ring_radius_km": 4.0,
+  "include_threshold_candidates": false,
+  "include_target_candidates": false,
+  "output_csv": "outputs\\stage2\\candidates_2020_r4km_fair\\stage2_2020_candidates.csv"
+}

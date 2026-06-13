@@ -1,0 +1,69 @@
+{
+  "model": "outputs\\stage2\\models\\stage2_gbm_r2km_fair_fold0_to_fold1.joblib",
+  "candidate_csv": "outputs\\stage2\\candidates_r2km_fair\\stage2_fold1_validation_candidates.csv",
+  "model_name": "stage2_gbm_r2km_fair_fold0_to_fold1",
+  "rows": 35136,
+  "positive_count": 1930,
+  "positive_rate": 0.054929417122040074,
+  "model_metrics": {
+    "average_precision": 0.394009826964637,
+    "roc_auc": 0.800764032594147,
+    "within_event_auc": 0.7992294824892512,
+    "best_threshold_by_f1": {
+      "threshold": 0.34167645345194053,
+      "precision": 0.3755334281650071,
+      "recall": 0.41036269430051814,
+      "f1": 0.39217628125773707,
+      "alert_rate": 0.06002390710382514
+    }
+  },
+  "distance_baseline_metrics": {
+    "average_precision": 0.19325444250379456,
+    "roc_auc": 0.7851118500651766,
+    "within_event_auc": 0.7949463383707361,
+    "best_threshold_by_f1": {
+      "threshold": -1.0,
+      "precision": 0.19653442772457821,
+      "recall": 0.4466321243523316,
+      "f1": 0.272957568081064,
+      "alert_rate": 0.1248292349726776
+    }
+  },
+  "stage1_probability_baseline_metrics": {
+    "average_precision": 0.15265032484482452,
+    "roc_auc": 0.6292623001211779,
+    "within_event_auc": 0.6217106067593634,
+    "best_threshold_by_f1": {
+      "threshold": 0.8480468750000014,
+      "precision": 0.22143195827406353,
+      "recall": 0.24196891191709843,
+      "f1": 0.23124535776182223,
+      "alert_rate": 0.06002390710382514
+    }
+  },
+  "forecast_wind_alignment_baseline_metrics": {
+    "average_precision": 0.045035789158207634,
+    "roc_auc": 0.4402444748264796,
+    "within_event_auc": 0.4389195666312473,
+    "best_threshold_by_f1": {
+      "threshold": -0.9845671350605466,
+      "precision": 0.055244315288055366,
+      "recall": 0.9554404145077721,
+      "f1": 0.10444929054915178,
+      "alert_rate": 0.9499943078324226
+    }
+  },
+  "summary": {
+    "model_average_precision": 0.394009826964637,
+    "distance_baseline_average_precision": 0.19325444250379456,
+    "stage1_baseline_average_precision": 0.15265032484482452,
+    "model_within_event_auc": 0.7992294824892512,
+    "distance_baseline_within_event_auc": 0.7949463383707361,
+    "stage1_baseline_within_event_auc": 0.6217106067593634,
+    "ap_gain_over_distance": 0.20075538446084243,
+    "within_event_auc_gain_over_distance": 0.004283144118515048,
+    "ap_gain_over_stage1": 0.24135950211981247,
+    "within_event_auc_gain_over_stage1": 0.17751887572988778,
+    "passes_discriminative_check": true
+  }
+}

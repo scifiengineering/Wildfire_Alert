@@ -1,0 +1,599 @@
+{
+  "model": "outputs\\stage2\\models\\stage2_gbm_r2km_fair_fold1_to_fold0.joblib",
+  "candidate_csv": "outputs\\stage2\\candidates_r2km_fair\\stage2_fold0_validation_candidates.csv",
+  "model_name": "stage2_gbm_r2km_fair_fold1_to_fold0",
+  "candidate_rows": 51330,
+  "shap_rows": 5000,
+  "feature_count": 33,
+  "expected_value_log_odds": -5.00961023544041,
+  "top_global_features": [
+    {
+      "feature": "distance_to_current_fire_px",
+      "mean_abs_shap": 1.108705303096677,
+      "mean_shap": 0.7064636591342074
+    },
+    {
+      "feature": "pdsi",
+      "mean_abs_shap": 0.38350679086173745,
+      "mean_shap": 0.18988530735756268
+    },
+    {
+      "feature": "stage1_probability",
+      "mean_abs_shap": 0.3787851390166548,
+      "mean_shap": 0.17718461022179807
+    },
+    {
+      "feature": "forecast_wind_speed",
+      "mean_abs_shap": 0.35391970954001517,
+      "mean_shap": 0.2278361894201576
+    },
+    {
+      "feature": "forecast_wind_direction",
+      "mean_abs_shap": 0.3352566042436012,
+      "mean_shap": 0.28365795052034687
+    },
+    {
+      "feature": "has_current_fire",
+      "mean_abs_shap": 0.32222003542672534,
+      "mean_shap": 0.25782338084050604
+    },
+    {
+      "feature": "minimum_temperature",
+      "mean_abs_shap": 0.2727997362093601,
+      "mean_shap": -0.048602504571883885
+    },
+    {
+      "feature": "specific_humidity",
+      "mean_abs_shap": 0.26771848175068547,
+      "mean_shap": 0.22347558106149404
+    },
+    {
+      "feature": "elevation",
+      "mean_abs_shap": 0.2635874542887573,
+      "mean_shap": 0.023984087871954513
+    },
+    {
+      "feature": "energy_release_component",
+      "mean_abs_shap": 0.26078276714387527,
+      "mean_shap": 0.20972863138518036
+    }
+  ],
+  "local_explanations": [
+    {
+      "rank": 0,
+      "event_id": "fire_23159637",
+      "target_date": "2019-08-17",
+      "row": 131,
+      "col": 126,
+      "label": 1,
+      "model_score": 0.9877166652544246,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_00_fire_23159637_2019-08-17.png"
+    },
+    {
+      "rank": 1,
+      "event_id": "fire_23159637",
+      "target_date": "2019-08-17",
+      "row": 128,
+      "col": 124,
+      "label": 1,
+      "model_score": 0.9862098310323585,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_01_fire_23159637_2019-08-17.png"
+    },
+    {
+      "rank": 2,
+      "event_id": "fire_23159637",
+      "target_date": "2019-08-17",
+      "row": 128,
+      "col": 122,
+      "label": 1,
+      "model_score": 0.9860062728996609,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_02_fire_23159637_2019-08-17.png"
+    },
+    {
+      "rank": 3,
+      "event_id": "fire_23159637",
+      "target_date": "2019-08-17",
+      "row": 127,
+      "col": 123,
+      "label": 1,
+      "model_score": 0.9848669565839078,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_03_fire_23159637_2019-08-17.png"
+    },
+    {
+      "rank": 4,
+      "event_id": "fire_23159637",
+      "target_date": "2019-08-17",
+      "row": 127,
+      "col": 122,
+      "label": 1,
+      "model_score": 0.9846168781917374,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_04_fire_23159637_2019-08-17.png"
+    },
+    {
+      "rank": 5,
+      "event_id": "fire_23037424",
+      "target_date": "2019-07-27",
+      "row": 129,
+      "col": 115,
+      "label": 1,
+      "model_score": 0.9844832472427103,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_05_fire_23037424_2019-07-27.png"
+    },
+    {
+      "rank": 6,
+      "event_id": "fire_23159637",
+      "target_date": "2019-08-17",
+      "row": 129,
+      "col": 123,
+      "label": 1,
+      "model_score": 0.9844480322300909,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_06_fire_23159637_2019-08-17.png"
+    },
+    {
+      "rank": 7,
+      "event_id": "fire_23037424",
+      "target_date": "2019-07-27",
+      "row": 129,
+      "col": 114,
+      "label": 1,
+      "model_score": 0.9839301441007612,
+      "plot": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local\\top_07_fire_23037424_2019-07-27.png"
+    }
+  ],
+  "paired_examples": [
+    {
+      "event_id": "fire_22710141",
+      "target_date": "2019-03-17",
+      "positive_row": 125,
+      "positive_col": 132,
+      "positive_score": 0.0006747193236077758,
+      "negative_row": 131,
+      "negative_col": 126,
+      "negative_score": 9.675405494954933e-05,
+      "distance_px": 5.0,
+      "score_gap": 0.0005779652686582265,
+      "positive_top_shap": [
+        {
+          "feature": "wind_direction",
+          "shap_value": -0.9160967388183849
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": -0.650496933547279
+        },
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": -0.3598522675866917
+        },
+        {
+          "feature": "wind_alignment",
+          "shap_value": 0.310363552833892
+        },
+        {
+          "feature": "forecast_wind_direction",
+          "shap_value": -0.2783575894026155
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": -0.9177654064149502
+        },
+        {
+          "feature": "wind_direction",
+          "shap_value": -0.8268001528285339
+        },
+        {
+          "feature": "slope_alignment",
+          "shap_value": -0.616027586548625
+        },
+        {
+          "feature": "ndvi",
+          "shap_value": -0.35749633247750534
+        },
+        {
+          "feature": "minimum_temperature",
+          "shap_value": -0.34263260702230763
+        }
+      ]
+    },
+    {
+      "event_id": "fire_22710141",
+      "target_date": "2019-03-18",
+      "positive_row": 105,
+      "positive_col": 135,
+      "positive_score": 0.008206682564571882,
+      "negative_row": 121,
+      "negative_col": 131,
+      "negative_score": 0.0005696446679834604,
+      "distance_px": 1.0,
+      "score_gap": 0.007637037896588422,
+      "positive_top_shap": [
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 1.7679623530980821
+        },
+        {
+          "feature": "wind_direction",
+          "shap_value": -0.7743033530175629
+        },
+        {
+          "feature": "forecast_specific_humidity",
+          "shap_value": 0.7020178122458506
+        },
+        {
+          "feature": "energy_release_component",
+          "shap_value": -0.5263734775647588
+        },
+        {
+          "feature": "ndvi",
+          "shap_value": -0.4670025442220017
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "wind_direction",
+          "shap_value": -0.8943966261212464
+        },
+        {
+          "feature": "ndvi",
+          "shap_value": -0.4000773050849177
+        },
+        {
+          "feature": "forecast_wind_direction",
+          "shap_value": -0.368958718606117
+        },
+        {
+          "feature": "energy_release_component",
+          "shap_value": -0.3227972602263845
+        },
+        {
+          "feature": "forecast_temperature",
+          "shap_value": -0.3222353159388544
+        }
+      ]
+    },
+    {
+      "event_id": "fire_22938749",
+      "target_date": "2019-06-10",
+      "positive_row": 149,
+      "positive_col": 130,
+      "positive_score": 0.08534473541143608,
+      "negative_row": 144,
+      "negative_col": 209,
+      "negative_score": 0.0026721016190569993,
+      "distance_px": 1.0,
+      "score_gap": 0.08267263379237909,
+      "positive_top_shap": [
+        {
+          "feature": "forecast_temperature",
+          "shap_value": -1.5616196531499649
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 1.5030931534138776
+        },
+        {
+          "feature": "slope",
+          "shap_value": 0.7864538302281718
+        },
+        {
+          "feature": "has_current_fire",
+          "shap_value": 0.38277991241981735
+        },
+        {
+          "feature": "pdsi",
+          "shap_value": 0.3294785001209777
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 1.4607511789552765
+        },
+        {
+          "feature": "ndvi",
+          "shap_value": -0.944359156440146
+        },
+        {
+          "feature": "forecast_temperature",
+          "shap_value": -0.7112332706501793
+        },
+        {
+          "feature": "evi2",
+          "shap_value": -0.658158516616433
+        },
+        {
+          "feature": "minimum_temperature",
+          "shap_value": -0.5361339692067265
+        }
+      ]
+    },
+    {
+      "event_id": "fire_22938749",
+      "target_date": "2019-06-11",
+      "positive_row": 146,
+      "positive_col": 123,
+      "positive_score": 0.025274549789829084,
+      "negative_row": 151,
+      "negative_col": 131,
+      "negative_score": 0.0048012819490227615,
+      "distance_px": 0.0,
+      "score_gap": 0.020473267840806324,
+      "positive_top_shap": [
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 1.7278571916550367
+        },
+        {
+          "feature": "forecast_temperature",
+          "shap_value": -1.6540238192886607
+        },
+        {
+          "feature": "stage1_probability",
+          "shap_value": 1.5377830801653367
+        },
+        {
+          "feature": "minimum_temperature",
+          "shap_value": -0.746068809892103
+        },
+        {
+          "feature": "wind_direction",
+          "shap_value": -0.5528932803356553
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 1.6142746316754761
+        },
+        {
+          "feature": "forecast_temperature",
+          "shap_value": -1.41976264548604
+        },
+        {
+          "feature": "wind_direction",
+          "shap_value": -0.8797957653483949
+        },
+        {
+          "feature": "minimum_temperature",
+          "shap_value": -0.5564700338212495
+        },
+        {
+          "feature": "slope",
+          "shap_value": 0.42194110316438893
+        }
+      ]
+    },
+    {
+      "event_id": "fire_22938749",
+      "target_date": "2019-06-12",
+      "positive_row": 143,
+      "positive_col": 214,
+      "positive_score": 0.40999450838043827,
+      "negative_row": 156,
+      "negative_col": 128,
+      "negative_score": 0.004149985978645882,
+      "distance_px": 1.4142135623730951,
+      "score_gap": 0.40584452240179236,
+      "positive_top_shap": [
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 1.4107122206167817
+        },
+        {
+          "feature": "forecast_wind_direction",
+          "shap_value": 0.5434840176715369
+        },
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": 0.4243482873423227
+        },
+        {
+          "feature": "has_current_fire",
+          "shap_value": 0.3694251704093462
+        },
+        {
+          "feature": "pdsi",
+          "shap_value": 0.28335435862540326
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "forecast_temperature",
+          "shap_value": -1.8318676855223712
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 1.4166118117246105
+        },
+        {
+          "feature": "minimum_temperature",
+          "shap_value": -0.5058716464353706
+        },
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": 0.3225446516043565
+        },
+        {
+          "feature": "stage1_probability",
+          "shap_value": -0.2496752785951262
+        }
+      ]
+    },
+    {
+      "event_id": "fire_22938749",
+      "target_date": "2019-06-13",
+      "positive_row": 151,
+      "positive_col": 115,
+      "positive_score": 0.17116973270917504,
+      "negative_row": 143,
+      "negative_col": 205,
+      "negative_score": 0.021307049413591555,
+      "distance_px": 5.0990195135927845,
+      "score_gap": 0.1498626832955835,
+      "positive_top_shap": [
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": 0.9738094186671311
+        },
+        {
+          "feature": "forecast_specific_humidity",
+          "shap_value": 0.9297949341710395
+        },
+        {
+          "feature": "forecast_temperature",
+          "shap_value": -0.918110532855381
+        },
+        {
+          "feature": "specific_humidity",
+          "shap_value": 0.8957588364500334
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": -0.6728206041782714
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": -0.9885111145817644
+        },
+        {
+          "feature": "ndvi",
+          "shap_value": -0.8542611044449117
+        },
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": 0.7855184790203172
+        },
+        {
+          "feature": "forecast_specific_humidity",
+          "shap_value": 0.7371438795849947
+        },
+        {
+          "feature": "specific_humidity",
+          "shap_value": 0.5902445288517293
+        }
+      ]
+    },
+    {
+      "event_id": "fire_22938749",
+      "target_date": "2019-06-14",
+      "positive_row": 155,
+      "positive_col": 109,
+      "positive_score": 0.8651855727012411,
+      "negative_row": 138,
+      "negative_col": 215,
+      "negative_score": 0.0014514301947367544,
+      "distance_px": 2.8284271247461903,
+      "score_gap": 0.8637341425065044,
+      "positive_top_shap": [
+        {
+          "feature": "slope",
+          "shap_value": 0.883715497935615
+        },
+        {
+          "feature": "forecast_wind_direction",
+          "shap_value": 0.7327141685362653
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 0.6775024015957667
+        },
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": 0.6525349474672277
+        },
+        {
+          "feature": "specific_humidity",
+          "shap_value": 0.6357516784584137
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "ndvi",
+          "shap_value": -1.0491490340133867
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": -0.7080323676104815
+        },
+        {
+          "feature": "maximum_temperature",
+          "shap_value": -0.6640772666984791
+        },
+        {
+          "feature": "forecast_specific_humidity",
+          "shap_value": 0.4624321952573176
+        },
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": 0.4507824535197475
+        }
+      ]
+    },
+    {
+      "event_id": "fire_22938749",
+      "target_date": "2019-06-15",
+      "positive_row": 141,
+      "positive_col": 91,
+      "positive_score": 0.9692993846712885,
+      "negative_row": 128,
+      "negative_col": 111,
+      "negative_score": 0.00387405329804362,
+      "distance_px": 2.23606797749979,
+      "score_gap": 0.9654253313732449,
+      "positive_top_shap": [
+        {
+          "feature": "forecast_wind_direction",
+          "shap_value": 1.0098645066554859
+        },
+        {
+          "feature": "forecast_wind_speed",
+          "shap_value": 0.6789972695455738
+        },
+        {
+          "feature": "specific_humidity",
+          "shap_value": 0.6689602682050543
+        },
+        {
+          "feature": "pdsi",
+          "shap_value": 0.6337996444971045
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": 0.5841881223254641
+        }
+      ],
+      "negative_top_shap": [
+        {
+          "feature": "slope_alignment",
+          "shap_value": -0.9644534678853206
+        },
+        {
+          "feature": "wind_alignment",
+          "shap_value": -0.7969807878772637
+        },
+        {
+          "feature": "stage1_probability",
+          "shap_value": 0.5591191992421366
+        },
+        {
+          "feature": "slope",
+          "shap_value": 0.472169334482426
+        },
+        {
+          "feature": "distance_to_current_fire_px",
+          "shap_value": -0.4260534854786058
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "global_importance_csv": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\global_shap_importance.csv",
+    "sample_shap_values_csv": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\sample_shap_values.csv",
+    "global_beeswarm_png": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\global_beeswarm.png",
+    "local_dir": "outputs\\stage2\\shap\\stage2_gbm_r2km_fair_fold1_to_fold0\\local"
+  }
+}

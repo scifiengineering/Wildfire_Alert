@@ -1,0 +1,21 @@
+[
+  {
+    "fold": 0,
+    "epoch": 0,
+    "train_years": [
+      2020,
+      2021
+    ],
+    "validation_year": 2018,
+    "test_year": 2019,
+    "lr": 0.0001,
+    "train_loss": 1.411537766456604,
+    "val_loss": 7.596378803253174,
+    "val_average_precision": 5.0600943382594336e-05,
+    "val_dice": 0.0001585137748470342,
+    "val_iou": 7.926316957562499e-05,
+    "val_precision": 7.926316957562499e-05,
+    "val_recall": 1.0,
+    "val_positive_rate": 7.62939453125e-05
+  }
+]

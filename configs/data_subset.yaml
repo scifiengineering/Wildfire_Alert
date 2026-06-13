@@ -1,0 +1,10 @@
+data:
+  root: wsts_subset/wsts_subset
+  backend: geotiff
+  years: [2018]
+  channels: 23
+  active_fire_channel: 22
+  input_days: 5
+  evaluation_window_days: 5
+  dataset_version: subset
+

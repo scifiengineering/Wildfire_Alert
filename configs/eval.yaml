@@ -1,0 +1,7 @@
+evaluation:
+  pixel_threshold: 0.5
+  front_radius_km: 2.0
+  alert_thresholds: [0.2, 0.5, 0.8]
+  headline_stage1_metric: average_precision
+  headline_stage2_metric: within_event_discrimination_auc
+

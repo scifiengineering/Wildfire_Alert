@@ -1,0 +1,10 @@
+data:
+  root: wsts_data
+  backend: geotiff
+  years: [2018, 2019, 2020, 2021]
+  channels: 23
+  active_fire_channel: 22
+  input_days: 5
+  evaluation_window_days: 5
+  dataset_version: v1.0
+  dataset_doi: 10.5281/zenodo.8006177

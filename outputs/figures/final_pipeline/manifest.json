@@ -1,0 +1,10 @@
+{
+  "figures": [
+    "outputs\\figures\\final_pipeline\\01_pipeline_overview.png",
+    "outputs\\figures\\final_pipeline\\02_stage1_qualitative.png",
+    "outputs\\figures\\final_pipeline\\03_stage2_baseline_comparison.png",
+    "outputs\\figures\\final_pipeline\\04_feature_engineering_shap_importance.png",
+    "outputs\\figures\\final_pipeline\\05_stage2_candidate_alert_map.png",
+    "outputs\\figures\\final_pipeline\\06_similar_distance_discrimination.png"
+  ]
+}

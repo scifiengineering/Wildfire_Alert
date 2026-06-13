@@ -1,0 +1,23 @@
+{
+  "event_day_count": 543,
+  "window_count": 181,
+  "mean_model_alert_count": 31.16022099447514,
+  "mean_naive_alert_count": 897.804788213628,
+  "mean_model_precision": 0.13885392342248173,
+  "mean_naive_precision": 0.029579174161540885,
+  "mean_alert_reduction_vs_naive": 0.9727113862763973,
+  "mean_dropped_previous_alerts": 16.114180478821364,
+  "mean_dropped_previous_2km_alerts": 16.11049723756906,
+  "mean_ap": 0.27674850431748743,
+  "mean_auc": 0.8456833407442326,
+  "model": "outputs\\stage2\\models_3fold_r4km\\stage2_gbm_3fold_r4km_holdout1.joblib",
+  "candidate_csv": "outputs\\stage2\\candidates_3fold_r4km_fair\\stage2_fold1_validation_candidates.csv",
+  "model_name": "stage2_gbm_3fold_r4km_holdout1",
+  "threshold": 0.8396428117675382,
+  "radii_km": [
+    2.0,
+    3.0,
+    4.0
+  ],
+  "naive_radius_km": 4.0
+}

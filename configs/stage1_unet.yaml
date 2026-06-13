@@ -1,0 +1,23 @@
+stage1:
+  encoder: resnet18
+  encoder_weights: imagenet
+  input_days: 5
+  raw_channels_per_day: 23
+  circular_direction_encoding: true
+  model_channels_per_day: 26
+  spatial_multiple: 32
+  crop_size: 256
+  exclude_empty_current_fire: false
+  uncertainty:
+    monte_carlo_dropout_passes: 0
+    calibration: isotonic
+  loss:
+    focal_weight: 1.0
+    dice_weight: 1.0
+    focal_gamma: 2.0
+  optimizer:
+    name: adamw
+    learning_rate: 0.0001
+    weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  seed: 42

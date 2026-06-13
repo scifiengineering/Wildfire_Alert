@@ -1,0 +1,29 @@
+{
+  "event_day_count": 5382,
+  "window_count": 1794,
+  "mean_model_alert_count": 89.52564102564102,
+  "mean_naive_alert_count": 2589.4583797844666,
+  "mean_model_precision": 0.17473298850025562,
+  "mean_naive_precision": 0.039552685038950104,
+  "mean_alert_reduction_vs_naive": 0.9701086543596649,
+  "mean_dropped_previous_alerts": 47.55053883314753,
+  "mean_dropped_previous_2km_alerts": 47.55053883314753,
+  "mean_ap": 0.24592697510792966,
+  "mean_auc": 0.8219556453339341,
+  "mean_fixed_3day_naive_alert_count": 2615.4448160535117,
+  "mean_fixed_3day_naive_precision": 0.04592661389417949,
+  "mean_final_day_model_alert_count": 88.58138238573021,
+  "mean_final_day_model_precision": 0.1640960423108555,
+  "mean_final_day_alert_reduction_vs_fixed_naive": 0.9641193983474596,
+  "model": null,
+  "candidate_csv": "outputs\\stage2\\scored_2020_r4km_fair\\stage2_2020_scored_candidates.csv",
+  "model_name": "stage2_2020_external_ensemble",
+  "threshold": 0.7777810642240797,
+  "radii_km": [
+    2.0,
+    3.0,
+    4.0
+  ],
+  "naive_radius_km": 4.0,
+  "fixed_baseline": "initial-current-fire 4 km alerts evaluated on final target day"
+}

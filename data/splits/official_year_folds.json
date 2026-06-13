@@ -1,0 +1,110 @@
+[
+  {
+    "index": 0,
+    "train_years": [
+      2020,
+      2021
+    ],
+    "validation_year": 2018,
+    "test_year": 2019
+  },
+  {
+    "index": 1,
+    "train_years": [
+      2019,
+      2021
+    ],
+    "validation_year": 2018,
+    "test_year": 2020
+  },
+  {
+    "index": 2,
+    "train_years": [
+      2019,
+      2020
+    ],
+    "validation_year": 2018,
+    "test_year": 2021
+  },
+  {
+    "index": 3,
+    "train_years": [
+      2020,
+      2021
+    ],
+    "validation_year": 2019,
+    "test_year": 2018
+  },
+  {
+    "index": 4,
+    "train_years": [
+      2018,
+      2021
+    ],
+    "validation_year": 2019,
+    "test_year": 2020
+  },
+  {
+    "index": 5,
+    "train_years": [
+      2018,
+      2020
+    ],
+    "validation_year": 2019,
+    "test_year": 2021
+  },
+  {
+    "index": 6,
+    "train_years": [
+      2019,
+      2021
+    ],
+    "validation_year": 2020,
+    "test_year": 2018
+  },
+  {
+    "index": 7,
+    "train_years": [
+      2018,
+      2021
+    ],
+    "validation_year": 2020,
+    "test_year": 2019
+  },
+  {
+    "index": 8,
+    "train_years": [
+      2018,
+      2019
+    ],
+    "validation_year": 2020,
+    "test_year": 2021
+  },
+  {
+    "index": 9,
+    "train_years": [
+      2019,
+      2020
+    ],
+    "validation_year": 2021,
+    "test_year": 2018
+  },
+  {
+    "index": 10,
+    "train_years": [
+      2018,
+      2020
+    ],
+    "validation_year": 2021,
+    "test_year": 2019
+  },
+  {
+    "index": 11,
+    "train_years": [
+      2018,
+      2019
+    ],
+    "validation_year": 2021,
+    "test_year": 2020
+  }
+]

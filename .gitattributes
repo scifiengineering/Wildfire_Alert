@@ -1,0 +1,2 @@
+outputs/checkpoints/**/*.pt filter=lfs diff=lfs merge=lfs -text
+outputs/stage2/candidates_3fold_r4km_fair/*.csv filter=lfs diff=lfs merge=lfs -text
