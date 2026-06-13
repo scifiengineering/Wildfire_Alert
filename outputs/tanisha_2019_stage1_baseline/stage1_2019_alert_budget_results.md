@@ -1,0 +1,5 @@
+# Stage-1 2019 Global-Threshold Alert-Budget Results
+
+| method_name | split_protocol | global_probability_threshold | event_days_evaluated | target_mean_alerts_per_event_day | achieved_mean_alerts_per_event_day | total_alerts | true_positive_alerts | false_positive_alerts | precision |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Stage-1 WSTS-style probability baseline | 2019 3-fold event-level out-of-fold validation; existing Stage-1 probability artifacts | 0.7568359375 | 617 | 90 | 90.25121556 | 55685 | 9210 | 46475 | 0.1653946305 |

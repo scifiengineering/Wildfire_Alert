@@ -1,0 +1,20 @@
+{
+  "script": "scripts/26_evaluate_stage1_alert_budget.py",
+  "command": ".venv/bin/python scripts/26_evaluate_stage1_alert_budget.py --prediction-root outputs/predictions/stage1_2019_3fold --data-root wsts_hdf5/2019 --year 2019 --target-mean-alerts-per-event-day 90.0 --output-dir outputs/tanisha_2019_stage1_baseline",
+  "prediction_root": "outputs/predictions/stage1_2019_3fold",
+  "data_root": "wsts_hdf5/2019",
+  "year": 2019,
+  "prediction_artifacts_evaluated": 617,
+  "result": {
+    "method_name": "Stage-1 WSTS-style probability baseline",
+    "split_protocol": "2019 3-fold event-level out-of-fold validation; existing Stage-1 probability artifacts",
+    "global_probability_threshold": 0.7568359375,
+    "event_days_evaluated": 617,
+    "target_mean_alerts_per_event_day": 90.0,
+    "achieved_mean_alerts_per_event_day": 90.25121555915722,
+    "total_alerts": 55685,
+    "true_positive_alerts": 9210,
+    "false_positive_alerts": 46475,
+    "precision": 0.16539463051090958
+  }
+}
