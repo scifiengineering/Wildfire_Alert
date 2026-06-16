@@ -138,7 +138,7 @@ Key regenerated-checkpoint dual catch artifact:
 
 ## Bottom Line
 
-The earlier 50-event discrepancy was caused by incomplete data, not by Tanisha's method. On the corrected full 2020 universe:
+On the full 2020 universe:
 
 - Tanisha's reported result shows Stage 2 beating WSTS-as-alerter.
 - The local rerun using Tanisha's Stage 1 checkpoints also shows Stage 2 beating WSTS-as-alerter.
