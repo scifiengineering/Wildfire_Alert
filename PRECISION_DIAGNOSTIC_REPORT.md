@@ -1,6 +1,6 @@
 # Precision Diagnostic Report
 
-This note investigates why the Stage 2 alert precision is not numerically high even when the method is outperforming WSTS-as-alerter and naive 4 km flooding.
+This note investigates why Stage 2 alert precision is modest in absolute terms even when the method outperforms WSTS-as-alerter and naive 4 km flooding.
 
 ## Short Answer
 
@@ -10,12 +10,12 @@ The precision is also budget-dependent. If the system is allowed to send only th
 
 ## Diagnostic Method
 
-I ran a budget-sensitivity diagnostic on the corrected full 2020 scored candidate files:
+The diagnostic evaluates precision sensitivity on the full 2020 scored candidate files:
 
 - `outputs/stage2/scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2/stage2_2020_scored_candidates.csv`
 - `outputs/stage2/scored_2020_r4km_fair_tanisha_ckpt_full2020/stage2_2020_scored_candidates.csv`
 
-For each run, I measured precision at fixed global alert budgets. This diagnostic is explanatory: it shows how precision changes as the alert budget changes. It is not meant to replace the official matched-volume comparison, which uses the frozen Stage 2 threshold and one global WSTS threshold matched to that run's Stage 2 alert volume.
+For each run, precision is measured at fixed global alert budgets. This shows how precision changes as the alert budget changes. The matched-volume comparison remains the primary alert-quality result because it uses the frozen Stage 2 threshold and one global WSTS threshold matched to that run's Stage 2 alert volume.
 
 Diagnostic output:
 
@@ -67,7 +67,7 @@ The low-looking precision is not best explained as "the model is weak." The diag
 - The candidate base rate is only about 0.049.
 - At strict budgets of 5 to 10 alerts/day, Stage 2 precision is roughly 0.63 to 0.70.
 - Around larger operational budgets, precision drops because the system is trading some precision for greater recall and event-day coverage.
-- Across the tested budgets, Stage 2 stays ahead of WSTS precision in both local full-2020 runs.
+- Across the tested budgets, Stage 2 stays ahead of WSTS precision in both full-2020 validation runs.
 
 So the justification is:
 
@@ -78,4 +78,3 @@ Stage 2 operates in a rare-event spatial alerting setting where the raw positive
 Do not frame the result as "Stage 2 is perfect" or "every alert should be trusted equally." A more defensible statement is:
 
 > Although absolute precision remains limited by the rarity and spatial ambiguity of wildfire spread, Stage 2 substantially enriches true positives relative to the candidate base rate and outperforms WSTS-as-alerter at matched alert volume. This means the model is useful as a prioritization and alert-screening layer, not as a guarantee that every alerted pixel will burn.
-
