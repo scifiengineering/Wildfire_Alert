@@ -33,6 +33,32 @@ The tested filters are:
 - wind alignment and forecast wind alignment;
 - simple combined rules using distance, Stage 1 probability, and forecast wind alignment.
 
+## Filters Tested and Rationale
+
+The filters are applied after candidate scoring for this sensitivity test. Stage 1 output, Stage 2 model weights, and Stage 2 scores are kept fixed. The experiment only changes which already-scored candidate rows are eligible for alert selection.
+
+| Filter type | Examples | Rationale |
+|---|---|---|
+| Distance from current fire | `distance <= 2 km`, `distance <= 3 km`, base `distance <= 4 km` | Fire spread is spatially local, so farther candidates may contribute false positives. |
+| Stage 1 probability | `stage1_probability >= 0.10`, `>= 0.20`, `>= 0.30` | Very low Stage 1 probability candidates may be weak candidates before Stage 2 ranking. |
+| Stage 1 top mask | `stage1_top_mask == 1` | Tests whether restricting to the highest Stage 1 risk pixels improves precision. |
+| Wind alignment | `wind_alignment >= 0` | Fire spread may be more plausible in the wind-aligned direction. |
+| Forecast wind alignment | `forecast_wind_alignment >= 0` | Tests the same spread-direction idea using forecast wind. |
+| Combined rules | `distance <= 3 km and stage1_probability >= 0.10`; `distance <= 3 km and forecast_wind_alignment >= 0` | Tests simple combinations of spatial proximity, Stage 1 risk, and physical spread plausibility. |
+
+These filters were chosen because they are simple, interpretable, based on features already available to Stage 2, and physically plausible. They should be understood as first-pass sensitivity checks, not as an exhaustive search for the best possible filtering policy.
+
+Other filters could also be tested, including:
+
+- additional Stage 1 probability thresholds such as `0.05`, `0.15`, `0.25`, or `0.40`;
+- quantile-based Stage 1 filters, such as keeping the top 5%, 10%, or 20% per event-day;
+- fire-front distance bands that exclude candidates that are either too close or too far;
+- terrain, vegetation, landcover, drought, or fire-danger filters;
+- learned candidate-pruning models;
+- validation-set optimization of a multi-filter rule subject to a minimum recall constraint.
+
+The main caution is that trying many filters can become test-set tuning if the rule is selected based on 2020 performance. A thesis-safe version would choose any filtering rule using training/validation data, then evaluate it once on the 2020 test set.
+
 ## Key Findings
 
 Filtering can improve precision at low and moderate recall targets, especially filters based on minimum Stage 1 probability. The gains are smaller at higher recall because stricter filters begin to remove true positives that are needed to reach the recall target.
@@ -93,4 +119,3 @@ Results:
 outputs/stage2/filter_sensitivity/candidate_filter_sensitivity.json
 outputs/stage2/filter_sensitivity/candidate_filter_sensitivity_summary.csv
 ```
-
