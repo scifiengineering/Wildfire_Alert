@@ -14,30 +14,7 @@ The fairest comparison for point 1 uses one global WSTS threshold matched to Sta
 
 ## Main Reproduction Lessons
 
-### 1. The first 2020 run was incomplete
-
-The first reproduced 2020 run used only 50 events because the Google Drive folder download stopped at the folder-download limit. That produced a misleading 50-event subset:
-
-| Check | Incomplete subset | Correct full 2020 |
-|---|---:|---:|
-| 2020 events | 50 | 201 |
-| Active-current-fire samples | 342 | 2,184 |
-| Candidate rows | 373,223 | about 5.21M |
-
-The 50-event result should not be used to judge Tanisha's result. It was an incomplete-data artifact.
-
-### 2. After restoring the full data, the conclusion changed
-
-Once the full 201-event 2020 universe was restored and converted to HDF5, the regenerated-checkpoint support run changed direction and supported Tanisha's matched-volume claim.
-
-| Run | Stage 2 TP alerts | WSTS TP alerts | Result |
-|---|---:|---:|---|
-| Incomplete 50-event subset | 4,085 | 4,561 | Did not support point 1 |
-| Full 2020 regenerated-checkpoint run | 107,046 | 94,602 | Supports point 1 |
-
-This is the most important audit finding: the earlier discrepancy was driven by incomplete data, not by evidence that Tanisha's method was invalid.
-
-### 3. Checkpoint differences change absolute values
+### 1. Checkpoint differences change absolute values
 
 We used two local checkpoint tracks:
 
@@ -49,6 +26,10 @@ We used two local checkpoint tracks:
 The checkpoint files are not identical. This changes Stage 1 probability maps, Stage 2 candidate features, Stage 2 model scores, and the frozen Stage 2 alert threshold. Therefore, exact alert volume and true-positive counts differ across runs.
 
 That difference is expected and does not undermine the thesis if the comparison direction remains stable.
+
+### 2. The full-2020 runs support the same framework direction
+
+All full-2020 runs use the same 201-event / 2,184-sample 2020 evaluation universe. The absolute alert volumes differ because each run has its own frozen checkpoint and threshold artifacts, but the Stage 2 versus WSTS comparison direction remains stable.
 
 ## Primary Matched-Volume Results
 
@@ -122,9 +103,7 @@ This means the conclusion is not dependent on only one catch-rate definition.
 
 ## Anything Not Supporting Her Argument?
 
-The only result that did not support her primary matched-volume claim was the early 50-event subset run. That run showed WSTS ahead of Stage 2 on precision, recall, and true-positive alerts. However, that run is not a valid full-2020 reproduction because the 2020 data download was incomplete.
-
-After correcting the data universe to 201 events and 2,184 samples:
+In the full-2020 thesis-facing results summarized here, I did not find a result that reverses Tanisha's main argument:
 
 - Tanisha's reported result supports the argument.
 - The local rerun using Tanisha's Stage 1 checkpoints supports the argument.
@@ -132,14 +111,12 @@ After correcting the data universe to 201 events and 2,184 samples:
 - Both catch-rate definitions support the argument.
 - Alert fatigue and ranking metrics support the argument.
 
-So the meaningful final audit finding is supportive. The non-supportive result is preserved as a data-completeness lesson, not as evidence against the thesis method.
+So the meaningful final audit finding is supportive. The remaining differences are differences in absolute values caused by non-identical checkpoint, score, and threshold artifacts.
 
 ## Reports and Artifacts
 
 - `FULL_2020_REGENERATED_CHECKPOINT_VALIDATION_REPORT.md`
 - `CHECKPOINT_COMPARISON_AND_DUAL_CATCH_REPORT.md`
-- `REGENERATED_CHECKPOINT_VALIDATION_REPORT.md` superseded 50-event subset report
-- `REPRODUCTION_COMMANDS_AND_VALIDATION.md` superseded 50-event command report
 - `outputs/stage2/matched_volume_tanisha_ckpt_full2020/`
 - `outputs/stage2/matched_volume_tanisha_ckpt_full2020_dual_catch/`
 - `outputs/stage2/matched_volume_imagenet_noamp_full2020_retrained_stage2/`

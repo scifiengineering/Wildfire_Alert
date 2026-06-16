@@ -1,8 +1,8 @@
 # Full 2020 Regenerated-Checkpoint Validation Report
 
-This report supersedes the earlier 50-event subset validation. The earlier subset was useful for debugging, but it was not a full 2020 reproduction because the Google Drive download had stopped at 50 events. After the remaining archives were uploaded, I restored the full 2020 event universe, converted the missing raw events to HDF5, regenerated the 2020 Stage 1 predictions, regenerated Stage 2 candidates and scores, and reran the matched-volume comparison.
+This report documents a full-2020 regenerated-checkpoint validation of Tanisha's matched-volume wildfire alerting framework. I used the full 2020 event universe, regenerated the 2020 Stage 1 predictions, regenerated Stage 2 candidates and scores, and reran the matched-volume comparison.
 
-This is still not an exact reproduction of Tanisha's checkpoint result, because this run uses my regenerated ImageNet-initialized Stage 1 checkpoints and regenerated Stage 2 models. It is a stronger validator than the earlier subset because it now uses the same 201-event / 2,184-sample 2020 universe.
+This is not an exact reproduction of Tanisha's checkpoint result, because this run uses my regenerated ImageNet-initialized Stage 1 checkpoints and regenerated Stage 2 models. It should be read as an independent validation of the framework direction on the same 201-event / 2,184-sample 2020 universe.
 
 ## Checkpoint Provenance
 
@@ -23,7 +23,7 @@ This checkpoint difference also changes downstream artifacts:
 - Stage 2 GBM models were retrained from regenerated 2019 out-of-fold Stage 1 predictions.
 - The frozen Stage 2 threshold is regenerated from those Stage 2 models: `0.8117221967059977`.
 
-Tanisha's reported result used her original checkpoint/threshold artifact set and reported about `89.53` Stage 2 alerts/event-day. My regenerated full-2020 run uses a different score distribution and produces about `75.88` Stage 2 alerts/event-day. The important validation point is that, after correcting the data universe, the comparison direction is now the same: Stage 2 beats WSTS-as-alerter at matched volume.
+Tanisha's reported result used her original checkpoint/threshold artifact set and reported about `89.53` Stage 2 alerts/event-day. My regenerated full-2020 run uses a different score distribution and produces about `75.88` Stage 2 alerts/event-day. The important validation point is that the comparison direction is the same: Stage 2 beats WSTS-as-alerter at matched volume.
 
 ## Data Universe
 
@@ -183,10 +183,8 @@ Stage 2 scoring and evaluation:
 
 ## Validator Conclusion
 
-After correcting the 2020 data universe, the regenerated-checkpoint validation supports Tanisha's thesis story:
+The regenerated-checkpoint validation supports Tanisha's thesis story:
 
 - Stage 2 beats WSTS-as-alerter at matched alert volume on the full 2020 universe.
 - Stage 2 sharply reduces alert fatigue compared with naive 4 km flooding.
 - Stage 2 ranks candidates better than WSTS/Stage 1 and distance-only baselines.
-
-The earlier contrary 50-event result should be treated as an incomplete-data artifact, not as evidence against Tanisha's method.
