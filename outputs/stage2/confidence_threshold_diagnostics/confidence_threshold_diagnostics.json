@@ -1,0 +1,366 @@
+{
+  "scored_candidate_csv": "outputs/stage2/scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2/stage2_2020_scored_candidates.csv",
+  "rows": 5212827,
+  "positives": 255105,
+  "candidate_positive_rate": 0.0489379371308505,
+  "event_days": 2184,
+  "thresholds": [
+    {
+      "threshold": 0.95,
+      "stage2": {
+        "alerts": 6368,
+        "alerts_per_day": 2.9157509157509156,
+        "true_positive_alerts": 4577,
+        "precision": 0.71875,
+        "recall": 0.017941631877070225,
+        "f1": 0.03500935086987949,
+        "lift_over_base": 14.686969703651437
+      },
+      "wsts": {
+        "alerts": 0,
+        "alerts_per_day": 0.0,
+        "true_positive_alerts": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "lift_over_base": 0.0
+      }
+    },
+    {
+      "threshold": 0.94,
+      "stage2": {
+        "alerts": 12439,
+        "alerts_per_day": 5.69551282051282,
+        "true_positive_alerts": 8553,
+        "precision": 0.6875954658734625,
+        "recall": 0.03352737108249544,
+        "f1": 0.06393714678707053,
+        "lift_over_base": 14.050356557428369
+      },
+      "wsts": {
+        "alerts": 0,
+        "alerts_per_day": 0.0,
+        "true_positive_alerts": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "lift_over_base": 0.0
+      }
+    },
+    {
+      "threshold": 0.93,
+      "stage2": {
+        "alerts": 17458,
+        "alerts_per_day": 7.993589743589744,
+        "true_positive_alerts": 11620,
+        "precision": 0.6655974338412189,
+        "recall": 0.04554987162148919,
+        "f1": 0.0852646910989386,
+        "lift_over_base": 13.600847785257912
+      },
+      "wsts": {
+        "alerts": 0,
+        "alerts_per_day": 0.0,
+        "true_positive_alerts": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "lift_over_base": 0.0
+      }
+    },
+    {
+      "threshold": 0.92,
+      "stage2": {
+        "alerts": 20931,
+        "alerts_per_day": 9.583791208791208,
+        "true_positive_alerts": 13661,
+        "precision": 0.6526682910515503,
+        "recall": 0.053550498814213754,
+        "f1": 0.09897984320885682,
+        "lift_over_base": 13.336653102202543
+      },
+      "wsts": {
+        "alerts": 0,
+        "alerts_per_day": 0.0,
+        "true_positive_alerts": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "lift_over_base": 0.0
+      }
+    },
+    {
+      "threshold": 0.91,
+      "stage2": {
+        "alerts": 25065,
+        "alerts_per_day": 11.476648351648352,
+        "true_positive_alerts": 15824,
+        "precision": 0.6313185717135448,
+        "recall": 0.06202936045941867,
+        "f1": 0.11295998857836313,
+        "lift_over_base": 12.900391980673849
+      },
+      "wsts": {
+        "alerts": 0,
+        "alerts_per_day": 0.0,
+        "true_positive_alerts": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "lift_over_base": 0.0
+      }
+    },
+    {
+      "threshold": 0.9,
+      "stage2": {
+        "alerts": 30014,
+        "alerts_per_day": 13.742673992673993,
+        "true_positive_alerts": 18142,
+        "precision": 0.6044512560804958,
+        "recall": 0.07111581505654535,
+        "f1": 0.1272591444274145,
+        "lift_over_base": 12.351384049235893
+      },
+      "wsts": {
+        "alerts": 514,
+        "alerts_per_day": 0.23534798534798534,
+        "true_positive_alerts": 318,
+        "precision": 0.6186770428015564,
+        "recall": 0.001246545540071735,
+        "f1": 0.002488077959776073,
+        "lift_over_base": 12.642074412481563
+      }
+    },
+    {
+      "threshold": 0.875,
+      "stage2": {
+        "alerts": 55557,
+        "alerts_per_day": 25.438186813186814,
+        "true_positive_alerts": 26918,
+        "precision": 0.4845114027035297,
+        "recall": 0.10551733599890241,
+        "f1": 0.17329444862905666,
+        "lift_over_base": 9.900527711416212
+      },
+      "wsts": {
+        "alerts": 9287,
+        "alerts_per_day": 4.252289377289378,
+        "true_positive_alerts": 5378,
+        "precision": 0.5790890492085711,
+        "recall": 0.02108151545442073,
+        "f1": 0.040682017610215136,
+        "lift_over_base": 11.83313157765927
+      }
+    },
+    {
+      "threshold": 0.85,
+      "stage2": {
+        "alerts": 100112,
+        "alerts_per_day": 45.83882783882784,
+        "true_positive_alerts": 39720,
+        "precision": 0.3967556336902669,
+        "recall": 0.15570059387311108,
+        "f1": 0.22363794525599845,
+        "lift_over_base": 8.107322395494926
+      },
+      "wsts": {
+        "alerts": 24259,
+        "alerts_per_day": 11.107600732600732,
+        "true_positive_alerts": 12573,
+        "precision": 0.5182818747681273,
+        "recall": 0.04928558828717587,
+        "f1": 0.0900115977720823,
+        "lift_over_base": 10.590595050672908
+      }
+    },
+    {
+      "threshold": 0.825,
+      "stage2": {
+        "alerts": 150977,
+        "alerts_per_day": 69.12866300366301,
+        "true_positive_alerts": 52673,
+        "precision": 0.3488809553773091,
+        "recall": 0.20647576488112737,
+        "f1": 0.2594205111282943,
+        "lift_over_base": 7.129049073819141
+      },
+      "wsts": {
+        "alerts": 41214,
+        "alerts_per_day": 18.87087912087912,
+        "true_positive_alerts": 19224,
+        "precision": 0.4664434415489882,
+        "recall": 0.07535720585641206,
+        "f1": 0.129752057748575,
+        "lift_over_base": 9.531326183647861
+      }
+    },
+    {
+      "threshold": 0.8,
+      "stage2": {
+        "alerts": 199042,
+        "alerts_per_day": 91.13644688644689,
+        "true_positive_alerts": 63493,
+        "precision": 0.31899297635674884,
+        "recall": 0.2488896728797946,
+        "f1": 0.27961430990406194,
+        "lift_over_base": 6.518316771379714
+      },
+      "wsts": {
+        "alerts": 59215,
+        "alerts_per_day": 27.113095238095237,
+        "true_positive_alerts": 25255,
+        "precision": 0.42649666469644515,
+        "recall": 0.09899845161796123,
+        "f1": 0.1606961058793586,
+        "lift_over_base": 8.715051955624453
+      }
+    },
+    {
+      "threshold": 0.775,
+      "stage2": {
+        "alerts": 238453,
+        "alerts_per_day": 109.18177655677655,
+        "true_positive_alerts": 71687,
+        "precision": 0.30063366785068757,
+        "recall": 0.28100978028654866,
+        "f1": 0.29049068194619476,
+        "lift_over_base": 6.1431618387765665
+      },
+      "wsts": {
+        "alerts": 78613,
+        "alerts_per_day": 35.99496336996337,
+        "true_positive_alerts": 30756,
+        "precision": 0.39123300217521273,
+        "recall": 0.12056212147939084,
+        "f1": 0.1843232909222757,
+        "lift_over_base": 7.99447269567436
+      }
+    },
+    {
+      "threshold": 0.75,
+      "stage2": {
+        "alerts": 273674,
+        "alerts_per_day": 125.30860805860806,
+        "true_positive_alerts": 78541,
+        "precision": 0.28698743760824924,
+        "recall": 0.3078771486250759,
+        "f1": 0.2970655037359653,
+        "lift_over_base": 5.864314158582141
+      },
+      "wsts": {
+        "alerts": 98347,
+        "alerts_per_day": 45.03067765567766,
+        "true_positive_alerts": 35862,
+        "precision": 0.36464762524530486,
+        "recall": 0.1405774093020521,
+        "f1": 0.20292430089517102,
+        "lift_over_base": 7.451225912328676
+      }
+    },
+    {
+      "threshold": 0.7,
+      "stage2": {
+        "alerts": 345959,
+        "alerts_per_day": 158.40613553113553,
+        "true_positive_alerts": 90551,
+        "precision": 0.26173910781335363,
+        "recall": 0.3549558025126909,
+        "f1": 0.3013023571533148,
+        "lift_over_base": 5.348388656299801
+      },
+      "wsts": {
+        "alerts": 135836,
+        "alerts_per_day": 62.19597069597069,
+        "true_positive_alerts": 43598,
+        "precision": 0.32096057009923734,
+        "recall": 0.1709021775347406,
+        "f1": 0.22304132848690722,
+        "lift_over_base": 6.55852267007192
+      }
+    },
+    {
+      "threshold": 0.65,
+      "stage2": {
+        "alerts": 426184,
+        "alerts_per_day": 195.13919413919413,
+        "true_positive_alerts": 102972,
+        "precision": 0.24161395078182193,
+        "recall": 0.40364555771153054,
+        "f1": 0.3022858140965141,
+        "lift_over_base": 4.937150295808206
+      },
+      "wsts": {
+        "alerts": 168489,
+        "alerts_per_day": 77.14697802197803,
+        "true_positive_alerts": 49520,
+        "precision": 0.29390642712580645,
+        "recall": 0.19411614825268028,
+        "f1": 0.23380878860418233,
+        "lift_over_base": 6.005697100389785
+      }
+    },
+    {
+      "threshold": 0.6,
+      "stage2": {
+        "alerts": 520201,
+        "alerts_per_day": 238.18727106227107,
+        "true_positive_alerts": 116816,
+        "precision": 0.22455935301931368,
+        "recall": 0.45791340820446486,
+        "f1": 0.3013416638075805,
+        "lift_over_base": 4.588655880996491
+      },
+      "wsts": {
+        "alerts": 202143,
+        "alerts_per_day": 92.55631868131869,
+        "true_positive_alerts": 55177,
+        "precision": 0.2729602311235116,
+        "recall": 0.21629133102056017,
+        "f1": 0.24134386591084053,
+        "lift_over_base": 5.577681592782899
+      }
+    },
+    {
+      "threshold": 0.55,
+      "stage2": {
+        "alerts": 618950,
+        "alerts_per_day": 283.40201465201466,
+        "true_positive_alerts": 128708,
+        "precision": 0.20794571451651991,
+        "recall": 0.5045295074577135,
+        "f1": 0.29450778269102057,
+        "lift_over_base": 4.249172047454997
+      },
+      "wsts": {
+        "alerts": 241808,
+        "alerts_per_day": 110.71794871794872,
+        "true_positive_alerts": 61464,
+        "precision": 0.25418513862237807,
+        "recall": 0.24093608514141235,
+        "f1": 0.24738334477061374,
+        "lift_over_base": 5.19403051139521
+      }
+    },
+    {
+      "threshold": 0.5,
+      "stage2": {
+        "alerts": 721776,
+        "alerts_per_day": 330.4835164835165,
+        "true_positive_alerts": 139053,
+        "precision": 0.19265395358116646,
+        "recall": 0.5450814370553302,
+        "f1": 0.2846876948164618,
+        "lift_over_base": 3.9366995193534082
+      },
+      "wsts": {
+        "alerts": 298148,
+        "alerts_per_day": 136.51465201465203,
+        "true_positive_alerts": 69750,
+        "precision": 0.23394421562445497,
+        "recall": 0.273416828364791,
+        "f1": 0.252145040334169,
+        "lift_over_base": 4.78042658395947
+      }
+    }
+  ]
+}
