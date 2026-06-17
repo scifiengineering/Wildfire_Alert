@@ -1,0 +1,29 @@
+{
+  "event_day_count": 459,
+  "window_count": 153,
+  "mean_model_alert_count": 41.79302832244009,
+  "mean_naive_alert_count": 1054.3159041394335,
+  "mean_model_precision": 0.09816612387200573,
+  "mean_naive_precision": 0.025011913434223206,
+  "mean_alert_reduction_vs_naive": 0.965185920815045,
+  "mean_dropped_previous_alerts": 20.355119825708062,
+  "mean_dropped_previous_2km_alerts": 19.923747276688452,
+  "mean_ap": 0.23772787945965004,
+  "mean_auc": 0.8234678610584287,
+  "mean_fixed_3day_naive_alert_count": NaN,
+  "mean_fixed_3day_naive_precision": NaN,
+  "mean_final_day_model_alert_count": NaN,
+  "mean_final_day_model_precision": NaN,
+  "mean_final_day_alert_reduction_vs_fixed_naive": NaN,
+  "model": "outputs/stage2/models_3fold_r4km_imagenet_noamp/stage2_gbm_3fold_r4km_imagenet_noamp_holdout0.joblib",
+  "candidate_csv": "outputs/stage2/candidates_3fold_r4km_fair_imagenet_noamp/stage2_fold0_validation_candidates.csv",
+  "model_name": "stage2_gbm_3fold_r4km_imagenet_noamp_holdout0",
+  "threshold": 0.8228798801649211,
+  "radii_km": [
+    2.0,
+    3.0,
+    4.0
+  ],
+  "naive_radius_km": 4.0,
+  "fixed_baseline": null
+}
