@@ -1,4 +1,4 @@
-"""Run precision-by-alert-budget diagnostics for full-2020 Stage 2 outputs."""
+"""Run precision-by-alert-budget diagnostics for 2020 Stage 2 outputs."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 
-DEFAULT_BUDGETS = (5, 10, 25, 50, 75, 90, 114, 150, 250)
+DEFAULT_BUDGETS = (5, 10, 15, 20, 25, 50, 75, 90, 114, 150, 250)
 REQUIRED_COLUMNS = (
     "event_id",
     "target_date",

@@ -36,6 +36,30 @@
         "wsts_lift_over_base": 10.729744772191411
       },
       {
+        "alerts_per_day": 15,
+        "alerts": 32760,
+        "stage2_precision": 0.5892246642246642,
+        "stage2_recall": 0.07566688226416574,
+        "stage2_tp": 19303,
+        "stage2_lift_over_base": 12.04024318902516,
+        "wsts_precision": 0.4923687423687424,
+        "wsts_recall": 0.06322886654514807,
+        "wsts_tp": 16130,
+        "wsts_lift_over_base": 10.061084942183902
+      },
+      {
+        "alerts_per_day": 20,
+        "alerts": 43680,
+        "stage2_precision": 0.5281364468864469,
+        "stage2_recall": 0.09042943101860018,
+        "stage2_tp": 23069,
+        "stage2_lift_over_base": 10.791963818873548,
+        "wsts_precision": 0.4600961538461538,
+        "wsts_recall": 0.07877932615981655,
+        "wsts_tp": 20097,
+        "wsts_lift_over_base": 9.401625422337407
+      },
+      {
         "alerts_per_day": 25,
         "alerts": 54600,
         "stage2_precision": 0.488003663003663,
@@ -156,6 +180,30 @@
         "wsts_recall": 0.043908179902330695,
         "wsts_tp": 11230,
         "wsts_lift_over_base": 10.479183714297257
+      },
+      {
+        "alerts_per_day": 15,
+        "alerts": 32760,
+        "stage2_precision": 0.5934065934065934,
+        "stage2_recall": 0.07600846102415927,
+        "stage2_tp": 19440,
+        "stage2_lift_over_base": 12.093519228610193,
+        "wsts_precision": 0.4751221001221001,
+        "wsts_recall": 0.0608575975226872,
+        "wsts_tp": 15565,
+        "wsts_lift_over_base": 9.682902612824982
+      },
+      {
+        "alerts_per_day": 20,
+        "alerts": 43680,
+        "stage2_precision": 0.5603937728937729,
+        "stage2_recall": 0.0957065385262022,
+        "stage2_tp": 24478,
+        "stage2_lift_over_base": 11.420723907327172,
+        "wsts_precision": 0.4459478021978022,
+        "wsts_recall": 0.0761609471342386,
+        "wsts_tp": 19479,
+        "wsts_lift_over_base": 9.088335688815507
       },
       {
         "alerts_per_day": 25,
