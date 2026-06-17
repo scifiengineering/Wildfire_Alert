@@ -20,26 +20,26 @@ The regenerated run keeps the main alert-fatigue finding intact: the model sends
 
 ## Optional High-Confidence Operating Points
 
-These rows answer the professor's request for a compact view of the most confident alerts. They are not a replacement for the rolling operating point above; they show what precision, recall, and F1 look like if the alert budget is tightened.
+These rows answer the professor's request for a compact view of the most confident alerts. The alert budget is produced by ranking candidate locations by confidence and keeping only the top-scoring rows. A smaller alerts/day budget therefore means a stricter confidence cutoff.
 
-| Alerts/day | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS precision | WSTS recall | WSTS F1 |
-|---:|---:|---:|---:|---:|---:|---:|
-| 5 | 0.6963 | 0.0298 | 0.0572 | 0.5663 | 0.0242 | 0.0465 |
-| 10 | 0.6480 | 0.0555 | 0.1022 | 0.5251 | 0.0450 | 0.0828 |
-| 15 | 0.5892 | 0.0757 | 0.1341 | 0.4924 | 0.0632 | 0.1121 |
-| 20 | 0.5281 | 0.0904 | 0.1544 | 0.4601 | 0.0788 | 0.1345 |
-| 25 | 0.4880 | 0.1044 | 0.1721 | 0.4362 | 0.0934 | 0.1538 |
+| Alerts/day | Stage 2 min confidence | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS min score | WSTS precision | WSTS recall | WSTS F1 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 5 | 0.9425 | 0.6963 | 0.0298 | 0.0572 | 0.8719 | 0.5663 | 0.0242 | 0.0465 |
+| 10 | 0.9173 | 0.6480 | 0.0555 | 0.1022 | 0.8538 | 0.5251 | 0.0450 | 0.0828 |
+| 15 | 0.8958 | 0.5892 | 0.0757 | 0.1341 | 0.8372 | 0.4924 | 0.0632 | 0.1121 |
+| 20 | 0.8841 | 0.5281 | 0.0904 | 0.1544 | 0.8215 | 0.4601 | 0.0788 | 0.1345 |
+| 25 | 0.8757 | 0.4880 | 0.1044 | 0.1721 | 0.8063 | 0.4362 | 0.0934 | 0.1538 |
 
-| Alerts/day | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS precision | WSTS recall | WSTS F1 |
-|---:|---:|---:|---:|---:|---:|---:|
-| 50 | 0.3866 | 0.1655 | 0.2318 | 0.3512 | 0.1503 | 0.2106 |
-| 75 | 0.3399 | 0.2183 | 0.2659 | 0.2973 | 0.1909 | 0.2325 |
-| 90 | 0.3203 | 0.2468 | 0.2787 | 0.2762 | 0.2128 | 0.2404 |
-| 114 | 0.2965 | 0.2893 | 0.2928 | 0.2515 | 0.2455 | 0.2484 |
-| 150 | 0.2676 | 0.3436 | 0.3009 | 0.2243 | 0.2881 | 0.2522 |
-| 250 | 0.2201 | 0.4712 | 0.3001 | 0.1735 | 0.3713 | 0.2365 |
+| Alerts/day | Stage 2 min confidence | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS min score | WSTS precision | WSTS recall | WSTS F1 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 50 | 0.8455 | 0.3866 | 0.1655 | 0.2318 | 0.7358 | 0.3512 | 0.1503 | 0.2106 |
+| 75 | 0.8185 | 0.3399 | 0.2183 | 0.2659 | 0.6574 | 0.2973 | 0.1909 | 0.2325 |
+| 90 | 0.8014 | 0.3203 | 0.2468 | 0.2787 | 0.6079 | 0.2762 | 0.2128 | 0.2404 |
+| 114 | 0.7676 | 0.2965 | 0.2893 | 0.2928 | 0.5423 | 0.2515 | 0.2455 | 0.2484 |
+| 150 | 0.7122 | 0.2676 | 0.3436 | 0.3009 | 0.4797 | 0.2243 | 0.2881 | 0.2522 |
+| 250 | 0.5869 | 0.2201 | 0.4712 | 0.3001 | 0.3529 | 0.1735 | 0.3713 | 0.2365 |
 
-At 10 alerts/day, Stage 2 reaches 0.648 precision with 0.055 recall; at 5 alerts/day, it reaches 0.696 precision with 0.030 recall. This is useful as an operational high-confidence framing, but the recall cost should be stated clearly.
+At 10 alerts/day, Stage 2 keeps candidates scoring at least 0.917 and reaches 0.648 precision with 0.055 recall. At 5 alerts/day, it keeps candidates scoring at least 0.943 and reaches 0.696 precision with 0.030 recall. This is useful as an operational high-confidence framing, but the recall cost should be stated clearly.
 
 ## Table 3.3: Ranking Quality
 

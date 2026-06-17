@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 import pandas as pd
 
 ROOT = Path("outputs/stage2")
@@ -25,6 +26,11 @@ EVAL_2020_SUMMARY = (
     / "stage2_2020_external_ensemble_imagenet_noamp_full2020_retrained_stage2_evaluation.json"
 )
 PRECISION_DIAGNOSTIC = ROOT / "precision_diagnostics" / "precision_budget_diagnostics.json"
+SCORED_2020_CANDIDATES = (
+    ROOT
+    / "scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2"
+    / "stage2_2020_scored_candidates.csv"
+)
 OUTPUT_DIR = ROOT / "regenerated_checkpoint_tables"
 SUMMARY_PATH = OUTPUT_DIR / "tables_3_2_3_3_3_4_summary.json"
 REPORT_PATH = Path("REGENERATED_CHECKPOINT_TABLES_3_2_3_3_3_4_REPORT.md")
@@ -48,7 +54,9 @@ def build_summary() -> dict[str, Any]:
     rolling_2020 = read_json(ROLLING_2020_SUMMARY)
     eval_2020 = read_json(EVAL_2020_SUMMARY)["summary"]
     fold_rows = [fold_metrics(fold) for fold in range(3)]
-    precision_budget = read_json(PRECISION_DIAGNOSTIC)["regenerated"]["budgets"]
+    precision_budget = add_budget_thresholds(
+        read_json(PRECISION_DIAGNOSTIC)["regenerated"]["budgets"]
+    )
 
     return {
         "scope": "regenerated-checkpoint support run only",
@@ -145,6 +153,30 @@ def fold_metrics(fold: int) -> dict[str, float | int]:
     }
 
 
+def add_budget_thresholds(budget_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Add the implied score cutoff for each top-k alert budget."""
+
+    scores = pd.read_csv(
+        SCORED_2020_CANDIDATES,
+        usecols=["model_score", "stage1_probability"],
+    )
+    model_scores = scores["model_score"].to_numpy(dtype=np.float64)
+    wsts_scores = scores["stage1_probability"].to_numpy(dtype=np.float64)
+    enriched = []
+    for row in budget_rows:
+        alerts = min(int(row["alerts"]), len(scores))
+        threshold_index = len(scores) - alerts
+        updated = dict(row)
+        updated["stage2_min_confidence"] = float(
+            np.partition(model_scores, threshold_index)[threshold_index]
+        )
+        updated["wsts_min_score"] = float(
+            np.partition(wsts_scores, threshold_index)[threshold_index]
+        )
+        enriched.append(updated)
+    return enriched
+
+
 def render_report(summary: dict[str, Any]) -> str:
     """Render a thesis-facing Markdown report."""
 
@@ -182,24 +214,24 @@ def render_report(summary: dict[str, Any]) -> str:
         "",
         "## Optional High-Confidence Operating Points",
         "",
-        "These rows answer the professor's request for a compact view of the most confident alerts. They are not a replacement for the rolling operating point above; they show what precision, recall, and F1 look like if the alert budget is tightened.",
+        "These rows answer the professor's request for a compact view of the most confident alerts. The alert budget is produced by ranking candidate locations by confidence and keeping only the top-scoring rows. A smaller alerts/day budget therefore means a stricter confidence cutoff.",
         "",
-        "| Alerts/day | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS precision | WSTS recall | WSTS F1 |",
-        "|---:|---:|---:|---:|---:|---:|---:|",
+        "| Alerts/day | Stage 2 min confidence | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS min score | WSTS precision | WSTS recall | WSTS F1 |",
+        "|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     lines.extend(budget_row(budget_rows[day]) for day in high_confidence_days)
     lines.extend(
         [
             "",
-            "| Alerts/day | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS precision | WSTS recall | WSTS F1 |",
-            "|---:|---:|---:|---:|---:|---:|---:|",
+            "| Alerts/day | Stage 2 min confidence | Stage 2 precision | Stage 2 recall | Stage 2 F1 | WSTS min score | WSTS precision | WSTS recall | WSTS F1 |",
+            "|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
         ]
     )
     lines.extend(budget_row(budget_rows[day]) for day in broader_days)
     lines.extend(
         [
             "",
-            "At 10 alerts/day, Stage 2 reaches 0.648 precision with 0.055 recall; at 5 alerts/day, it reaches 0.696 precision with 0.030 recall. This is useful as an operational high-confidence framing, but the recall cost should be stated clearly.",
+            "At 10 alerts/day, Stage 2 keeps candidates scoring at least 0.917 and reaches 0.648 precision with 0.055 recall. At 5 alerts/day, it keeps candidates scoring at least 0.943 and reaches 0.696 precision with 0.030 recall. This is useful as an operational high-confidence framing, but the recall cost should be stated clearly.",
             "",
             "## Table 3.3: Ranking Quality",
             "",
@@ -301,8 +333,10 @@ def budget_row(row: dict[str, Any]) -> str:
     stage2_f1 = f1(row["stage2_precision"], row["stage2_recall"])
     wsts_f1 = f1(row["wsts_precision"], row["wsts_recall"])
     return (
-        f"| {int(row['alerts_per_day'])} | {row['stage2_precision']:.4f} | "
+        f"| {int(row['alerts_per_day'])} | {row['stage2_min_confidence']:.4f} | "
+        f"{row['stage2_precision']:.4f} | "
         f"{row['stage2_recall']:.4f} | {stage2_f1:.4f} | "
+        f"{row['wsts_min_score']:.4f} | "
         f"{row['wsts_precision']:.4f} | {row['wsts_recall']:.4f} | {wsts_f1:.4f} |"
     )
 
