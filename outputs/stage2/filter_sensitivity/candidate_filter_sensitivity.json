@@ -1,0 +1,1364 @@
+{
+  "regenerated": {
+    "run": "regenerated",
+    "scored_candidate_csv": "outputs/stage2/scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2/stage2_2020_scored_candidates.csv",
+    "base_candidates": 5111847,
+    "base_positives": 231725,
+    "base_positive_rate": 0.0453309733252971,
+    "base_event_days": 2153,
+    "filters": [
+      {
+        "filter": "base_future_distance_le_4km",
+        "eligible_candidates": 5111847,
+        "eligible_positives": 231725,
+        "eligible_positive_rate": 0.0453309733252971,
+        "max_recall_against_base": 1.0,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.843945376877356,
+            "alerts": 80266,
+            "alerts_per_base_event_day": 37.28100325127729,
+            "alerts_per_eligible_event_day": 37.28100325127729,
+            "true_positive_alerts": 23173,
+            "precision": 0.28870256397478383,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.8184172652057863,
+            "alerts": 129596,
+            "alerts_per_base_event_day": 60.19321876451463,
+            "alerts_per_eligible_event_day": 60.19321876451463,
+            "true_positive_alerts": 34759,
+            "precision": 0.26821043859378374,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.787138759673654,
+            "alerts": 184248,
+            "alerts_per_base_event_day": 85.57733395262424,
+            "alerts_per_eligible_event_day": 85.57733395262424,
+            "true_positive_alerts": 46345,
+            "precision": 0.251535973253441,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.7436147198776902,
+            "alerts": 244820,
+            "alerts_per_base_event_day": 113.71110078959592,
+            "alerts_per_eligible_event_day": 113.71110078959592,
+            "true_positive_alerts": 57932,
+            "precision": 0.23663099419982028,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_3km",
+        "eligible_candidates": 3627933,
+        "eligible_positives": 214302,
+        "eligible_positive_rate": 0.0590699993632738,
+        "max_recall_against_base": 0.9248117380515698,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.843945376877356,
+            "alerts": 80266,
+            "alerts_per_base_event_day": 37.28100325127729,
+            "alerts_per_eligible_event_day": 37.28100325127729,
+            "true_positive_alerts": 23173,
+            "precision": 0.28870256397478383,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.8184172652057863,
+            "alerts": 129596,
+            "alerts_per_base_event_day": 60.19321876451463,
+            "alerts_per_eligible_event_day": 60.19321876451463,
+            "true_positive_alerts": 34759,
+            "precision": 0.26821043859378374,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.787138759673654,
+            "alerts": 184248,
+            "alerts_per_base_event_day": 85.57733395262424,
+            "alerts_per_eligible_event_day": 85.57733395262424,
+            "true_positive_alerts": 46345,
+            "precision": 0.251535973253441,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.7436147198776902,
+            "alerts": 244820,
+            "alerts_per_base_event_day": 113.71110078959592,
+            "alerts_per_eligible_event_day": 113.71110078959592,
+            "true_positive_alerts": 57932,
+            "precision": 0.23663099419982028,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_2km",
+        "eligible_candidates": 2257811,
+        "eligible_positives": 187065,
+        "eligible_positive_rate": 0.08285237338289166,
+        "max_recall_against_base": 0.8072715503290538,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.843945376877356,
+            "alerts": 80266,
+            "alerts_per_base_event_day": 37.28100325127729,
+            "alerts_per_eligible_event_day": 37.28100325127729,
+            "true_positive_alerts": 23173,
+            "precision": 0.28870256397478383,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.8184172652057863,
+            "alerts": 129596,
+            "alerts_per_base_event_day": 60.19321876451463,
+            "alerts_per_eligible_event_day": 60.19321876451463,
+            "true_positive_alerts": 34759,
+            "precision": 0.26821043859378374,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.787138759673654,
+            "alerts": 184248,
+            "alerts_per_base_event_day": 85.57733395262424,
+            "alerts_per_eligible_event_day": 85.57733395262424,
+            "true_positive_alerts": 46345,
+            "precision": 0.251535973253441,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.7436147198776902,
+            "alerts": 244817,
+            "alerts_per_base_event_day": 113.70970738504413,
+            "alerts_per_eligible_event_day": 113.70970738504413,
+            "true_positive_alerts": 57932,
+            "precision": 0.23663389388808784,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "stage1_probability_ge_0_10",
+        "eligible_candidates": 1975749,
+        "eligible_positives": 151772,
+        "eligible_positive_rate": 0.07681744998985195,
+        "max_recall_against_base": 0.6549660157514295,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8321475092072129,
+            "alerts": 76120,
+            "alerts_per_base_event_day": 35.35531816070599,
+            "alerts_per_eligible_event_day": 40.06315789473684,
+            "true_positive_alerts": 23173,
+            "precision": 0.30442722017866525,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1900
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7894968807675014,
+            "alerts": 124455,
+            "alerts_per_base_event_day": 57.80538783093358,
+            "alerts_per_eligible_event_day": 65.50263157894737,
+            "true_positive_alerts": 34759,
+            "precision": 0.27928970310554013,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1900
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.7229108442934971,
+            "alerts": 183021,
+            "alerts_per_base_event_day": 85.00743149094286,
+            "alerts_per_eligible_event_day": 96.32684210526315,
+            "true_positive_alerts": 46345,
+            "precision": 0.2532223078225996,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1900
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.6545341106676615,
+            "alerts": 251563,
+            "alerts_per_base_event_day": 116.84300975383186,
+            "alerts_per_eligible_event_day": 132.40157894736842,
+            "true_positive_alerts": 57932,
+            "precision": 0.2302882379364215,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1900
+          }
+        ]
+      },
+      {
+        "filter": "stage1_probability_ge_0_20",
+        "eligible_candidates": 1066548,
+        "eligible_positives": 113289,
+        "eligible_positive_rate": 0.10622025450331349,
+        "max_recall_against_base": 0.48889416334016617,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8180444003019597,
+            "alerts": 72881,
+            "alerts_per_base_event_day": 33.850905712958664,
+            "alerts_per_eligible_event_day": 44.11682808716707,
+            "true_positive_alerts": 23173,
+            "precision": 0.3179566690907095,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1652
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7466409694034439,
+            "alerts": 121880,
+            "alerts_per_base_event_day": 56.609382257315374,
+            "alerts_per_eligible_event_day": 73.7772397094431,
+            "true_positive_alerts": 34759,
+            "precision": 0.2851903511650804,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1652
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.6571940157361489,
+            "alerts": 182958,
+            "alerts_per_base_event_day": 84.97816999535532,
+            "alerts_per_eligible_event_day": 110.74939467312349,
+            "true_positive_alerts": 46345,
+            "precision": 0.25330950272740194,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1652
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.578825697844676,
+            "alerts": 248513,
+            "alerts_per_base_event_day": 115.4263817928472,
+            "alerts_per_eligible_event_day": 150.431598062954,
+            "true_positive_alerts": 57932,
+            "precision": 0.23311456543520861,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1652
+          }
+        ]
+      },
+      {
+        "filter": "stage1_probability_ge_0_30",
+        "eligible_candidates": 582579,
+        "eligible_positives": 81046,
+        "eligible_positive_rate": 0.13911589672816904,
+        "max_recall_against_base": 0.34975078217714967,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.7897875287372059,
+            "alerts": 70119,
+            "alerts_per_base_event_day": 32.56804458894566,
+            "alerts_per_eligible_event_day": 47.961012311901506,
+            "true_positive_alerts": 23173,
+            "precision": 0.3304810393759181,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1462
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.6715930478038664,
+            "alerts": 121973,
+            "alerts_per_base_event_day": 56.65257779842081,
+            "alerts_per_eligible_event_day": 83.42886456908344,
+            "true_positive_alerts": 34759,
+            "precision": 0.2849729038393743,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1462
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.5654862343922052,
+            "alerts": 180455,
+            "alerts_per_base_event_day": 83.81560613098003,
+            "alerts_per_eligible_event_day": 123.43023255813954,
+            "true_positive_alerts": 46345,
+            "precision": 0.2568230306724668,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1462
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.4260522353128659,
+            "alerts": 263090,
+            "alerts_per_base_event_day": 122.19693450998606,
+            "alerts_per_eligible_event_day": 179.95212038303694,
+            "true_positive_alerts": 57932,
+            "precision": 0.22019841119008704,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1462
+          }
+        ]
+      },
+      {
+        "filter": "stage1_top_mask",
+        "eligible_candidates": 43164,
+        "eligible_positives": 7264,
+        "eligible_positive_rate": 0.16828838847187472,
+        "max_recall_against_base": 0.03134750242744633,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          },
+          {
+            "recall_target": 0.15,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          },
+          {
+            "recall_target": 0.2,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          },
+          {
+            "recall_target": 0.25,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          }
+        ]
+      },
+      {
+        "filter": "wind_alignment_ge_0",
+        "eligible_candidates": 2624075,
+        "eligible_positives": 104607,
+        "eligible_positive_rate": 0.03986433314596572,
+        "max_recall_against_base": 0.45142733843996113,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.7763195946981627,
+            "alerts": 95877,
+            "alerts_per_base_event_day": 44.53181607059916,
+            "alerts_per_eligible_event_day": 44.53181607059916,
+            "true_positive_alerts": 23173,
+            "precision": 0.24169508849880575,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.6814316771904277,
+            "alerts": 161342,
+            "alerts_per_base_event_day": 74.93822573153739,
+            "alerts_per_eligible_event_day": 74.93822573153739,
+            "true_positive_alerts": 34759,
+            "precision": 0.21543677405759196,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.5895085833327658,
+            "alerts": 240208,
+            "alerts_per_base_event_day": 111.56897352531351,
+            "alerts_per_eligible_event_day": 111.56897352531351,
+            "true_positive_alerts": 46345,
+            "precision": 0.1929369546393126,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.4714600219663294,
+            "alerts": 353516,
+            "alerts_per_base_event_day": 164.19693450998608,
+            "alerts_per_eligible_event_day": 164.19693450998608,
+            "true_positive_alerts": 57932,
+            "precision": 0.16387377091843086,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "forecast_wind_alignment_ge_0",
+        "eligible_candidates": 2497542,
+        "eligible_positives": 117428,
+        "eligible_positive_rate": 0.04701742753475217,
+        "max_recall_against_base": 0.5067558528428093,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.7877860018351067,
+            "alerts": 89414,
+            "alerts_per_base_event_day": 41.529958197863444,
+            "alerts_per_eligible_event_day": 41.529958197863444,
+            "true_positive_alerts": 23173,
+            "precision": 0.2591652313955309,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.6951355605026635,
+            "alerts": 154587,
+            "alerts_per_base_event_day": 71.80074314909429,
+            "alerts_per_eligible_event_day": 71.80074314909429,
+            "true_positive_alerts": 34759,
+            "precision": 0.22485073130340844,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.6085079921007079,
+            "alerts": 228346,
+            "alerts_per_base_event_day": 106.05945192754297,
+            "alerts_per_eligible_event_day": 106.05945192754297,
+            "true_positive_alerts": 46345,
+            "precision": 0.2029595438501222,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.5097831853326769,
+            "alerts": 326833,
+            "alerts_per_base_event_day": 151.80352995819786,
+            "alerts_per_eligible_event_day": 151.80352995819786,
+            "true_positive_alerts": 57932,
+            "precision": 0.17725260301132384,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_3km_and_forecast_wind_ge_0",
+        "eligible_candidates": 1769556,
+        "eligible_positives": 108620,
+        "eligible_positive_rate": 0.0613826293149242,
+        "max_recall_against_base": 0.4687452799654763,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.7877860018351067,
+            "alerts": 89414,
+            "alerts_per_base_event_day": 41.529958197863444,
+            "alerts_per_eligible_event_day": 41.54925650557621,
+            "true_positive_alerts": 23173,
+            "precision": 0.2591652313955309,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.6951355605026635,
+            "alerts": 154587,
+            "alerts_per_base_event_day": 71.80074314909429,
+            "alerts_per_eligible_event_day": 71.83410780669145,
+            "true_positive_alerts": 34759,
+            "precision": 0.22485073130340844,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.6085079921007079,
+            "alerts": 228344,
+            "alerts_per_base_event_day": 106.05852299117511,
+            "alerts_per_eligible_event_day": 106.10780669144981,
+            "true_positive_alerts": 46345,
+            "precision": 0.20296132151490734,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.50974151706468,
+            "alerts": 326149,
+            "alerts_per_base_event_day": 151.48583372039016,
+            "alerts_per_eligible_event_day": 151.55622676579927,
+            "true_positive_alerts": 57932,
+            "precision": 0.17762433734274824,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_3km_and_stage1_probability_ge_0_10",
+        "eligible_candidates": 1565187,
+        "eligible_positives": 143261,
+        "eligible_positive_rate": 0.09152963831158832,
+        "max_recall_against_base": 0.6182371345344697,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8321475092072129,
+            "alerts": 76120,
+            "alerts_per_base_event_day": 35.35531816070599,
+            "alerts_per_eligible_event_day": 40.48936170212766,
+            "true_positive_alerts": 23173,
+            "precision": 0.30442722017866525,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1880
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7894968807675014,
+            "alerts": 124455,
+            "alerts_per_base_event_day": 57.80538783093358,
+            "alerts_per_eligible_event_day": 66.19946808510639,
+            "true_positive_alerts": 34759,
+            "precision": 0.27928970310554013,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1880
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.7229108442934971,
+            "alerts": 183021,
+            "alerts_per_base_event_day": 85.00743149094286,
+            "alerts_per_eligible_event_day": 97.35159574468085,
+            "true_positive_alerts": 46345,
+            "precision": 0.2532223078225996,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1880
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.6545341106676615,
+            "alerts": 251564,
+            "alerts_per_base_event_day": 116.84347422201579,
+            "alerts_per_eligible_event_day": 133.81063829787234,
+            "true_positive_alerts": 57932,
+            "precision": 0.2302873225103751,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1880
+          }
+        ]
+      }
+    ]
+  },
+  "tanisha_ckpt_rerun": {
+    "run": "tanisha_ckpt_rerun",
+    "scored_candidate_csv": "outputs/stage2/scored_2020_r4km_fair_tanisha_ckpt_full2020/stage2_2020_scored_candidates.csv",
+    "base_candidates": 5111847,
+    "base_positives": 231725,
+    "base_positive_rate": 0.0453309733252971,
+    "base_event_days": 2153,
+    "filters": [
+      {
+        "filter": "base_future_distance_le_4km",
+        "eligible_candidates": 5111847,
+        "eligible_positives": 231725,
+        "eligible_positive_rate": 0.0453309733252971,
+        "max_recall_against_base": 1.0,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8404678021882992,
+            "alerts": 74326,
+            "alerts_per_base_event_day": 34.522062238736645,
+            "alerts_per_eligible_event_day": 34.522062238736645,
+            "true_positive_alerts": 23173,
+            "precision": 0.3117751527056481,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.8220018728222218,
+            "alerts": 124243,
+            "alerts_per_base_event_day": 57.70692057594055,
+            "alerts_per_eligible_event_day": 57.70692057594055,
+            "true_positive_alerts": 34759,
+            "precision": 0.2797662644977987,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.7979776875513173,
+            "alerts": 174970,
+            "alerts_per_base_event_day": 81.26799814212727,
+            "alerts_per_eligible_event_day": 81.26799814212727,
+            "true_positive_alerts": 46345,
+            "precision": 0.2648739783962965,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.7630094324934228,
+            "alerts": 232989,
+            "alerts_per_base_event_day": 108.21597770552717,
+            "alerts_per_eligible_event_day": 108.21597770552717,
+            "true_positive_alerts": 57932,
+            "precision": 0.24864693182939968,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_3km",
+        "eligible_candidates": 3627933,
+        "eligible_positives": 214302,
+        "eligible_positive_rate": 0.0590699993632738,
+        "max_recall_against_base": 0.9248117380515698,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8404678021882992,
+            "alerts": 74326,
+            "alerts_per_base_event_day": 34.522062238736645,
+            "alerts_per_eligible_event_day": 34.522062238736645,
+            "true_positive_alerts": 23173,
+            "precision": 0.3117751527056481,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.8220018728222218,
+            "alerts": 124243,
+            "alerts_per_base_event_day": 57.70692057594055,
+            "alerts_per_eligible_event_day": 57.70692057594055,
+            "true_positive_alerts": 34759,
+            "precision": 0.2797662644977987,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.7979776875513173,
+            "alerts": 174970,
+            "alerts_per_base_event_day": 81.26799814212727,
+            "alerts_per_eligible_event_day": 81.26799814212727,
+            "true_positive_alerts": 46345,
+            "precision": 0.2648739783962965,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.7630094324934228,
+            "alerts": 232989,
+            "alerts_per_base_event_day": 108.21597770552717,
+            "alerts_per_eligible_event_day": 108.21597770552717,
+            "true_positive_alerts": 57932,
+            "precision": 0.24864693182939968,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_2km",
+        "eligible_candidates": 2257811,
+        "eligible_positives": 187065,
+        "eligible_positive_rate": 0.08285237338289166,
+        "max_recall_against_base": 0.8072715503290538,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8404678021882992,
+            "alerts": 74326,
+            "alerts_per_base_event_day": 34.522062238736645,
+            "alerts_per_eligible_event_day": 34.522062238736645,
+            "true_positive_alerts": 23173,
+            "precision": 0.3117751527056481,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.8220018728222218,
+            "alerts": 124241,
+            "alerts_per_base_event_day": 57.70599163957269,
+            "alerts_per_eligible_event_day": 57.70599163957269,
+            "true_positive_alerts": 34759,
+            "precision": 0.27977076810392704,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.7979776875513173,
+            "alerts": 174966,
+            "alerts_per_base_event_day": 81.26614026939154,
+            "alerts_per_eligible_event_day": 81.26614026939154,
+            "true_positive_alerts": 46345,
+            "precision": 0.26488003383514513,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.7630094324934228,
+            "alerts": 232978,
+            "alerts_per_base_event_day": 108.21086855550395,
+            "alerts_per_eligible_event_day": 108.21086855550395,
+            "true_positive_alerts": 57932,
+            "precision": 0.24865867163423155,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "stage1_probability_ge_0_10",
+        "eligible_candidates": 1382019,
+        "eligible_positives": 128544,
+        "eligible_positive_rate": 0.09301174585877618,
+        "max_recall_against_base": 0.554726507713885,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.832325455183315,
+            "alerts": 71235,
+            "alerts_per_base_event_day": 33.086391082210866,
+            "alerts_per_eligible_event_day": 38.257250268528466,
+            "true_positive_alerts": 23173,
+            "precision": 0.32530357268196813,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1862
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.791892577558582,
+            "alerts": 113794,
+            "alerts_per_base_event_day": 52.85369252206224,
+            "alerts_per_eligible_event_day": 61.11385606874329,
+            "true_positive_alerts": 34759,
+            "precision": 0.30545547216900715,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1862
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.7298605653495103,
+            "alerts": 167687,
+            "alerts_per_base_event_day": 77.88527635856944,
+            "alerts_per_eligible_event_day": 90.05746509129968,
+            "true_positive_alerts": 46345,
+            "precision": 0.2763780137995193,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1862
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.6695494564091522,
+            "alerts": 226435,
+            "alerts_per_base_event_day": 105.17185322805388,
+            "alerts_per_eligible_event_day": 121.60848549946294,
+            "true_positive_alerts": 57932,
+            "precision": 0.2558438403956985,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1862
+          }
+        ]
+      },
+      {
+        "filter": "stage1_probability_ge_0_20",
+        "eligible_candidates": 793938,
+        "eligible_positives": 100625,
+        "eligible_positive_rate": 0.1267416347372213,
+        "max_recall_against_base": 0.43424317617866004,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8246732461221944,
+            "alerts": 69320,
+            "alerts_per_base_event_day": 32.196934509986065,
+            "alerts_per_eligible_event_day": 44.096692111959285,
+            "true_positive_alerts": 23173,
+            "precision": 0.33429024812463937,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1572
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7686447745227653,
+            "alerts": 112129,
+            "alerts_per_base_event_day": 52.08035299581979,
+            "alerts_per_eligible_event_day": 71.32888040712469,
+            "true_positive_alerts": 34759,
+            "precision": 0.30999117088353595,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1572
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.6941562182452712,
+            "alerts": 166367,
+            "alerts_per_base_event_day": 77.27217835578263,
+            "alerts_per_eligible_event_day": 105.83142493638677,
+            "true_positive_alerts": 46345,
+            "precision": 0.2785708704250242,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1572
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.5998999437792564,
+            "alerts": 236891,
+            "alerts_per_base_event_day": 110.02833255921969,
+            "alerts_per_eligible_event_day": 150.6940203562341,
+            "true_positive_alerts": 57932,
+            "precision": 0.2445512915222613,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1572
+          }
+        ]
+      },
+      {
+        "filter": "stage1_probability_ge_0_30",
+        "eligible_candidates": 569082,
+        "eligible_positives": 84894,
+        "eligible_positive_rate": 0.14917709574367138,
+        "max_recall_against_base": 0.3663566727802352,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8168130530720027,
+            "alerts": 67955,
+            "alerts_per_base_event_day": 31.562935438922434,
+            "alerts_per_eligible_event_day": 49.207096307023896,
+            "true_positive_alerts": 23173,
+            "precision": 0.3410050768891178,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1381
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7442948615786733,
+            "alerts": 112602,
+            "alerts_per_base_event_day": 52.30004644681839,
+            "alerts_per_eligible_event_day": 81.53656770456192,
+            "true_positive_alerts": 34759,
+            "precision": 0.3086890108523827,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1381
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.6568685067422975,
+            "alerts": 168731,
+            "alerts_per_base_event_day": 78.37018114259173,
+            "alerts_per_eligible_event_day": 122.18030412744388,
+            "true_positive_alerts": 46345,
+            "precision": 0.27466796261505,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1381
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.5316775166967492,
+            "alerts": 245285,
+            "alerts_per_base_event_day": 113.92707849512308,
+            "alerts_per_eligible_event_day": 177.61404779145548,
+            "true_positive_alerts": 57932,
+            "precision": 0.23618240006523025,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1381
+          }
+        ]
+      },
+      {
+        "filter": "stage1_top_mask",
+        "eligible_candidates": 43628,
+        "eligible_positives": 7937,
+        "eligible_positive_rate": 0.1819244521866691,
+        "max_recall_against_base": 0.03425180709893192,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          },
+          {
+            "recall_target": 0.15,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          },
+          {
+            "recall_target": 0.2,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          },
+          {
+            "recall_target": 0.25,
+            "status": "target_unreachable",
+            "score_threshold": null,
+            "alerts": 0,
+            "alerts_per_base_event_day": 0.0,
+            "alerts_per_eligible_event_day": 0.0,
+            "true_positive_alerts": 0,
+            "precision": null,
+            "recall_against_base": 0.0,
+            "base_event_days": 0,
+            "eligible_event_days": 0
+          }
+        ]
+      },
+      {
+        "filter": "wind_alignment_ge_0",
+        "eligible_candidates": 2624075,
+        "eligible_positives": 104607,
+        "eligible_positive_rate": 0.03986433314596572,
+        "max_recall_against_base": 0.45142733843996113,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.7904441367344127,
+            "alerts": 91055,
+            "alerts_per_base_event_day": 42.29215048769159,
+            "alerts_per_eligible_event_day": 42.29215048769159,
+            "true_positive_alerts": 23173,
+            "precision": 0.2544945362692878,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7145735838771125,
+            "alerts": 151521,
+            "alerts_per_base_event_day": 70.37668369716674,
+            "alerts_per_eligible_event_day": 70.37668369716674,
+            "true_positive_alerts": 34759,
+            "precision": 0.22940054513895763,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.625614369070452,
+            "alerts": 227707,
+            "alerts_per_base_event_day": 105.76265675801207,
+            "alerts_per_eligible_event_day": 105.76265675801207,
+            "true_positive_alerts": 46345,
+            "precision": 0.2035290966022125,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.5004609592629196,
+            "alerts": 341012,
+            "alerts_per_base_event_day": 158.38922433813283,
+            "alerts_per_eligible_event_day": 158.38922433813283,
+            "true_positive_alerts": 57932,
+            "precision": 0.1698825847770753,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "forecast_wind_alignment_ge_0",
+        "eligible_candidates": 2497542,
+        "eligible_positives": 117428,
+        "eligible_positive_rate": 0.04701742753475217,
+        "max_recall_against_base": 0.5067558528428093,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8002729147528534,
+            "alerts": 84767,
+            "alerts_per_base_event_day": 39.371574547143524,
+            "alerts_per_eligible_event_day": 39.371574547143524,
+            "true_positive_alerts": 23173,
+            "precision": 0.2733728927530761,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7268880963510553,
+            "alerts": 144450,
+            "alerts_per_base_event_day": 67.09242916860195,
+            "alerts_per_eligible_event_day": 67.09242916860195,
+            "true_positive_alerts": 34759,
+            "precision": 0.24062997577016268,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.6513624755314877,
+            "alerts": 212176,
+            "alerts_per_base_event_day": 98.54900139340455,
+            "alerts_per_eligible_event_day": 98.54900139340455,
+            "true_positive_alerts": 46345,
+            "precision": 0.21842715481487068,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.5449701501022514,
+            "alerts": 309291,
+            "alerts_per_base_event_day": 143.6558290757083,
+            "alerts_per_eligible_event_day": 143.6558290757083,
+            "true_positive_alerts": 57932,
+            "precision": 0.18730580585920703,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2153
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_3km_and_forecast_wind_ge_0",
+        "eligible_candidates": 1769556,
+        "eligible_positives": 108620,
+        "eligible_positive_rate": 0.0613826293149242,
+        "max_recall_against_base": 0.4687452799654763,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.8002729147528534,
+            "alerts": 84767,
+            "alerts_per_base_event_day": 39.371574547143524,
+            "alerts_per_eligible_event_day": 39.389869888475836,
+            "true_positive_alerts": 23173,
+            "precision": 0.2733728927530761,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.7268880963510553,
+            "alerts": 144450,
+            "alerts_per_base_event_day": 67.09242916860195,
+            "alerts_per_eligible_event_day": 67.1236059479554,
+            "true_positive_alerts": 34759,
+            "precision": 0.24062997577016268,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.6513609583582441,
+            "alerts": 212117,
+            "alerts_per_base_event_day": 98.52159777055272,
+            "alerts_per_eligible_event_day": 98.56737918215613,
+            "true_positive_alerts": 46345,
+            "precision": 0.21848790997421236,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.5447862065705065,
+            "alerts": 308896,
+            "alerts_per_base_event_day": 143.4723641430562,
+            "alerts_per_eligible_event_day": 143.53903345724908,
+            "true_positive_alerts": 57932,
+            "precision": 0.18754532269760696,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 2152
+          }
+        ]
+      },
+      {
+        "filter": "distance_le_3km_and_stage1_probability_ge_0_10",
+        "eligible_candidates": 1144024,
+        "eligible_positives": 123004,
+        "eligible_positive_rate": 0.10751872338342552,
+        "max_recall_against_base": 0.530818858560794,
+        "targets": [
+          {
+            "recall_target": 0.1,
+            "status": "ok",
+            "score_threshold": 0.832325455183315,
+            "alerts": 71235,
+            "alerts_per_base_event_day": 33.086391082210866,
+            "alerts_per_eligible_event_day": 38.799019607843135,
+            "true_positive_alerts": 23173,
+            "precision": 0.32530357268196813,
+            "recall_against_base": 0.10000215773006797,
+            "base_event_days": 2153,
+            "eligible_event_days": 1836
+          },
+          {
+            "recall_target": 0.15,
+            "status": "ok",
+            "score_threshold": 0.791892577558582,
+            "alerts": 113794,
+            "alerts_per_base_event_day": 52.85369252206224,
+            "alerts_per_eligible_event_day": 61.97930283224401,
+            "true_positive_alerts": 34759,
+            "precision": 0.30545547216900715,
+            "recall_against_base": 0.15000107886503397,
+            "base_event_days": 2153,
+            "eligible_event_days": 1836
+          },
+          {
+            "recall_target": 0.2,
+            "status": "ok",
+            "score_threshold": 0.7298605653495103,
+            "alerts": 167687,
+            "alerts_per_base_event_day": 77.88527635856944,
+            "alerts_per_eligible_event_day": 91.33278867102396,
+            "true_positive_alerts": 46345,
+            "precision": 0.2763780137995193,
+            "recall_against_base": 0.2,
+            "base_event_days": 2153,
+            "eligible_event_days": 1836
+          },
+          {
+            "recall_target": 0.25,
+            "status": "ok",
+            "score_threshold": 0.6695494564091522,
+            "alerts": 226419,
+            "alerts_per_base_event_day": 105.16442173711101,
+            "alerts_per_eligible_event_day": 123.3218954248366,
+            "true_positive_alerts": 57932,
+            "precision": 0.25586191971521827,
+            "recall_against_base": 0.25000323659510193,
+            "base_event_days": 2153,
+            "eligible_event_days": 1836
+          }
+        ]
+      }
+    ]
+  }
+}
