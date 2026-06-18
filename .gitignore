@@ -31,9 +31,20 @@ wsts_subset/
 wsts_data/
 wsts_hdf5/
 .tmp/
+
+# Local data transfer/download helper files.
+drive_manifest_*.txt
+missing_*.txt
+gdown_*.log
+rclone-current-linux-amd64.zip
+rclone-v*-linux-amd64/
+
 outputs/hdf5_2020_smoke/
 outputs/predictions/stage1_2020_smoke_fold0/
 outputs/predictions/stage1_2020_fold_*/
 outputs/predictions/stage1_2020_ensemble/
 outputs/stage2/candidates_2020_r4km_fair/*.csv
 outputs/stage2/scored_2020_r4km_fair/*.csv
+
+#personal specs
+Specifications/*
