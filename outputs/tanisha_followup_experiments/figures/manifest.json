@@ -1,0 +1,33 @@
+{
+  "purpose": "Only the new figures for Tanisha follow-up experiments. Existing final-pipeline figures remain in outputs/figures/final_pipeline.",
+  "figures": [
+    {
+      "file": "01_top5_added_feature_shap_heatmap.png",
+      "request": "SHAP contribution for top locations across fire events",
+      "role": "Grouped added-feature SHAP contributions for the highest-scoring sampled alert across five unique fire events."
+    },
+    {
+      "file": "02_top5_alert_locations_lat_lon_table.png",
+      "request": "Raster row/column locations converted to latitude/longitude",
+      "role": "Standalone coordinate table for top Stage 2 alert locations."
+    },
+    {
+      "file": "03_feature_group_ablation_impact.png",
+      "request": "No-added-feature LightGBM and added-feature ablations",
+      "role": "Percent AP and within-event AUC drop by removed feature group."
+    }
+  ],
+  "tables": [
+    {
+      "file": "01_top5_added_feature_group_shap.csv",
+      "role": "Source table for Figure 1."
+    },
+    {
+      "file": "02_top5_alert_locations_lat_lon_table.csv",
+      "role": "Source table for Figure 2."
+    }
+  ],
+  "excluded": [
+    "The first scatter plot attempt was removed because it was less clear than Figure 1."
+  ]
+}

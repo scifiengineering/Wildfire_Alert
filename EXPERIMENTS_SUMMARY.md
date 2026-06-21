@@ -82,6 +82,37 @@ Both local full-2020 runs also support the ranking-quality claim.
 
 Stage 2 ranks candidate locations better than both WSTS/Stage 1 and distance-only baselines.
 
+## Follow-up Feature Ablations
+
+Tanisha also requested a smaller follow-up around explainability, coordinate conversion, and whether the added Stage 2 features matter. The SHAP and coordinate-conversion files were already present in the repository:
+
+- SHAP generation and artifacts: `scripts/15_compute_stage2_shap.py`, `outputs/stage2/shap/`
+- Pixel-to-latitude/longitude conversion: `scripts/17_generate_pipeline_visualizations.py`
+- Existing coordinate table: `outputs/figures/final_pipeline/05_stage2_high_alert_locations.csv`
+
+I trained two-fold LightGBM variants on the 2019 `r2km_fair` candidate tables. The accepted full-feature models are the reference. The no-extra-feature baseline kept only Stage 1 probability/threshold-mask features plus current-fire distance/geometry features.
+
+| Variant | Mean AP | Mean within-event AUC | Mean AP drop vs full | Mean AUC drop vs full | Discriminative check |
+|---|---:|---:|---:|---:|---:|
+| No added features | 0.1444 | 0.7509 | 65.1% | 6.0% | 0/2 folds passed |
+| Drop weather/drought features | 0.3031 | 0.8133 | 27.3% | -1.8% | 2/2 folds passed |
+| Drop fire geometry features | 0.3404 | 0.7391 | 17.5% | 7.5% | 0/2 folds passed |
+| Drop terrain/vegetation features | 0.3776 | 0.8332 | 8.4% | -4.3% | 2/2 folds passed |
+| Drop wind features | 0.4130 | 0.7987 | -0.3% | -0.0% | 2/2 folds passed |
+| Drop Stage 1 threshold features | 0.4847 | 0.8221 | -18.3% | -2.9% | 2/2 folds passed |
+
+The clearest thesis-facing finding is that the model without added features performs much worse: AP falls by about 65% and both no-extra-feature folds fail the discriminative check. Among individual feature groups, weather/drought features cause the largest AP loss when removed, while fire-geometry features cause the largest within-event AUC loss and fail the discriminative check.
+
+The follow-up figures should be additions, not replacements for Tanisha's existing `outputs/figures/final_pipeline/` set. I rejected the initial top-5 SHAP scatter plot generated during this follow-up because it was not presentation-worthy: the x-axis labels were crowded, annotations collided with the title, repeated event labels dominated the plot, and the visual did not communicate a clean claim.
+
+The follow-up figure folder contains only the three new figures for Tanisha's request, under `outputs/tanisha_followup_experiments/figures/`. The detailed follow-up report `outputs/tanisha_followup_experiments/TANISHA_FOLLOWUP_RESULTS.md` includes a figure guide explaining what each diagram shows and why it matters:
+
+- `01_top5_added_feature_shap_heatmap.png`: highest-scoring sampled alert across five unique fire events, with grouped added-feature SHAP contributions.
+- `02_top5_alert_locations_lat_lon_table.png`: standalone coordinate table for the highest-risk Stage 2 alert locations.
+- `03_feature_group_ablation_impact.png`: percent performance drop by feature group for AP and within-event AUC.
+
+For the thesis/report, these should be considered supplemental follow-up figures beside Tanisha's existing `outputs/figures/final_pipeline/` set, not replacements.
+
 ## Catch-Rate Definitions
 
 Tanisha's requested clarification is useful because the two catch-rate definitions answer different questions.

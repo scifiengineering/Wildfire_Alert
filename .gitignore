@@ -46,5 +46,15 @@ outputs/predictions/stage1_2020_ensemble/
 outputs/stage2/candidates_2020_r4km_fair/*.csv
 outputs/stage2/scored_2020_r4km_fair/*.csv
 
+# Local editor settings.
+.vscode/
+
+# Generated follow-up experiment internals. Keep curated reports/figures/tables visible.
+outputs/tanisha_followup_experiments/2020_ablation/models/
+outputs/tanisha_followup_experiments/derived_candidates/
+outputs/tanisha_followup_experiments/evaluation/
+outputs/tanisha_followup_experiments/logs/
+outputs/tanisha_followup_experiments/models/
+
 #personal specs
 Specifications/*
