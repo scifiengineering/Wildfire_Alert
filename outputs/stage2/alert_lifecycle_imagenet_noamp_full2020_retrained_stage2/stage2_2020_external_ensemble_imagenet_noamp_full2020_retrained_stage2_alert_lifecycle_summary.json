@@ -1,0 +1,22 @@
+{
+  "event_day_count": 2153,
+  "event_count": 200,
+  "total_new_alerts": 115866,
+  "total_continued_alerts": 26561,
+  "total_removed_alerts": 112326,
+  "total_active_alerts": 142427,
+  "mean_new_alerts_per_event_day": 53.81607059916396,
+  "mean_continued_alerts_per_event_day": 12.336739433348816,
+  "mean_removed_alerts_per_event_day": 52.17185322805388,
+  "mean_active_alerts_per_event_day": 66.15281003251278,
+  "mean_selected_alerts_per_event_day": 66.15281003251278,
+  "total_removed_burned": 3680,
+  "total_removed_no_longer_candidate": 39627,
+  "total_removed_below_threshold": 69019,
+  "model_name": "stage2_2020_external_ensemble_imagenet_noamp_full2020_retrained_stage2",
+  "scored_candidate_csv": "outputs/stage2/scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2/stage2_2020_scored_candidates.csv",
+  "threshold": 0.8117221967059977,
+  "threshold_json": "outputs/stage2/calibration_3fold_r4km_imagenet_noamp/stage2_oof_threshold.json",
+  "max_radius_km": 4.0,
+  "carry_over_gaps": false
+}
