@@ -57,6 +57,7 @@ FEATURE_GROUPS = {
         "landcover_class",
     ],
 }
+MODEL_SOURCE = "stage2_gbm_3fold_r4km_imagenet_noamp_ensemble"
 
 
 def main() -> None:
@@ -65,7 +66,7 @@ def main() -> None:
         "--scored-candidate-csv",
         type=Path,
         default=Path(
-            "outputs/stage2/scored_2020_r4km_fair_tanisha_ckpt_full2020/"
+            "outputs/stage2/scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2/"
             "stage2_2020_scored_candidates.csv"
         ),
     )
@@ -75,16 +76,16 @@ def main() -> None:
         nargs="+",
         default=[
             Path(
-                "outputs/stage2/models_3fold_r4km_tanisha_ckpt/"
-                "stage2_gbm_3fold_r4km_tanisha_ckpt_holdout0.joblib"
+                "outputs/stage2/models_3fold_r4km_imagenet_noamp/"
+                "stage2_gbm_3fold_r4km_imagenet_noamp_holdout0.joblib"
             ),
             Path(
-                "outputs/stage2/models_3fold_r4km_tanisha_ckpt/"
-                "stage2_gbm_3fold_r4km_tanisha_ckpt_holdout1.joblib"
+                "outputs/stage2/models_3fold_r4km_imagenet_noamp/"
+                "stage2_gbm_3fold_r4km_imagenet_noamp_holdout1.joblib"
             ),
             Path(
-                "outputs/stage2/models_3fold_r4km_tanisha_ckpt/"
-                "stage2_gbm_3fold_r4km_tanisha_ckpt_holdout2.joblib"
+                "outputs/stage2/models_3fold_r4km_imagenet_noamp/"
+                "stage2_gbm_3fold_r4km_imagenet_noamp_holdout2.joblib"
             ),
         ],
     )
@@ -107,6 +108,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    reject_tanisha_checkpoint_paths([args.scored_candidate_csv, *args.models])
     table = build_grouped_contribution_table(
         scored_candidate_csv=args.scored_candidate_csv,
         model_paths=args.models,
@@ -141,7 +143,7 @@ def build_grouped_contribution_table(
 
     lon, lat = rows_cols_to_lon_lat(top_rows, hdf5_root)
     output = top_rows[METADATA_COLUMNS].copy()
-    output.insert(0, "model_source", "stage2_gbm_3fold_r4km_tanisha_ckpt_ensemble")
+    output.insert(0, "model_source", MODEL_SOURCE)
     output["latitude"] = lat
     output["longitude"] = lon
     output["burned_tomorrow"] = output.pop("label").astype(int)
@@ -289,6 +291,18 @@ def render_heatmap(table: pd.DataFrame, output_path: Path) -> Path:
     fig.savefig(output_path, dpi=180, bbox_inches="tight")
     plt.close(fig)
     return output_path
+
+
+def reject_tanisha_checkpoint_paths(paths: list[Path]) -> None:
+    """Prevent active follow-up figures from using Tanisha-checkpoint artifacts."""
+
+    blocked = [str(path) for path in paths if "tanisha_ckpt" in str(path)]
+    if blocked:
+        joined = "\n  ".join(blocked)
+        raise ValueError(
+            "Active follow-up figures must use regenerated-checkpoint artifacts, "
+            f"not Tanisha-checkpoint paths:\n  {joined}"
+        )
 
 
 def annotate_cells(

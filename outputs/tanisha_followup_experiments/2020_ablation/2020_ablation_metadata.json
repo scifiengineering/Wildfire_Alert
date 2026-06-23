@@ -1,0 +1,16 @@
+{
+  "model_source": "regenerated_imagenet_noamp_full2020",
+  "fold_csvs": [
+    "outputs/stage2/candidates_3fold_r4km_fair_imagenet_noamp/stage2_fold0_validation_candidates.csv",
+    "outputs/stage2/candidates_3fold_r4km_fair_imagenet_noamp/stage2_fold1_validation_candidates.csv",
+    "outputs/stage2/candidates_3fold_r4km_fair_imagenet_noamp/stage2_fold2_validation_candidates.csv"
+  ],
+  "full_models": [
+    "outputs/stage2/models_3fold_r4km_imagenet_noamp/stage2_gbm_3fold_r4km_imagenet_noamp_holdout0.joblib",
+    "outputs/stage2/models_3fold_r4km_imagenet_noamp/stage2_gbm_3fold_r4km_imagenet_noamp_holdout1.joblib",
+    "outputs/stage2/models_3fold_r4km_imagenet_noamp/stage2_gbm_3fold_r4km_imagenet_noamp_holdout2.joblib"
+  ],
+  "test_csv": "outputs/stage2/candidates_2020_r4km_fair_imagenet_noamp_full2020/stage2_2020_candidates.csv",
+  "figure_output": "outputs/tanisha_followup_experiments/figures/03_feature_group_ablation_impact.png",
+  "seed": 42
+}

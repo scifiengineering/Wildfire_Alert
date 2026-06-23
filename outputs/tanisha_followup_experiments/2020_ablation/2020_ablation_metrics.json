@@ -1,62 +1,62 @@
 [
   {
     "variant": "drop_fire_geometry_features",
-    "average_precision": 0.16595237923329725,
-    "roc_auc": 0.7055884370946827,
-    "within_event_auc": 0.6776375484606281,
-    "ap_drop_vs_full": 0.09558372525109421,
-    "within_event_auc_drop_vs_full": 0.17895080985017908,
-    "ap_drop_percent_vs_full": 36.54704785006028,
-    "within_event_auc_drop_percent_vs_full": 20.89110926082047
+    "average_precision": 0.1628519163895632,
+    "roc_auc": 0.6968586377420616,
+    "within_event_auc": 0.6752289131786294,
+    "ap_drop_vs_full": 0.08822763436150749,
+    "within_event_auc_drop_vs_full": 0.18474743087007772,
+    "ap_drop_percent_vs_full": 35.13931504879087,
+    "within_event_auc_drop_percent_vs_full": 21.48285033054514
   },
   {
     "variant": "drop_weather_drought_features",
-    "average_precision": 0.24960140854886878,
-    "roc_auc": 0.815393137342476,
-    "within_event_auc": 0.8586395002678073,
-    "ap_drop_vs_full": 0.011934695935522682,
-    "within_event_auc_drop_vs_full": -0.00205114195700018,
-    "ap_drop_percent_vs_full": 4.563307218730463,
-    "within_event_auc_drop_percent_vs_full": -0.2394548019593721
+    "average_precision": 0.24906145701066837,
+    "roc_auc": 0.8179356426777317,
+    "within_event_auc": 0.8624754780427846,
+    "ap_drop_vs_full": 0.0020180937404023214,
+    "within_event_auc_drop_vs_full": -0.002499133994077418,
+    "ap_drop_percent_vs_full": 0.803766668518191,
+    "within_event_auc_drop_percent_vs_full": -0.2906049697031983
   },
   {
     "variant": "drop_terrain_vegetation_features",
-    "average_precision": 0.2545030074396304,
-    "roc_auc": 0.8238785225555488,
-    "within_event_auc": 0.8573257580812483,
-    "ap_drop_vs_full": 0.007033097044761072,
-    "within_event_auc_drop_vs_full": -0.0007373997704411828,
-    "ap_drop_percent_vs_full": 2.689149575974054,
-    "within_event_auc_drop_percent_vs_full": -0.08608566335121991
-  },
-  {
-    "variant": "no_extra_features",
-    "average_precision": 0.25806877781617216,
-    "roc_auc": 0.8122337944409393,
-    "within_event_auc": 0.8571723313937477,
-    "ap_drop_vs_full": 0.003467326668219306,
-    "within_event_auc_drop_vs_full": -0.0005839730829405587,
-    "ap_drop_percent_vs_full": 1.3257544976648672,
-    "within_event_auc_drop_percent_vs_full": -0.06817429600516099
+    "average_precision": 0.2492361690906998,
+    "roc_auc": 0.820273405076381,
+    "within_event_auc": 0.8604811204349864,
+    "ap_drop_vs_full": 0.001843381660370902,
+    "within_event_auc_drop_vs_full": -0.0005047763862792154,
+    "ap_drop_percent_vs_full": 0.7341823158662957,
+    "within_event_auc_drop_percent_vs_full": -0.05869654319824244
   },
   {
     "variant": "full_features",
-    "average_precision": 0.26153610448439146,
-    "roc_auc": 0.8249899362621604,
-    "within_event_auc": 0.8565883583108072,
+    "average_precision": 0.2510795507510707,
+    "roc_auc": 0.8186182105957973,
+    "within_event_auc": 0.8599763440487072,
     "ap_drop_vs_full": 0.0,
     "within_event_auc_drop_vs_full": 0.0,
     "ap_drop_percent_vs_full": 0.0,
     "within_event_auc_drop_percent_vs_full": 0.0
   },
   {
+    "variant": "no_extra_features",
+    "average_precision": 0.26200609563919336,
+    "roc_auc": 0.8212560622509631,
+    "within_event_auc": 0.8589946893056926,
+    "ap_drop_vs_full": -0.010926544888122669,
+    "within_event_auc_drop_vs_full": 0.0009816547430145928,
+    "ap_drop_percent_vs_full": -4.351825887627001,
+    "within_event_auc_drop_percent_vs_full": 0.11414904023906429
+  },
+  {
     "variant": "drop_wind_features",
-    "average_precision": 0.2700581420594896,
-    "roc_auc": 0.8179996058443367,
-    "within_event_auc": 0.8553541953847866,
-    "ap_drop_vs_full": -0.008522037575098118,
-    "within_event_auc_drop_vs_full": 0.0012341629260205211,
-    "ap_drop_percent_vs_full": -3.2584554977214304,
-    "within_event_auc_drop_percent_vs_full": 0.14407888153585127
+    "average_precision": 0.26946906284658556,
+    "roc_auc": 0.8183559308083788,
+    "within_event_auc": 0.8570806496556156,
+    "ap_drop_vs_full": -0.01838951209551487,
+    "within_event_auc_drop_vs_full": 0.0028956943930915635,
+    "ap_drop_percent_vs_full": -7.324177552694004,
+    "within_event_auc_drop_percent_vs_full": 0.33671791243220034
   }
 ]

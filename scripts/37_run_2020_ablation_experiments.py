@@ -8,6 +8,7 @@ from pathlib import Path
 
 import joblib
 import lightgbm as lgb
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
@@ -71,6 +72,7 @@ FEATURE_GROUPS = {
         "landcover_class",
     ],
 }
+MODEL_SOURCE = "regenerated_imagenet_noamp_full2020"
 
 
 def main() -> None:
@@ -81,15 +83,15 @@ def main() -> None:
         nargs="+",
         default=[
             Path(
-                "outputs/stage2/candidates_3fold_r4km_fair_tanisha_ckpt/"
+                "outputs/stage2/candidates_3fold_r4km_fair_imagenet_noamp/"
                 "stage2_fold0_validation_candidates.csv"
             ),
             Path(
-                "outputs/stage2/candidates_3fold_r4km_fair_tanisha_ckpt/"
+                "outputs/stage2/candidates_3fold_r4km_fair_imagenet_noamp/"
                 "stage2_fold1_validation_candidates.csv"
             ),
             Path(
-                "outputs/stage2/candidates_3fold_r4km_fair_tanisha_ckpt/"
+                "outputs/stage2/candidates_3fold_r4km_fair_imagenet_noamp/"
                 "stage2_fold2_validation_candidates.csv"
             ),
         ],
@@ -100,16 +102,16 @@ def main() -> None:
         nargs="+",
         default=[
             Path(
-                "outputs/stage2/models_3fold_r4km_tanisha_ckpt/"
-                "stage2_gbm_3fold_r4km_tanisha_ckpt_holdout0.joblib"
+                "outputs/stage2/models_3fold_r4km_imagenet_noamp/"
+                "stage2_gbm_3fold_r4km_imagenet_noamp_holdout0.joblib"
             ),
             Path(
-                "outputs/stage2/models_3fold_r4km_tanisha_ckpt/"
-                "stage2_gbm_3fold_r4km_tanisha_ckpt_holdout1.joblib"
+                "outputs/stage2/models_3fold_r4km_imagenet_noamp/"
+                "stage2_gbm_3fold_r4km_imagenet_noamp_holdout1.joblib"
             ),
             Path(
-                "outputs/stage2/models_3fold_r4km_tanisha_ckpt/"
-                "stage2_gbm_3fold_r4km_tanisha_ckpt_holdout2.joblib"
+                "outputs/stage2/models_3fold_r4km_imagenet_noamp/"
+                "stage2_gbm_3fold_r4km_imagenet_noamp_holdout2.joblib"
             ),
         ],
     )
@@ -117,7 +119,7 @@ def main() -> None:
         "--test-csv",
         type=Path,
         default=Path(
-            "outputs/stage2/candidates_2020_r4km_fair_tanisha_ckpt_full2020/"
+            "outputs/stage2/candidates_2020_r4km_fair_imagenet_noamp_full2020/"
             "stage2_2020_candidates.csv"
         ),
     )
@@ -126,9 +128,18 @@ def main() -> None:
         type=Path,
         default=Path("outputs/tanisha_followup_experiments/2020_ablation"),
     )
+    parser.add_argument(
+        "--figure-output",
+        type=Path,
+        default=Path(
+            "outputs/tanisha_followup_experiments/figures/"
+            "03_feature_group_ablation_impact.png"
+        ),
+    )
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
 
+    reject_tanisha_checkpoint_paths([*args.fold_csvs, *args.full_models, args.test_csv])
     args.output_dir.mkdir(parents=True, exist_ok=True)
     fold_frames = [pd.read_csv(path) for path in args.fold_csvs]
     full_feature_columns = feature_column_names(fold_frames[0])
@@ -170,6 +181,19 @@ def main() -> None:
         json.dumps(table.to_dict(orient="records"), indent=2) + "\n",
         encoding="utf-8",
     )
+    metadata = {
+        "model_source": MODEL_SOURCE,
+        "fold_csvs": [str(path) for path in args.fold_csvs],
+        "full_models": [str(path) for path in args.full_models],
+        "test_csv": str(args.test_csv),
+        "figure_output": str(args.figure_output),
+        "seed": args.seed,
+    }
+    (args.output_dir / "2020_ablation_metadata.json").write_text(
+        json.dumps(metadata, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    render_ablation_figure(table, args.figure_output)
     print(table.to_string(index=False))
 
 
@@ -295,6 +319,70 @@ def percentage_drop(full_value: float, variant_values: pd.Series) -> pd.Series:
     if full_value == 0:
         return pd.Series(np.zeros(len(variant_values)), index=variant_values.index)
     return (full_value - variant_values) / full_value * 100.0
+
+
+def render_ablation_figure(table: pd.DataFrame, output_path: Path) -> Path:
+    """Render 2020 regenerated-checkpoint ablation drops for the paper figure."""
+
+    plot = table[table["variant"] != "full_features"].copy()
+    plot = plot.sort_values("ap_drop_percent_vs_full", ascending=True)
+    labels = [format_variant_name(value) for value in plot["variant"]]
+    y_positions = np.arange(len(plot))
+
+    fig, axes = plt.subplots(1, 2, figsize=(12.0, 5.2), sharey=True)
+    specs = [
+        ("ap_drop_percent_vs_full", "AP drop vs full (%)", "#2f6f9f"),
+        ("within_event_auc_drop_percent_vs_full", "Within-event AUC drop vs full (%)", "#b85c38"),
+    ]
+    for axis, (column, title, color) in zip(axes, specs, strict=True):
+        values = plot[column].to_numpy(dtype=float)
+        axis.barh(y_positions, values, color=color, alpha=0.88)
+        axis.axvline(0.0, color="#333333", linewidth=1.0)
+        axis.set_title(title, weight="bold")
+        axis.set_xlabel("Percent drop")
+        axis.grid(axis="x", color="#dddddd", linewidth=0.8)
+        for index, value in enumerate(values):
+            x_offset = 0.8 if value >= 0 else -0.8
+            ha = "left" if value >= 0 else "right"
+            axis.text(value + x_offset, index, f"{value:.1f}", va="center", ha=ha, fontsize=9)
+
+    axes[0].set_yticks(y_positions, labels)
+    axes[0].set_ylabel("Ablation variant")
+    fig.suptitle(
+        "2020 Regenerated-Checkpoint Feature Ablation Impact",
+        weight="bold",
+        y=0.98,
+    )
+    fig.text(
+        0.01,
+        0.02,
+        "Positive values mean performance dropped after removing that feature group.",
+        fontsize=10,
+        color="#444444",
+    )
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.tight_layout(rect=(0, 0.04, 1, 0.94))
+    fig.savefig(output_path, dpi=180, bbox_inches="tight")
+    plt.close(fig)
+    return output_path
+
+
+def format_variant_name(value: str) -> str:
+    """Make compact figure labels from ablation variant names."""
+
+    return value.removeprefix("drop_").replace("_features", "").replace("_", " ")
+
+
+def reject_tanisha_checkpoint_paths(paths: list[Path]) -> None:
+    """Prevent active follow-up runs from using Tanisha-checkpoint artifacts."""
+
+    blocked = [str(path) for path in paths if "tanisha_ckpt" in str(path)]
+    if blocked:
+        joined = "\n  ".join(blocked)
+        raise ValueError(
+            "Active follow-up experiments must use regenerated-checkpoint artifacts, "
+            f"not Tanisha-checkpoint paths:\n  {joined}"
+        )
 
 
 if __name__ == "__main__":

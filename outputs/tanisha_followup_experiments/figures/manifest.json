@@ -4,7 +4,7 @@
     {
       "file": "01_top5_added_feature_shap_heatmap.png",
       "request": "SHAP contribution for top locations across fire events",
-      "role": "Grouped added-feature SHAP contributions for the highest-scoring sampled alert across five unique fire events."
+      "role": "Grouped added-feature SHAP contributions from regenerated-checkpoint scores for the highest-scoring sampled alert across five unique fire events."
     },
     {
       "file": "02_top5_alert_locations_lat_lon_table.png",
@@ -14,7 +14,7 @@
     {
       "file": "03_feature_group_ablation_impact.png",
       "request": "No-added-feature LightGBM and added-feature ablations",
-      "role": "Percent AP and within-event AUC drop by removed feature group."
+      "role": "2020 regenerated-checkpoint percent AP and within-event AUC drop by removed feature group."
     }
   ],
   "tables": [
