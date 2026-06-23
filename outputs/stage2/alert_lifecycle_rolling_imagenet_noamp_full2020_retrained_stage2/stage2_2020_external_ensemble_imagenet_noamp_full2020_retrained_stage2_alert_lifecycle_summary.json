@@ -1,0 +1,31 @@
+{
+  "event_day_count": 5382,
+  "event_count": 176,
+  "window_count": 1794,
+  "total_new_alerts": 355924,
+  "total_continued_alerts": 52474,
+  "total_removed_alerts": 220909,
+  "total_active_alerts": 408398,
+  "mean_new_alerts_per_event_day": 66.13229282794501,
+  "mean_continued_alerts_per_event_day": 9.749907097733185,
+  "mean_removed_alerts_per_event_day": 41.04589371980676,
+  "mean_active_alerts_per_event_day": 75.8821999256782,
+  "mean_selected_alerts_per_event_day": 75.8821999256782,
+  "total_removed_burned": 0,
+  "total_removed_no_longer_candidate": 88064,
+  "total_removed_below_threshold": 132845,
+  "source_event_count": 201,
+  "source_event_day_count": 2184,
+  "protocol": "rolling_windows",
+  "model_name": "stage2_2020_external_ensemble_imagenet_noamp_full2020_retrained_stage2",
+  "scored_candidate_csv": "outputs/stage2/scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2/stage2_2020_scored_candidates.csv",
+  "threshold": 0.8117221967059977,
+  "threshold_json": "outputs/stage2/calibration_3fold_r4km_imagenet_noamp/stage2_oof_threshold.json",
+  "max_radius_km": null,
+  "rolling_radii_km": [
+    2.0,
+    3.0,
+    4.0
+  ],
+  "carry_over_gaps": false
+}

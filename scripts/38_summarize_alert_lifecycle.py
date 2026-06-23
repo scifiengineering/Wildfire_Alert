@@ -39,6 +39,15 @@ def main() -> None:
         help="Optional candidate-region radius to apply before selecting/continuing alerts.",
     )
     parser.add_argument(
+        "--rolling-radii-km",
+        type=float,
+        nargs="+",
+        help=(
+            "Evaluate lifecycle within overlapping rolling windows using these step radii. "
+            "Use this when comparing against rolling-alert table summaries."
+        ),
+    )
+    parser.add_argument(
         "--carry-over-gaps",
         action="store_true",
         help="Carry active alerts across missing calendar dates. By default, gaps reset state.",
@@ -53,20 +62,34 @@ def main() -> None:
 
     threshold = resolve_threshold(args.threshold, args.threshold_json)
     candidates = load_candidates(args.scored_candidate_csv)
-    rows = summarize_alert_lifecycle(
-        candidates,
-        threshold=threshold,
-        max_radius_km=args.max_radius_km,
-        carry_over_gaps=args.carry_over_gaps,
-    )
+    if args.rolling_radii_km is not None:
+        if not args.rolling_radii_km:
+            raise ValueError("--rolling-radii-km must contain at least one value.")
+        rows = summarize_rolling_alert_lifecycle(
+            candidates,
+            threshold=threshold,
+            radii_km=tuple(args.rolling_radii_km),
+        )
+        protocol = "rolling_windows"
+    else:
+        rows = summarize_alert_lifecycle(
+            candidates,
+            threshold=threshold,
+            max_radius_km=args.max_radius_km,
+            carry_over_gaps=args.carry_over_gaps,
+        )
+        protocol = "unique_event_days"
     summary = summarize(rows)
+    summary.update(source_universe_summary(candidates))
     summary.update(
         {
+            "protocol": protocol,
             "model_name": args.model_name,
             "scored_candidate_csv": str(args.scored_candidate_csv),
             "threshold": threshold,
             "threshold_json": str(args.threshold_json) if args.threshold_json else None,
             "max_radius_km": args.max_radius_km,
+            "rolling_radii_km": args.rolling_radii_km,
             "carry_over_gaps": args.carry_over_gaps,
         }
     )
@@ -148,6 +171,71 @@ def summarize_alert_lifecycle(
     return rows
 
 
+def summarize_rolling_alert_lifecycle(
+    candidates: pd.DataFrame,
+    threshold: float,
+    radii_km: tuple[float, ...],
+) -> list[dict[str, int | float | str]]:
+    """Compute lifecycle counts on the same overlapping windows as rolling alerts."""
+
+    frame = candidates.copy()
+    frame["target_date"] = frame["target_date"].astype(str)
+    frame["_coord"] = list(zip(frame["row"].astype(int), frame["col"].astype(int), strict=True))
+    future = frame[frame["current_fire_at_candidate"].astype(int).eq(0)].copy()
+
+    rows: list[dict[str, int | float | str]] = []
+    for event_id, event in future.groupby("event_id", sort=True):
+        dates = sorted(str(date) for date in event["target_date"].unique())
+        if len(dates) < len(radii_km):
+            continue
+        for start_index in range(0, len(dates) - len(radii_km) + 1):
+            previous_active: set[tuple[int, int]] = set()
+            window_dates = dates[start_index : start_index + len(radii_km)]
+            window_id = f"{event_id}_{window_dates[0]}_{window_dates[-1]}"
+            for step, (target_date, radius_km) in enumerate(
+                zip(window_dates, radii_km, strict=True)
+            ):
+                day = event[event["target_date"] == target_date].copy()
+                day["_eligible_region"] = day["distance_to_current_fire_km"].astype(float).le(
+                    radius_km
+                )
+                day["_selected"] = day["_eligible_region"] & day["model_score"].astype(
+                    float
+                ).ge(threshold)
+
+                selected_today = set(day.loc[day["_selected"], "_coord"])
+                continued = previous_active & selected_today
+                new = selected_today - previous_active
+                removed = previous_active - selected_today
+                removal_reasons = count_removal_reasons(
+                    day=day,
+                    removed=removed,
+                    threshold=threshold,
+                    max_radius_km=radius_km,
+                )
+
+                rows.append(
+                    {
+                        "event_id": str(event_id),
+                        "target_date": str(target_date),
+                        "window_id": window_id,
+                        "rolling_step": int(step),
+                        "radius_km": float(radius_km),
+                        "candidate_count": int(len(day)),
+                        "eligible_candidate_count": int(day["_eligible_region"].sum()),
+                        "selected_alert_count": int(len(selected_today)),
+                        "previous_active_alert_count": int(len(previous_active)),
+                        "new_alert_count": int(len(new)),
+                        "continued_alert_count": int(len(continued)),
+                        "removed_alert_count": int(len(removed)),
+                        "active_alert_count": int(len(new) + len(continued)),
+                        **removal_reasons,
+                    }
+                )
+                previous_active = selected_today
+    return rows
+
+
 def count_removal_reasons(
     day: pd.DataFrame,
     removed: set[tuple[int, int]],
@@ -198,6 +286,11 @@ def summarize(rows: list[dict[str, int | float | str]]) -> dict[str, int | float
     return {
         "event_day_count": int(len(frame)),
         "event_count": int(frame["event_id"].nunique()),
+        **(
+            {"window_count": int(frame["window_id"].nunique())}
+            if "window_id" in frame.columns
+            else {}
+        ),
         "total_new_alerts": total_new,
         "total_continued_alerts": total_continued,
         "total_removed_alerts": total_removed,
@@ -215,6 +308,16 @@ def summarize(rows: list[dict[str, int | float | str]]) -> dict[str, int | float
     }
 
 
+def source_universe_summary(candidates: pd.DataFrame) -> dict[str, int]:
+    """Describe the input candidate universe before lifecycle windowing."""
+
+    event_days = candidates[["event_id", "target_date"]].drop_duplicates()
+    return {
+        "source_event_count": int(candidates["event_id"].nunique()),
+        "source_event_day_count": int(len(event_days)),
+    }
+
+
 def load_candidates(path: Path) -> pd.DataFrame:
     """Load only columns needed for alert lifecycle post-processing."""
 
@@ -228,7 +331,11 @@ def load_candidates(path: Path) -> pd.DataFrame:
     frame = pd.read_csv(path, usecols=columns)
     if frame.empty:
         raise ValueError(f"{path} contains no candidate rows.")
-    return frame.replace([np.inf, -np.inf], np.nan).dropna(subset=REQUIRED_COLUMNS)
+    frame = frame.replace([np.inf, -np.inf], np.nan)
+    required_without_distance = [
+        column for column in REQUIRED_COLUMNS if column != "distance_to_current_fire_km"
+    ]
+    return frame.dropna(subset=required_without_distance)
 
 
 def resolve_threshold(threshold: float | None, threshold_json: Path | None) -> float:
