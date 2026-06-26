@@ -1,10 +1,10 @@
-# Tanisha Follow-up Experiment Results
+# Follow-up Experiment Results
 
 Generated: 2026-06-23
 
 ## Figure Guide
 
-All new follow-up figures are in `outputs/tanisha_followup_experiments/figures/`. This folder now contains only the three new figures that correspond to Tanisha's requested follow-up experiments. The existing final-pipeline figures remain in `outputs/figures/final_pipeline/` and are not duplicated here.
+All new follow-up figures are in this follow-up output folder's `figures/` directory. This folder now contains only the three new figures that correspond to the requested follow-up experiments. The existing final-pipeline figures remain in `outputs/figures/final_pipeline/` and are not duplicated here.
 
 | Figure | What it shows | Why it matters |
 |---|---|---|
@@ -14,10 +14,10 @@ All new follow-up figures are in `outputs/tanisha_followup_experiments/figures/`
 
 Related figure tables:
 
-- Added-feature SHAP table: `outputs/tanisha_followup_experiments/figures/01_top5_added_feature_group_shap.csv`
-- Standalone top-5 coordinate table: `outputs/tanisha_followup_experiments/figures/02_top5_alert_locations_lat_lon_table.csv`
-- Top alert lat/lon table: `outputs/tanisha_followup_experiments/tables/top_alert_locations_lat_lon.csv`
-- Provenance: the active follow-up figures and 2020 ablation table use the regenerated ImageNet/no-AMP checkpoint artifacts, not `*_tanisha_ckpt*` artifacts.
+- Added-feature SHAP table: `figures/01_top5_added_feature_group_shap.csv`
+- Standalone top-5 coordinate table: `figures/02_top5_alert_locations_lat_lon_table.csv`
+- Top alert lat/lon table: `tables/top_alert_locations_lat_lon.csv`
+- Provenance: the active follow-up figures and 2020 ablation table use the regenerated ImageNet/no-AMP checkpoint artifacts, not the original-checkpoint artifact family.
 
 ## Table Definitions
 
@@ -49,7 +49,7 @@ Related figure tables:
 
 ### 2020 Ablation Result Table
 
-`outputs/tanisha_followup_experiments/2020_ablation/2020_ablation_metrics.csv` is the source table for the 2020 regenerated-checkpoint ablation.
+`2020_ablation/2020_ablation_metrics.csv` is the source table for the 2020 regenerated-checkpoint ablation.
 
 | Column | Definition |
 |---|---|

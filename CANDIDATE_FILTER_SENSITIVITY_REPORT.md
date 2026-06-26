@@ -72,7 +72,7 @@ Filtering can improve precision at low and moderate recall targets, especially f
 | 0.20 | 0.2515 | `stage1_probability_ge_0_30` | 0.2568 | +0.0053 | 85.58 | 83.82 |
 | 0.25 | 0.2366 | `distance_le_2km` | 0.2366 | +0.0000 | 113.71 | 113.71 |
 
-### Tanisha-Checkpoint Rerun
+### original thesis-Checkpoint Rerun
 
 | Recall target | Base precision | Best filter | Best precision | Precision gain | Base alerts/day | Filtered alerts/day |
 |---:|---:|---|---:|---:|---:|---:|
@@ -89,7 +89,7 @@ However, the improvement is not uniform:
 
 - At recall `0.10` and `0.15`, filtering gives a meaningful precision improvement.
 - At recall `0.20`, filtering still helps, but the gain is smaller.
-- At recall `0.25`, filtering gives little or no improvement in the regenerated-checkpoint run and only a small improvement in the Tanisha-checkpoint rerun.
+- At recall `0.25`, filtering gives little or no improvement in the regenerated-checkpoint run and only a small improvement in the original-checkpoint rerun.
 
 This means filtering is best framed as an operating-point or deployment-policy option, not as evidence that the primary Stage 2 result should be replaced.
 

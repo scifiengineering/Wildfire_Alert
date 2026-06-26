@@ -2,29 +2,29 @@
 
 > Superseded note, 2026-06-15: this command report documents the earlier incomplete 50-event 2020 subset run. The full 2020 universe has since been restored to 201 events and 2,184 active-current-fire samples. Use `FULL_2020_REGENERATED_CHECKPOINT_VALIDATION_REPORT.md` for the corrected full-2020 results, while keeping this file as provenance for the debugging path.
 
-This document records how I reproduced Tanisha's Stage 2 alerting framework using regenerated Stage 1 checkpoints, which scripts were used, which train/validation/test commands were run, and what conclusions I reached against the three thesis claims.
+This document records a reproduction of the original Stage 2 alerting framework using regenerated Stage 1 checkpoints, including the scripts used, the train/validation/test commands run, and the conclusions reached against the three thesis claims.
 
-This is a supportive reproducibility and integrity check, not a competing experiment. The goal is not to prove that my regenerated-checkpoint run is better than Tanisha's run. The goal is to check whether the same comparison framework produces the same direction of evidence, and to clearly flag places where my regenerated run differs from Tanisha's reported comparison.
+This is a supportive reproducibility and integrity check, not a competing experiment. The goal is not to prove that the regenerated-checkpoint run is better than the original run. The goal is to check whether the same comparison framework produces the same direction of evidence, and to clearly flag places where regenerated run differs from the reported thesis comparison.
 
-This was not an exact artifact reproduction of Tanisha's reported checkpoint run. The checkpoint paths were present in the repo, but the original Git LFS checkpoint objects were not retrievable locally, so I regenerated ImageNet-initialized Stage 1 checkpoints and then ran the same Stage 2 alerting framework.
+This was not an exact artifact reproduction of the reported thesis checkpoint run. The checkpoint paths were present in the repo, but the original Git LFS checkpoint objects were not retrievable locally, so the run regenerated ImageNet-initialized Stage 1 checkpoints and then ran the same Stage 2 alerting framework.
 
 ## Objective
 
-Tanisha's framework makes three alerting-system claims:
+the thesis framework makes three alerting-system claims:
 
 1. At matched alert volume, Stage 2 should be better than WSTS/Stage 1 used directly as an alerter.
 2. Stage 2 should reduce alert fatigue compared with naive 4 km flooding.
 3. Stage 2 should rank candidate locations better than WSTS/Stage 1 and distance-only baselines.
 
-The key fairness rule for claim 1 is one global WSTS threshold matched to Stage 2's mean alert volume. I did not use per-event-day top-K thresholding.
+The key fairness rule for claim 1 is one global WSTS threshold matched to Stage 2's mean alert volume. The run did not use per-event-day top-K thresholding.
 
 ## How to Read This Run
 
-The regenerated-checkpoint results should be read as a sensitivity check under different artifacts, not as an alternative thesis result. Tanisha's reported result remains the primary thesis result because it uses her frozen pipeline and artifacts.
+The regenerated-checkpoint results should be read as a sensitivity check under different artifacts, not as an alternative thesis result. the reported thesis result remains the primary thesis result because it uses the frozen pipeline and artifacts.
 
-The main comparability issue is alert volume. Tanisha's saved 2020 run produces about 89.53 Stage 2 alerts/event-day. My regenerated-checkpoint run produces about 25.23 Stage 2 alerts/event-day using the newly calibrated regenerated-pipeline Stage 2 threshold, `0.8117221967059977`.
+The main comparability issue is alert volume. the saved thesis 2020 run produces about 89.53 Stage 2 alerts/event-day. The regenerated-checkpoint run produces about 25.23 Stage 2 alerts/event-day using the newly calibrated regenerated-pipeline Stage 2 threshold, `0.8117221967059977`.
 
-| Input / volume check | Tanisha saved 2020 run | My regenerated-checkpoint run |
+| Input / volume check | saved thesis 2020 run | The regenerated-checkpoint run |
 |---|---:|---:|
 | 2020 events | 201 | 50 |
 | 2020 samples | 2,184 | 342 |
@@ -33,19 +33,19 @@ The main comparability issue is alert volume. Tanisha's saved 2020 run produces 
 | Stage 2 threshold | 0.7777810642 | 0.8117221967 |
 | Stage 2 alerts/event-day | 89.53 | 25.23 |
 
-This means the regenerated-checkpoint run should not be described as "beating" or "competing with" Tanisha's result. It checks whether the same framework points in the same thesis direction under regenerated artifacts. Where it does not, that difference is part of the audit and should be reported plainly. In this run, the alert-fatigue and ranking-quality claims point in the same direction as Tanisha's reported thesis results, while the matched-volume WSTS comparison does not reproduce the same precision/true-positive advantage.
+This means the regenerated-checkpoint run should not be described as "beating" or "competing with" the thesis result. It checks whether the same framework points in the same thesis direction under regenerated artifacts. Where it does not, that difference is part of the audit and should be reported plainly. In this run, the alert-fatigue and ranking-quality claims point in the same direction as the reported thesis thesis results, while the matched-volume WSTS comparison does not reproduce the same precision/true-positive advantage.
 
 ## Audit Finding at a Glance
 
-| Thesis comparison | Tanisha's reported direction | My regenerated-checkpoint direction | Integrity/audit reading |
+| Thesis comparison | the reported thesis direction | Regenerated-checkpoint direction | Integrity/audit reading |
 |---|---|---|---|
-| Stage 2 vs WSTS-as-alerter at matched volume | Stage 2 better on precision, recall, true-positive alerts, and event-day catch rate | Stage 2 better only on event-day catch rate; WSTS better on precision, recall, and true-positive alerts | Different result direction for precision/recall/TP. This does not validate the full point 1 claim without Tanisha's exact artifacts. |
+| Stage 2 vs WSTS-as-alerter at matched volume | Stage 2 better on precision, recall, true-positive alerts, and event-day catch rate | Stage 2 better only on event-day catch rate; WSTS better on precision, recall, and true-positive alerts | Different result direction for precision/recall/TP. This does not validate the full point 1 claim without the original artifacts. |
 | Stage 2 vs naive 4 km flooding | Stage 2 far fewer alerts and higher precision | Stage 2 far fewer alerts and higher precision | Same direction. Supports the alert-fatigue claim. |
 | Stage 2 vs WSTS/Stage 1 and distance ranking | Stage 2 better ranking quality | Stage 2 better AP/AUC than WSTS/Stage 1 and distance | Same direction. Supports the ranking-quality claim. |
 
 ## Script and Artifact Audit Before Reporting
 
-I compared the public repo scripts used by Tanisha's documented 2020 workflow with the scripts used in my run:
+The comparison checked the public repo scripts used by the original thesis documented 2020 workflow with the scripts used in this run:
 
 - `scripts/20_evaluate_rolling_alerts.py`
 - `scripts/21_predict_stage1_year.py`
@@ -53,11 +53,11 @@ I compared the public repo scripts used by Tanisha's documented 2020 workflow wi
 - `scripts/23_build_stage2_candidates_year.py`
 - `scripts/25_score_stage2_ensemble.py`
 
-There were no local diffs in those shared scripts. I also tested the documented `--exclude-empty-current-fire` flag for candidate generation on my available 2020 data; it produced the same candidate count, so that flag does not explain the lower true-positive count.
+There were no local diffs in those shared scripts. The documented `--exclude-empty-current-fire` flag was also tested for candidate generation on available 2020 data; it produced the same candidate count, so that flag does not explain the lower true-positive count.
 
-The exact matched-volume scripts Tanisha named, `scripts/26_compare_matched_alert_volume.py` and `scripts/27_summarize_matched_alert_volume.py`, were later provided in `Specifications/`. I compared them against my local implementation and ran Tanisha's comparison script on my corrected scored candidates from the retrained Stage 2 pipeline. Her script could not run standalone because the helper module `wildfire_alert.evaluation.matched_alerts` is not present in the repo, so I used a compatibility implementation matching the imported API and the metric definitions in her script.
+The exact matched-volume scripts named by the original workflow, `scripts/26_compare_matched_alert_volume.py` and `scripts/27_summarize_matched_alert_volume.py`, were later provided in `Specifications/`. The comparison checked them against the local implementation and ran the original comparison script on the corrected scored candidates from the retrained Stage 2 pipeline. The original script could not run standalone because the helper module `wildfire_alert.evaluation.matched_alerts` is not present in the repo, so this run used a compatibility implementation matching the imported API and the metric definitions in the original script.
 
-Tanisha's script on my scored candidates produced the same precision, recall, and true-positive discrepancy:
+the original script on the scored candidates produced the same precision, recall, and true-positive discrepancy:
 
 | Metric | Stage 2 | WSTS-as-alerter |
 |---|---:|---:|
@@ -68,9 +68,9 @@ Tanisha's script on my scored candidates produced the same precision, recall, an
 | True-positive alerts | 4,085 | 4,561 |
 | Event-day catch rate | 0.6047 | 0.3419 |
 
-This means the lower true-positive count is not caused by my local matched-volume script. One metric-definition correction was found: my first local summary computed event-day catch rate over all rolling decisions, while Tanisha's script defines it over positive rolling decisions only. Using Tanisha's definition, Stage 2's event-day catch-rate advantage in my run is `0.6047` vs `0.3419`.
+This means the lower true-positive count is not caused by the local matched-volume script. One metric-definition correction was found: the first local summary computed event-day catch rate over all rolling decisions, while the original script defines it over positive rolling decisions only. Using the original thesis definition, Stage 2's event-day catch-rate advantage in this run is `0.6047` vs `0.3419`.
 
-Before Tanisha's scripts were available, I implemented the described matched-volume logic locally as:
+Before the original scripts were available, A local implementation used the described matched-volume logic locally as:
 
 - `scripts/27_compare_matched_alert_volume.py`
 - `scripts/28_summarize_matched_alert_volume.py`
@@ -79,11 +79,11 @@ Those local scripts use one global WSTS threshold matched to Stage 2's total/mea
 
 The main remaining differences are artifact/data differences rather than visible shared-script differences:
 
-- My run uses regenerated Stage 1 checkpoints, not Tanisha's exact Stage 1 checkpoints.
-- My 2020 data/artifact universe is smaller: 50 events and 342 samples rather than 201 events and 2,184 samples.
-- I corrected the earlier hybrid run by retraining Stage 2 from regenerated 2019 Stage 1 out-of-fold predictions. The corrected Stage 2 models are in `outputs/stage2/models_3fold_r4km_imagenet_noamp/`.
+- This run uses regenerated Stage 1 checkpoints, not the original Stage 1 checkpoints.
+- The available 2020 data/artifact universe is smaller: 50 events and 342 samples rather than 201 events and 2,184 samples.
+- The run corrected the earlier hybrid run by retraining Stage 2 from regenerated 2019 Stage 1 out-of-fold predictions. The corrected Stage 2 models are in `outputs/stage2/models_3fold_r4km_imagenet_noamp/`.
 
-So the lower true-positive count is not explained by a known shared-script mismatch or by the earlier Stage 2 shortcut. After retraining Stage 2 consistently, the discrepancy remains. The remaining likely causes are regenerated Stage 1 checkpoints and incomplete/different 2020 data coverage compared with Tanisha's full 201-event run.
+So the lower true-positive count is not explained by a known shared-script mismatch or by the earlier Stage 2 shortcut. After retraining Stage 2 consistently, the discrepancy remains. The remaining likely causes are regenerated Stage 1 checkpoints and incomplete/different 2020 data coverage compared with the original thesis full 201-event run.
 
 ## Environment
 
@@ -323,7 +323,7 @@ Output summary:
 
 The earlier hybrid run reused the repo's existing Stage 2 GBM models. That was not an uncompromised regenerated-checkpoint reproduction. The corrected run retrained Stage 2 from regenerated 2019 Stage 1 out-of-fold predictions and candidates.
 
-I captured the corrected sequence in:
+The report captured the corrected sequence in:
 
 ```bash
 bash scripts/30_run_regenerated_stage2_pipeline.sh \
@@ -403,9 +403,9 @@ Result:
 | True-positive alerts | 4,085 | 4,561 |
 | Event-day catch rate | 0.6047 | 0.3419 |
 
-Audit conclusion: different result direction for the main matched-volume claim. Stage 2 catches more event-days, but WSTS has higher precision and more true-positive alert occurrences in this regenerated-checkpoint run. This should not be framed as a competing result against Tanisha, but it must be highlighted as a reproducibility discrepancy. It shows that Tanisha's strongest matched-volume WSTS claim depends on the exact frozen checkpoints and full 2020 artifact set.
+Audit conclusion: different result direction for the main matched-volume claim. Stage 2 catches more event-days, but WSTS has higher precision and more true-positive alert occurrences in this regenerated-checkpoint run. This should not be framed as a competing result against original thesis, but it must be highlighted as a reproducibility discrepancy. It shows that the original thesis strongest matched-volume WSTS claim depends on the exact frozen checkpoints and full 2020 artifact set.
 
-Why the alert volume is much lower than Tanisha's reported 89.53 alerts/event-day: this run used a regenerated-pipeline Stage 2 threshold calibrated from regenerated 2019 OOF scores, `0.8117221967059977`, while Tanisha's saved 2020 run used `0.7777810642240797`. The threshold operates on a different regenerated-checkpoint score distribution and a smaller 2020 data universe. Tanisha's saved 2020 candidate summary references 201 events, 2,184 samples, and 5,212,367 candidates. My regenerated-checkpoint run used 50 events, 342 samples, and 373,223 generated candidates. The naive 4 km baseline is also smaller in my run, 1,156.02 alerts/event-day versus Tanisha's 2,589.46. So the low `25.23` alerts/event-day is not because WSTS was matched incorrectly; WSTS was matched to the Stage 2 volume that the regenerated-pipeline threshold produced in my run.
+Why the alert volume is much lower than the reported thesis 89.53 alerts/event-day: this run used a regenerated-pipeline Stage 2 threshold calibrated from regenerated 2019 OOF scores, `0.8117221967059977`, while the saved thesis 2020 run used `0.7777810642240797`. The threshold operates on a different regenerated-checkpoint score distribution and a smaller 2020 data universe. the saved thesis 2020 candidate summary references 201 events, 2,184 samples, and 5,212,367 candidates. The regenerated-checkpoint run used 50 events, 342 samples, and 373,223 generated candidates. The naive 4 km baseline is also smaller in this run, 1,156.02 alerts/event-day versus the original reported 2,589.46. So the low `25.23` alerts/event-day is not because WSTS was matched incorrectly; WSTS was matched to the Stage 2 volume that the regenerated-pipeline threshold produced in this run.
 
 ## Experiment 2: Alert Fatigue vs Naive 4 km
 
@@ -429,7 +429,7 @@ Result:
 | Precision | 0.1215 | 0.0296 |
 | Alert reduction vs naive | 98.11% | - |
 
-Supportive validation conclusion: agrees with Tanisha's thesis direction. The regenerated-checkpoint run confirms that Stage 2 dramatically reduces alert volume and improves precision versus naive 4 km flooding.
+Supportive validation conclusion: agrees with the thesis direction. The regenerated-checkpoint run confirms that Stage 2 dramatically reduces alert volume and improves precision versus naive 4 km flooding.
 
 ## Experiment 3: Ranking Quality
 
@@ -519,22 +519,22 @@ Result:
 | ROC AUC | 0.8179 | 0.7606 | 0.7658 |
 | Within-event AUC | 0.8455 | 0.6768 | 0.8280 |
 
-Supportive validation conclusion: agrees with Tanisha's thesis direction. Stage 2 ranks candidates better than both WSTS/Stage 1 and distance-only baselines in this regenerated-checkpoint run.
+Supportive validation conclusion: agrees with the thesis direction. Stage 2 ranks candidates better than both WSTS/Stage 1 and distance-only baselines in this regenerated-checkpoint run.
 
-## Overall Comparison to Tanisha's Thesis Claims
+## Overall Comparison to the original thesis Thesis Claims
 
-| Thesis point | Tanisha's reported result | My regenerated-checkpoint result | Reproducibility / integrity conclusion |
+| Thesis point | the reported thesis result | Regenerated regenerated-checkpoint result | Reproducibility / integrity conclusion |
 |---|---|---|---|
-| 1. Stage 2 beats WSTS-as-alerter at matched volume | Stage 2 wins precision, recall, true-positive alerts, and event-day catch rate. | Stage 2 wins event-day catch rate only; WSTS wins precision, recall, and true-positive alerts under my smaller alert budget. | Not reproduced in full. This discrepancy must be highlighted. |
+| 1. Stage 2 beats WSTS-as-alerter at matched volume | Stage 2 wins precision, recall, true-positive alerts, and event-day catch rate. | Stage 2 wins event-day catch rate only; WSTS wins precision, recall, and true-positive alerts under the smaller alert budget. | Not reproduced in full. This discrepancy must be highlighted. |
 | 2. Stage 2 reduces alert fatigue vs naive 4 km flooding | Stage 2 reduces alerts by about 97% and improves precision. | Stage 2 reduces alerts by 98.11% and improves precision. | Reproduced directionally. |
 | 3. Stage 2 improves ranking quality vs WSTS/Stage 1 and distance | Stage 2 AP wins across reported validation folds; 2020 AP/AUC remain stable. | Stage 2 AP/AUC beat WSTS/Stage 1 and distance on the regenerated-checkpoint 2020 run. | Reproduced directionally. |
 
 ## Important Caveats
 
-- This run used regenerated Stage 1 checkpoints, not Tanisha's exact original checkpoint artifacts.
+- This run used regenerated Stage 1 checkpoints, not the exact original checkpoint artifacts.
 - The available 2020 HDF5 set used here contains 50 events and 342 eligible samples.
-- Tanisha's saved 2020 summaries reference a larger run with 201 events and 2,184 samples.
-- Therefore this validates the framework and two of the three thesis conclusions under regenerated artifacts, but it should not be presented as an exact reproduction of Tanisha's reported 2020 numbers.
+- the saved thesis 2020 summaries reference a larger run with 201 events and 2,184 samples.
+- Therefore this validates the framework and two of the three thesis conclusions under regenerated artifacts, but it should not be presented as an exact reproduction of the reported thesis 2020 numbers.
 
 ## Primary Output Artifacts
 

@@ -2,7 +2,7 @@
 
 ## Scope
 
-This report uses Sifiso's regenerated checkpoint support run only. It does not mix in Tanisha's original checkpoints or the Tanisha-checkpoint rerun.
+This report uses Sifiso's regenerated checkpoint support run only. It does not mix in the original checkpoints or the original-checkpoint rerun.
 
 - Stage 1 checkpoint family: `outputs/checkpoints/stage1_2019_3fold_imagenet_noamp_20260615/stage1_fold_{0,1,2}_best.pt`
 - Stage 2 model family: `outputs/stage2/models_3fold_r4km_imagenet_noamp/`
@@ -69,7 +69,7 @@ For 2019, Stage 2 improves AP over both distance and Stage-1 ranking in all thre
 | Global AUC | 0.8186 | 0.7089 | 0.7930 |
 | Within-event AUC | 0.8600 | 0.6961 | 0.8507 |
 
-The 2020 regenerated-checkpoint run supports Tanisha's direction: Stage 2 is above WSTS/Stage 1 and distance on AP, global AUC, and within-event AUC.
+The 2020 regenerated-checkpoint run supports the thesis direction: Stage 2 is above WSTS/Stage 1 and distance on AP, global AUC, and within-event AUC.
 
 ## Commands Used
 

@@ -1,4 +1,4 @@
-# Tanisha Follow-up Experiment Plan
+# original thesis Follow-up Experiment Plan
 
 Date: 2026-06-21
 
@@ -18,7 +18,7 @@ Date: 2026-06-21
   - `outputs/stage2/models/stage2_gbm_r2km_fair_fold0_to_fold1.joblib`
   - `outputs/stage2/models/stage2_gbm_r2km_fair_fold1_to_fold0.joblib`
 
-Remote check note: the SHAP and lat/lon files Tanisha referenced are visible locally and tracked in the current branch, so no remote file recovery is needed for those. Remote heads were checked on `origin` and `upstream` for awareness.
+Remote check note: the SHAP and lat/lon files original thesis referenced are visible locally and tracked in the current branch, so no remote file recovery is needed for those. Remote heads were checked on `origin` and `upstream` for awareness.
 
 ## Execution Plan
 
@@ -67,16 +67,16 @@ Remote check note: the SHAP and lat/lon files Tanisha referenced are visible loc
 
 ## Results Written
 
-- Summary report: `outputs/tanisha_followup_experiments/TANISHA_FOLLOWUP_RESULTS.md`
-- Mean ablation metrics: `outputs/tanisha_followup_experiments/tables/ablation_metrics_mean.csv`
-- Fold-level ablation metrics: `outputs/tanisha_followup_experiments/tables/ablation_metrics_by_fold.csv`
+- Summary report: follow-up experiment results Markdown under the follow-up output folder.
+- Mean ablation metrics: `tables/ablation_metrics_mean.csv` under the follow-up output folder.
+- Fold-level ablation metrics: `tables/ablation_metrics_by_fold.csv` under the follow-up output folder.
 - Presentation candidate figures:
-  - `outputs/tanisha_followup_experiments/figures/01_top5_added_feature_shap_heatmap.png`
-  - `outputs/tanisha_followup_experiments/figures/02_top5_alert_locations_lat_lon_table.png`
-  - `outputs/tanisha_followup_experiments/figures/03_feature_group_ablation_impact.png`
-- Added-feature SHAP table: `outputs/tanisha_followup_experiments/figures/01_top5_added_feature_group_shap.csv`
-- Coordinate table: `outputs/tanisha_followup_experiments/tables/top_alert_locations_lat_lon.csv`
+  - `figures/01_top5_added_feature_shap_heatmap.png` under the follow-up output folder.
+  - `figures/02_top5_alert_locations_lat_lon_table.png` under the follow-up output folder.
+  - `figures/03_feature_group_ablation_impact.png` under the follow-up output folder.
+- Added-feature SHAP table: `figures/01_top5_added_feature_group_shap.csv` under the follow-up output folder.
+- Coordinate table: `tables/top_alert_locations_lat_lon.csv` under the follow-up output folder.
 
 Environment note: `.venv` has LightGBM and the geo dependencies but not `shap`, so SHAP was not recomputed from scratch. The follow-up SHAP view uses the existing tracked SHAP artifacts already present in `outputs/stage2/shap/`.
 
-Figure-quality note: the first scatter attempt was rejected and removed because it was visually weaker than Tanisha's existing `outputs/figures/final_pipeline/` figures.
+Figure-quality note: the first scatter attempt was rejected and removed because it was visually weaker than the existing `outputs/figures/final_pipeline/` figures.

@@ -90,7 +90,7 @@ The relevant excluded columns are:
 fold, split, event_id, target_date, row, col, label
 ```
 
-The saved model bundles also store the exact feature list under `feature_columns`, and both the regenerated-checkpoint run and the Tanisha-checkpoint rerun use the same 33-feature list.
+The saved model bundles also store the exact feature list under `feature_columns`, and both the regenerated-checkpoint run and the original-checkpoint rerun use the same 33-feature list.
 
 ## Integrity Note
 

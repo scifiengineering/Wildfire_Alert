@@ -13,7 +13,7 @@ The precision is also budget-dependent. If the system is allowed to send only th
 The diagnostic evaluates precision sensitivity on the 2020 scored candidate files:
 
 - `outputs/stage2/scored_2020_r4km_fair_imagenet_noamp_full2020_retrained_stage2/stage2_2020_scored_candidates.csv`
-- `outputs/stage2/scored_2020_r4km_fair_tanisha_ckpt_full2020/stage2_2020_scored_candidates.csv`
+- Original-checkpoint full-2020 scored candidate CSV.
 
 For each run, precision is measured at fixed global alert budgets. This shows how precision changes as the alert budget changes. The matched-volume comparison remains the primary alert-quality result because it uses the frozen Stage 2 threshold and one global WSTS threshold matched to that run's Stage 2 alert volume.
 
@@ -26,7 +26,7 @@ Diagnostic output:
 | Run | Candidate rows | Positive candidates | Candidate positive rate |
 |---|---:|---:|---:|
 | Regenerated-checkpoint support | 5,212,827 | 255,105 | 0.0489 |
-| Tanisha-checkpoint rerun | 5,212,363 | 255,761 | 0.0491 |
+| original-checkpoint rerun | 5,212,363 | 255,761 | 0.0491 |
 
 This means a random candidate alert would only be correct about 4.9% of the time.
 
@@ -44,7 +44,7 @@ This table focuses on the most confident alert budgets. It is the clearest table
 | 20 | 0.5281 | 0.0904 | 0.4601 | 0.0788 | 10.8x |
 | 25 | 0.4880 | 0.1044 | 0.4362 | 0.0934 | 10.0x |
 
-### Tanisha-checkpoint rerun
+### original-checkpoint rerun
 
 | Alerts/day | Stage 2 precision | Stage 2 recall | WSTS precision | WSTS recall | Stage 2 lift over base |
 |---:|---:|---:|---:|---:|---:|
@@ -72,7 +72,7 @@ This table focuses on the most confident alert budgets. It is the clearest table
 | 150 | 0.2676 | 0.3436 | 0.2243 | 0.2881 | 5.5x | 4.6x |
 | 250 | 0.2201 | 0.4712 | 0.1735 | 0.3713 | 4.5x | 3.5x |
 
-### Tanisha-checkpoint rerun
+### original-checkpoint rerun
 
 | Alerts/day | Stage 2 precision | Stage 2 recall | WSTS precision | WSTS recall | Stage 2 lift over base | WSTS lift over base |
 |---:|---:|---:|---:|---:|---:|---:|

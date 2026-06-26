@@ -1,10 +1,10 @@
-# Tanisha 2019 Stage-1 Baseline Notes
+# original thesis 2019 Stage-1 Baseline Notes
 
 Running notes for the 2019-only WSTS-style Stage-1 probability baseline task.
 
 ## Ground Rules
 
-- Preserve Tanisha's thesis framing.
+- Preserve the original thesis framing.
 - Do not make comparison claims.
 - Report reproducible baseline result numbers only.
 - Use 2019 data only.
@@ -16,7 +16,7 @@ Running notes for the 2019-only WSTS-style Stage-1 probability baseline task.
 
 ### 2026-06-13
 
-- Created and switched to branch `tanisha-2019-stage1-baseline`.
+- Created and switched to branch `stage1-2019-baseline`.
 - Started from repo root: `/home/Sifiso/Projects/Wildfire_Alert`.
 - Initial sandboxed shell commands failed with `bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`; reran read-only checks with escalated execution.
 - Verified requested 2019 HDF5 data footprint:
@@ -38,15 +38,15 @@ Running notes for the 2019-only WSTS-style Stage-1 probability baseline task.
 - Dependency note from `pyproject.toml`: base dependencies are `numpy`, `omegaconf`, `pyyaml`; HDF5 reading is in the `data` extra via `h5py`; full `ml` extra includes SHAP and is not necessary for this baseline evaluation.
 
 
-### Tanisha Correction Applied
+### original thesis Correction Applied
 
-- Tanisha clarified that the baseline must use only one global probability threshold.
+- the baseline clarification stated that the baseline must use only one global probability threshold.
 - Removed per-event-day top-k/top-90 from the deliverable analysis because it gives a different effective threshold per event-day.
 - Revised `scripts/26_evaluate_stage1_alert_budget.py` to compute only one deployable fixed global threshold over all evaluated Stage-1 probability scores.
 - Re-ran the evaluator with target mean alert volume `90` alerts/event-day:
 
 ```bash
-.venv/bin/python scripts/26_evaluate_stage1_alert_budget.py --prediction-root outputs/predictions/stage1_2019_3fold --data-root wsts_hdf5/2019 --year 2019 --target-mean-alerts-per-event-day 90 --output-dir outputs/tanisha_2019_stage1_baseline
+.venv/bin/python scripts/26_evaluate_stage1_alert_budget.py --prediction-root outputs/predictions/stage1_2019_3fold --data-root wsts_hdf5/2019 --year 2019 --target-mean-alerts-per-event-day 90 --output-dir <stage1-baseline-output-dir>
 ```
 
 - Final global-threshold-only result:
@@ -62,11 +62,11 @@ Running notes for the 2019-only WSTS-style Stage-1 probability baseline task.
   - precision: `0.16539463051090958`
 
 - Saved outputs:
-  - `outputs/tanisha_2019_stage1_baseline/stage1_2019_alert_budget_results.md`
-  - `outputs/tanisha_2019_stage1_baseline/stage1_2019_alert_budget_results.csv`
-  - `outputs/tanisha_2019_stage1_baseline/stage1_2019_alert_budget_results.json`
-  - `outputs/tanisha_2019_stage1_baseline/stage1_2019_alert_budget_reproducibility.json`
-  - `outputs/tanisha_2019_stage1_baseline/wsts_hdf5_2019_audit.json`
+  - `stage1_2019_alert_budget_results.md`
+  - `stage1_2019_alert_budget_results.csv`
+  - `stage1_2019_alert_budget_results.json`
+  - `stage1_2019_alert_budget_reproducibility.json`
+  - `wsts_hdf5_2019_audit.json`
 
 
 ### `CLAUDE.md` Relevance Check
@@ -79,6 +79,6 @@ Running notes for the 2019-only WSTS-style Stage-1 probability baseline task.
   - The older overlapping two-fold methodology is marked historical; the three-fold event split is authoritative.
   - Stage-1 artifacts were generated with 2019 event k-folds, five input days, center crop size 256, and one-day-ahead targets by default.
 - Context to avoid carrying into this deliverable:
-  - `CLAUDE.md` discusses AP/AUC and comparison language for other phases, but Tanisha's current baseline deliverable excludes AP and thesis comparison claims.
-  - Earlier notes mention top fraction/top-k style artifacts, but Tanisha clarified the baseline result must use one fixed global probability threshold only.
+  - `CLAUDE.md` discusses AP/AUC and comparison language for other phases, but the original thesis current baseline deliverable excludes AP and thesis comparison claims.
+  - Earlier notes mention top fraction/top-k style artifacts, but the baseline clarification stated the baseline result must use one fixed global probability threshold only.
   - Stage 2 SHAP/ML setup is not needed for this baseline.
