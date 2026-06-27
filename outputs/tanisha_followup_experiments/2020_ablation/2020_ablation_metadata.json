@@ -12,5 +12,15 @@
   ],
   "test_csv": "outputs/stage2/candidates_2020_r4km_fair_imagenet_noamp_full2020/stage2_2020_candidates.csv",
   "figure_output": "outputs/tanisha_followup_experiments/figures/03_feature_group_ablation_impact.png",
-  "seed": 42
+  "seed": 42,
+  "variant_descriptions": {
+    "full_features": "Full Stage 2 feature set.",
+    "drop_distance_features": "Full set minus distance_to_current_fire_px and distance_to_current_fire_km.",
+    "drop_bearing_feature": "Full set minus bearing_from_fire_deg.",
+    "drop_wind_alignment_features": "Full set minus wind_alignment and forecast_wind_alignment.",
+    "drop_slope_alignment_feature": "Full set minus slope_alignment.",
+    "drop_stage1_calibration_group": "Full set minus stage1_threshold_mask, stage1_top_mask, threshold, top_fraction, and top_threshold.",
+    "drop_all_geometry_alignment_features": "Full set minus distance, bearing, wind alignment, forecast alignment, and slope alignment features.",
+    "minimal_geometry_baseline": "Only stage1_probability and distance_to_current_fire_km."
+  }
 }

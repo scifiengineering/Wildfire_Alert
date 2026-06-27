@@ -22,55 +22,78 @@ NON_FEATURE_COLUMNS = {
     "col",
     "label",
 }
-BASELINE_FEATURES = [
+MINIMAL_GEOMETRY_BASELINE_FEATURES = [
     "stage1_probability",
-    "stage1_threshold_mask",
-    "stage1_top_mask",
-    "threshold",
-    "top_fraction",
-    "top_threshold",
-    "has_current_fire",
-    "current_fire_at_candidate",
-    "distance_to_current_fire_px",
     "distance_to_current_fire_km",
-    "bearing_from_fire_deg",
 ]
-FEATURE_GROUPS = {
-    "fire_geometry_features": [
-        "has_current_fire",
-        "current_fire_at_candidate",
+ABLATION_DROP_GROUPS = {
+    "drop_distance_features": [
+        "distance_to_current_fire_px",
+        "distance_to_current_fire_km",
+    ],
+    "drop_bearing_feature": [
+        "bearing_from_fire_deg",
+    ],
+    "drop_wind_alignment_features": [
+        "wind_alignment",
+        "forecast_wind_alignment",
+    ],
+    "drop_slope_alignment_feature": [
+        "slope_alignment",
+    ],
+    "drop_stage1_calibration_group": [
+        "stage1_threshold_mask",
+        "stage1_top_mask",
+        "threshold",
+        "top_fraction",
+        "top_threshold",
+    ],
+    "drop_all_geometry_alignment_features": [
         "distance_to_current_fire_px",
         "distance_to_current_fire_km",
         "bearing_from_fire_deg",
-    ],
-    "wind_features": [
         "wind_alignment",
         "forecast_wind_alignment",
         "slope_alignment",
-        "wind_speed",
-        "wind_direction",
-        "forecast_wind_speed",
-        "forecast_wind_direction",
     ],
-    "weather_drought_features": [
-        "total_precipitation",
-        "minimum_temperature",
-        "maximum_temperature",
-        "energy_release_component",
-        "specific_humidity",
-        "pdsi",
-        "forecast_total_precipitation",
-        "forecast_temperature",
-        "forecast_specific_humidity",
-    ],
-    "terrain_vegetation_features": [
-        "ndvi",
-        "evi2",
-        "slope",
-        "aspect",
-        "elevation",
-        "landcover_class",
-    ],
+}
+VARIANT_DESCRIPTIONS = {
+    "full_features": "Full Stage 2 feature set.",
+    "drop_distance_features": (
+        "Full set minus distance_to_current_fire_px and distance_to_current_fire_km."
+    ),
+    "drop_bearing_feature": "Full set minus bearing_from_fire_deg.",
+    "drop_wind_alignment_features": (
+        "Full set minus wind_alignment and forecast_wind_alignment."
+    ),
+    "drop_slope_alignment_feature": "Full set minus slope_alignment.",
+    "drop_stage1_calibration_group": (
+        "Full set minus stage1_threshold_mask, stage1_top_mask, threshold, "
+        "top_fraction, and top_threshold."
+    ),
+    "drop_all_geometry_alignment_features": (
+        "Full set minus distance, bearing, wind alignment, forecast alignment, "
+        "and slope alignment features."
+    ),
+    "minimal_geometry_baseline": (
+        "Only stage1_probability and distance_to_current_fire_km."
+    ),
+}
+VARIANT_ORDER = {
+    variant: index
+    for index, variant in enumerate(
+        [
+            "full_features",
+            "drop_distance_features",
+            "drop_bearing_feature",
+            "drop_wind_alignment_features",
+            "drop_slope_alignment_feature",
+            "drop_stage1_calibration_group",
+            "drop_all_geometry_alignment_features",
+            "minimal_geometry_baseline",
+        ],
+        start=1,
+    )
 }
 MODEL_SOURCE = "regenerated_imagenet_noamp_full2020"
 
@@ -175,7 +198,23 @@ def main() -> None:
     table["within_event_auc_drop_percent_vs_full"] = percentage_drop(
         full_auc, table["within_event_auc"]
     )
-    table = table.sort_values("ap_drop_vs_full", ascending=False)
+    table["row"] = table["variant"].map(VARIANT_ORDER)
+    table["feature_configuration"] = table["variant"].map(VARIANT_DESCRIPTIONS)
+    table = table.sort_values("row")
+    table = table[
+        [
+            "row",
+            "variant",
+            "feature_configuration",
+            "average_precision",
+            "roc_auc",
+            "within_event_auc",
+            "ap_drop_vs_full",
+            "within_event_auc_drop_vs_full",
+            "ap_drop_percent_vs_full",
+            "within_event_auc_drop_percent_vs_full",
+        ]
+    ]
     table.to_csv(args.output_dir / "2020_ablation_metrics.csv", index=False)
     (args.output_dir / "2020_ablation_metrics.json").write_text(
         json.dumps(table.to_dict(orient="records"), indent=2) + "\n",
@@ -188,6 +227,7 @@ def main() -> None:
         "test_csv": str(args.test_csv),
         "figure_output": str(args.figure_output),
         "seed": args.seed,
+        "variant_descriptions": VARIANT_DESCRIPTIONS,
     }
     (args.output_dir / "2020_ablation_metadata.json").write_text(
         json.dumps(metadata, indent=2) + "\n",
@@ -206,15 +246,16 @@ def feature_column_names(frame: pd.DataFrame) -> list[str]:
 
 
 def build_variants(full_feature_columns: list[str]) -> dict[str, list[str]]:
-    variants = {
-        "no_extra_features": [
-            feature for feature in BASELINE_FEATURES if feature in full_feature_columns
+    variants = {}
+    for variant_name, drop_features in ABLATION_DROP_GROUPS.items():
+        variants[variant_name] = [
+            feature for feature in full_feature_columns if feature not in drop_features
         ]
-    }
-    for group_name, group_features in FEATURE_GROUPS.items():
-        variants[f"drop_{group_name}"] = [
-            feature for feature in full_feature_columns if feature not in group_features
-        ]
+    variants["minimal_geometry_baseline"] = [
+        feature
+        for feature in MINIMAL_GEOMETRY_BASELINE_FEATURES
+        if feature in full_feature_columns
+    ]
     return variants
 
 
@@ -342,9 +383,14 @@ def render_ablation_figure(table: pd.DataFrame, output_path: Path) -> Path:
         axis.set_xlabel("Percent drop")
         axis.grid(axis="x", color="#dddddd", linewidth=0.8)
         for index, value in enumerate(values):
-            x_offset = 0.8 if value >= 0 else -0.8
-            ha = "left" if value >= 0 else "right"
-            axis.text(value + x_offset, index, f"{value:.1f}", va="center", ha=ha, fontsize=9)
+            if value >= 0:
+                x = value + 0.8
+                ha = "left"
+            else:
+                x = value + 0.35
+                ha = "left"
+            label_value = 0.0 if abs(value) < 0.05 else value
+            axis.text(x, index, f"{label_value:.1f}", va="center", ha=ha, fontsize=9)
 
     axes[0].set_yticks(y_positions, labels)
     axes[0].set_ylabel("Ablation variant")
@@ -356,7 +402,7 @@ def render_ablation_figure(table: pd.DataFrame, output_path: Path) -> Path:
     fig.text(
         0.01,
         0.02,
-        "Positive values mean performance dropped after removing that feature group.",
+        "Positive values mean performance dropped after removing that feature variant.",
         fontsize=10,
         color="#444444",
     )

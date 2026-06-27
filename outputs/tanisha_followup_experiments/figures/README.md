@@ -16,10 +16,10 @@ This folder contains only the new figures for the original thesis follow-up requ
 - Purpose: converts the top Stage 2 raster row/column alert locations into latitude/longitude coordinates.
 - Use for: the request to show what model output locations look like after coordinate conversion.
 
-## Figure 3: Added-Feature Ablation Impact
+## Figure 3: Corrected Feature Ablation Impact
 
 - File: `03_feature_group_ablation_impact.png`
-- Purpose: shows the 2020 regenerated-checkpoint percent performance drop after removing added feature groups, using average precision and within-event AUC.
-- Use for: the request to test whether LightGBM performance goes down without added features and which feature groups contribute most.
+- Purpose: shows the 2020 regenerated-checkpoint percent performance drop after removing the specific distance, bearing, alignment, and Stage 1 calibration features, using average precision and within-event AUC.
+- Use for: the corrected request to test the contribution of the added Stage 2 geometry/alignment features without mixing them with raw context features.
 
 The earlier scatter plot attempt was removed because it was less clear than the heatmap.

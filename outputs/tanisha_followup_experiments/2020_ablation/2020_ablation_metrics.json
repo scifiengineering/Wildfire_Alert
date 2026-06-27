@@ -1,36 +1,8 @@
 [
   {
-    "variant": "drop_fire_geometry_features",
-    "average_precision": 0.1628519163895632,
-    "roc_auc": 0.6968586377420616,
-    "within_event_auc": 0.6752289131786294,
-    "ap_drop_vs_full": 0.08822763436150749,
-    "within_event_auc_drop_vs_full": 0.18474743087007772,
-    "ap_drop_percent_vs_full": 35.13931504879087,
-    "within_event_auc_drop_percent_vs_full": 21.48285033054514
-  },
-  {
-    "variant": "drop_weather_drought_features",
-    "average_precision": 0.24906145701066837,
-    "roc_auc": 0.8179356426777317,
-    "within_event_auc": 0.8624754780427846,
-    "ap_drop_vs_full": 0.0020180937404023214,
-    "within_event_auc_drop_vs_full": -0.002499133994077418,
-    "ap_drop_percent_vs_full": 0.803766668518191,
-    "within_event_auc_drop_percent_vs_full": -0.2906049697031983
-  },
-  {
-    "variant": "drop_terrain_vegetation_features",
-    "average_precision": 0.2492361690906998,
-    "roc_auc": 0.820273405076381,
-    "within_event_auc": 0.8604811204349864,
-    "ap_drop_vs_full": 0.001843381660370902,
-    "within_event_auc_drop_vs_full": -0.0005047763862792154,
-    "ap_drop_percent_vs_full": 0.7341823158662957,
-    "within_event_auc_drop_percent_vs_full": -0.05869654319824244
-  },
-  {
+    "row": 1,
     "variant": "full_features",
+    "feature_configuration": "Full Stage 2 feature set.",
     "average_precision": 0.2510795507510707,
     "roc_auc": 0.8186182105957973,
     "within_event_auc": 0.8599763440487072,
@@ -40,23 +12,87 @@
     "within_event_auc_drop_percent_vs_full": 0.0
   },
   {
-    "variant": "no_extra_features",
-    "average_precision": 0.26200609563919336,
-    "roc_auc": 0.8212560622509631,
-    "within_event_auc": 0.8589946893056926,
-    "ap_drop_vs_full": -0.010926544888122669,
-    "within_event_auc_drop_vs_full": 0.0009816547430145928,
-    "ap_drop_percent_vs_full": -4.351825887627001,
-    "within_event_auc_drop_percent_vs_full": 0.11414904023906429
+    "row": 2,
+    "variant": "drop_distance_features",
+    "feature_configuration": "Full set minus distance_to_current_fire_px and distance_to_current_fire_km.",
+    "average_precision": 0.19011214298778856,
+    "roc_auc": 0.6951697204440599,
+    "within_event_auc": 0.6875076823644998,
+    "ap_drop_vs_full": 0.06096740776328213,
+    "within_event_auc_drop_vs_full": 0.17246866168420738,
+    "ap_drop_percent_vs_full": 24.28210803345248,
+    "within_event_auc_drop_percent_vs_full": 20.055047197256293
   },
   {
-    "variant": "drop_wind_features",
-    "average_precision": 0.26946906284658556,
-    "roc_auc": 0.8183559308083788,
-    "within_event_auc": 0.8570806496556156,
-    "ap_drop_vs_full": -0.01838951209551487,
-    "within_event_auc_drop_vs_full": 0.0028956943930915635,
-    "ap_drop_percent_vs_full": -7.324177552694004,
-    "within_event_auc_drop_percent_vs_full": 0.33671791243220034
+    "row": 3,
+    "variant": "drop_bearing_feature",
+    "feature_configuration": "Full set minus bearing_from_fire_deg.",
+    "average_precision": 0.25073932752202516,
+    "roc_auc": 0.8189408223778242,
+    "within_event_auc": 0.8600856158660859,
+    "ap_drop_vs_full": 0.00034022322904553315,
+    "within_event_auc_drop_vs_full": -0.00010927181737874214,
+    "ap_drop_percent_vs_full": 0.13550415715967357,
+    "within_event_auc_drop_percent_vs_full": -0.012706374789834128
+  },
+  {
+    "row": 4,
+    "variant": "drop_wind_alignment_features",
+    "feature_configuration": "Full set minus wind_alignment and forecast_wind_alignment.",
+    "average_precision": 0.2516560197418201,
+    "roc_auc": 0.8174213328810099,
+    "within_event_auc": 0.8580311612151655,
+    "ap_drop_vs_full": -0.0005764689907494236,
+    "within_event_auc_drop_vs_full": 0.0019451828335416144,
+    "ap_drop_percent_vs_full": -0.22959615349995416,
+    "within_event_auc_drop_percent_vs_full": 0.22619027220956248
+  },
+  {
+    "row": 5,
+    "variant": "drop_slope_alignment_feature",
+    "feature_configuration": "Full set minus slope_alignment.",
+    "average_precision": 0.2513367992052233,
+    "roc_auc": 0.8197658092625415,
+    "within_event_auc": 0.8605609660092673,
+    "ap_drop_vs_full": -0.0002572484541525921,
+    "within_event_auc_drop_vs_full": -0.0005846219605601943,
+    "ap_drop_percent_vs_full": -0.10245695174420537,
+    "within_event_auc_drop_percent_vs_full": -0.06798116769210603
+  },
+  {
+    "row": 6,
+    "variant": "drop_stage1_calibration_group",
+    "feature_configuration": "Full set minus stage1_threshold_mask, stage1_top_mask, threshold, top_fraction, and top_threshold.",
+    "average_precision": 0.2564029688550454,
+    "roc_auc": 0.8211822345070764,
+    "within_event_auc": 0.8588315643165971,
+    "ap_drop_vs_full": -0.005323418103974686,
+    "within_event_auc_drop_vs_full": 0.001144779732110024,
+    "ap_drop_percent_vs_full": -2.1202117368978866,
+    "within_event_auc_drop_percent_vs_full": 0.13311758399312273
+  },
+  {
+    "row": 7,
+    "variant": "drop_all_geometry_alignment_features",
+    "feature_configuration": "Full set minus distance, bearing, wind alignment, forecast alignment, and slope alignment features.",
+    "average_precision": 0.187926065531518,
+    "roc_auc": 0.6938684209699586,
+    "within_event_auc": 0.688544835410606,
+    "ap_drop_vs_full": 0.06315348521955269,
+    "within_event_auc_drop_vs_full": 0.1714315086381012,
+    "ap_drop_percent_vs_full": 25.152779280764815,
+    "within_event_auc_drop_percent_vs_full": 19.934444688445023
+  },
+  {
+    "row": 8,
+    "variant": "minimal_geometry_baseline",
+    "feature_configuration": "Only stage1_probability and distance_to_current_fire_km.",
+    "average_precision": 0.25325473614316074,
+    "roc_auc": 0.8134966513457016,
+    "within_event_auc": 0.8578622922537084,
+    "ap_drop_vs_full": -0.002175185392090051,
+    "within_event_auc_drop_vs_full": 0.0021140517949987947,
+    "ap_drop_percent_vs_full": -0.8663331544059549,
+    "within_event_auc_drop_percent_vs_full": 0.24582673809909586
   }
 ]
